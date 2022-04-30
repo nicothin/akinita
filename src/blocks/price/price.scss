@@ -1,0 +1,122 @@
+// В этом файле должны быть стили только для БЭМ-блока price, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.price {
+
+  $block-name:                &; // #{$block-name}__
+
+  font-size: 21px; // нет переменной
+  line-height: 1em;
+
+  small {
+    font-size: $font-size--small;
+  }
+
+  &__currency {
+    margin-right: 0.2em;
+  }
+
+  &__inner {
+    display: inline-block;
+    position: relative;
+    padding-right: 7px;
+
+    &--mb24 {
+      // margin-bottom: 10px;
+
+      @media (min-width: $screen-sm) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: -1px;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    overflow: hidden;
+    color: transparent;
+
+    &--up {
+      border-width: 0 3px 5px 3px;
+      border-color: transparent transparent $color-danger transparent;
+    }
+
+    &--down {
+      border-width: 5px 3px 0 3px;
+      border-color: $color-success transparent transparent transparent;
+    }
+
+    &--up-alt {
+      border-width: 0 3px 5px 3px;
+      border-color: transparent transparent $color-success transparent;
+    }
+
+    &--down-alt {
+      border-width: 5px 3px 0 3px;
+      border-color: $color-danger transparent transparent transparent;
+    }
+  }
+
+  &__history-link {
+    font-size: $font-size--small;
+    font-weight: 400;
+  }
+
+  &__text {
+    display: block;
+    // margin-bottom: 20px;
+    font-size: $font-size;
+    font-weight: 500;
+  }
+
+  &__correct {
+    font-size: $font-size--small;
+    font-weight: 400;
+
+    &--red {
+      color: $color-danger-2;
+    }
+
+    &--green {
+      color: $color-success;
+    }
+  }
+
+
+
+  &--lg {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  &--sm {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  &--xs {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  &--sidebar {
+    position: relative;
+
+    #{$block-name}__text {
+      line-height: 1;
+    }
+
+    #{$block-name}__inner {
+      line-height: 1.33;
+    }
+
+    #{$block-name}__history-link {
+      line-height: 1;
+    }
+  }
+}

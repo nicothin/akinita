@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>greece_ru</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <div style="position: fixed;z-index:999;right:0;bottom:0;background: #fff;padding: 0.5em">
+    <a href="#addItemToWishlist" data-toggle="modal">add Item</a>,
+    <a href="#successfullyAdded" data-toggle="modal">successfully</a>,
+    <a href="#shedule" data-toggle="modal">shedule</a>,
+    <a href="#blog-post-2017-04-11" data-toggle="modal">media</a>,
+    <a href="#ask" data-toggle="modal">ask</a>,
+    <a href="#notice-text" data-toggle="modal">notice-text</a>,
+    <a href="#notice-price" data-toggle="modal">notice-price</a>,
+    <a href="#interview" data-toggle="modal">interview</a>,
+    <a href="#confirm" data-toggle="modal">confirm</a>,
+    <a href="#sign-in" data-toggle="modal">sign-in</a>,
+    <a href="#sign-up" data-toggle="modal">sign-up</a>,
+    <a href="#login" data-toggle="modal">login</a>,
+    <a href="#reset-password" data-toggle="modal">reset-password</a>,
+    <a href="#login-to-continue" data-toggle="modal">login-to-continue</a>,
+    <a href="#sign-up-2" data-toggle="modal">sign-up-2</a>,
+    <a href="#pro-photos" data-toggle="modal">pro-photos</a>,
+  </div>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header--new-search.html')
+
+      <main class="page__main-content" role="main">
+
+        <section class="search">
+          <h1 class="search__title">Find the right home <br>and the right neighborhood</h1>
+          <form action="" class="search__form">
+            <div class="search__form-descr">Search properties for</div>
+            <div class="search__part-buy">
+              <div class="field-drop-checkboxes">
+                <div class="field-drop-checkboxes__pseudoselect" id="buy-rent-pseudoselect" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Buy</div>
+                <div class="field-drop-checkboxes__drop  field-drop-checkboxes__drop--separated-checks  field-checkbox" aria-labelledby="buy-rent-pseudoselect">
+                  <div class="field-checkbox__input-wrap">
+                    <label class="field-checkbox__name  field-checkbox__name--check-only">
+                      <input class="field-checkbox__input" type="radio" name="buy-rent" checked>
+                      <span class="field-checkbox__name-text">Buy</span>
+                    </label>
+                  </div>
+                  <div class="field-checkbox__input-wrap">
+                    <label class="field-checkbox__name  field-checkbox__name--check-only">
+                      <input class="field-checkbox__input" type="radio" name="buy-rent">
+                      <span class="field-checkbox__name-text">Rent</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="search__part-type">
+              <div class="field-drop-checkboxes  field-drop-checkboxes--fz-small">
+                <div class="field-drop-checkboxes__pseudoselect" id="property-types" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All property types</div>
+                <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="property-types">
+                  <div class="field-checkbox__input-wrap">
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox" checked>
+                      <span class="field-checkbox__name-text">Apartment</span>
+                    </label>
+                  </div>
+                  <div class="field-checkbox__input-wrap">
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox">
+                      <span class="field-checkbox__name-text">Townhouse</span>
+                    </label>
+                  </div>
+                  <div class="field-checkbox__input-wrap">
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox">
+                      <span class="field-checkbox__name-text">House</span>
+                    </label>
+                  </div>
+                  <div class="field-checkbox__input-wrap">
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox">
+                      <span class="field-checkbox__name-text">Villa</span>
+                    </label>
+                  </div>
+                  <div class="field-checkbox__input-wrap">
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox">
+                      <span class="field-checkbox__name-text">Office</span>
+                    </label>
+                  </div>
+                  <div class="field-checkbox__input-wrap">
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox">
+                      <span class="field-checkbox__name-text">Storage space</span>
+                    </label>
+                  </div>
+                  <div class="field-checkbox__input-wrap">
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox">
+                      <span class="field-checkbox__name-text">Parking space</span>
+                    </label>
+                  </div>
+                  <div class="field-checkbox__input-wrap">
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox">
+                      <span class="field-checkbox__name-text">Industrial building</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="search__part-location">
+              <label class="field-text">
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input  field-text__input--lg" type="text" placeholder="Type in to find location or address">
+                </span>
+              </label>
+            </div>
+            <div class="search__part-bedrooms">
+              <div class="field-drop-checkboxes  field-drop-checkboxes--fz-small">
+                <div class="field-drop-checkboxes__pseudoselect" id="bedrooms" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bedrooms</div>
+                <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="bedrooms">
+                  <div class="field-checkbox__input-wrap">
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox" checked>
+                      <span class="field-checkbox__name-text">Studio</span>
+                    </label>
+                  </div>
+                  <div class="field-checkbox__input-wrap">
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox">
+                      <span class="field-checkbox__name-text">1 bed</span>
+                    </label>
+                  </div>
+                  <div class="field-checkbox__input-wrap">
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox">
+                      <span class="field-checkbox__name-text">2 bed’s</span>
+                    </label>
+                  </div>
+                  <div class="field-checkbox__input-wrap">
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox">
+                      <span class="field-checkbox__name-text">3 bed’s</span>
+                    </label>
+                  </div>
+                  <div class="field-checkbox__input-wrap">
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox">
+                      <span class="field-checkbox__name-text">4 bed’s</span>
+                    </label>
+                  </div>
+                  <div class="field-checkbox__input-wrap">
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox">
+                      <span class="field-checkbox__name-text">5+</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="search__part-price">
+              <div class="field-text">
+                <span class="field-text__input-wrap  field-text__input-wrap--input-group">
+                  <input class="field-text__input  field-text__input--fz-small" type="number" placeholder="Min price">
+                  <input class="field-text__input  field-text__input--fz-small" type="number" placeholder="Max price">
+                </span>
+              </div>
+            </div>
+            <div class="search__part-btn">
+              <div class="field-actions">
+                <button class="btn">Search</button>
+              </div>
+            </div>
+          </form>
+        </section>
+
+        <section class="property-owner">
+          <h2 class="property-owner__title">Are you a property owner?</h2>
+          <p class="property-owner__descr">Join Greece.Ru community &amp; get access to customers worldwide</p>
+          <p class="property-owner__btn">
+            <button class="btn  btn--white  btn--lg  property-owner__item-btn">List Your Property Online</button>
+          </p>
+        </section>
+
+        <section class="youtube-content">
+          <h2 class="youtube-content__title">Youtube Content</h2>
+          <p class="youtube-content__descr">Join Greece.Ru youtube community &amp; get all videos for free at our channel</p>
+          <div class="youtube-content__row">
+            <div class="youtube-content__embed  embed-responsive  embed-responsive--16-9">
+              <iframe src="https://www.youtube.com/embed/HNpLuXOg7xQ" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="youtube-content__text-wrap">
+              <div class="youtube-content__text-inner">
+                <h3 class="youtube-content__subtitle">Some title can be place here</h3>
+                <ol>
+                  <li>1. Northern Virginia Is Keeping Amazon’s 25,000 Jobs, and Wants You to Know It. <a href="" class="youtube-content__more-link">Read more</a></li>
+                  <li>2. Are Your Children Racking Up Charges From Mobile Games? Here’s How to Fight Back. <a href="" class="youtube-content__more-link">Read more</a></li>
+                  <li>3. How to Make a 3-D Model of, your Home Renovation Vision. <a href="" class="youtube-content__more-link">Read more</a></li>
+                  <li>4. Germany Is Wary of a Digital World (but Loves Its E-Toothbrushes). <a href="" class="youtube-content__more-link">Read more</a></li>
+                  <li>5. When the Tools of the Trade Are the Keyboard and Mouse. <a href="" class="youtube-content__more-link">Read more</a></li>
+                </ol>
+                <p>Welcome to IEM Katowice 2019 CS:GO Major. The best 24 teams from around the world will compete</p>
+                <a href="" class="btn  btn--youtube  youtube-content__btn">
+                  <svg width="32" height="32"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#youtube"></use></svg>
+                  Subscribe to our channel
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="new-offer-program">
+          <div class="new-offer-program__inner">
+            <h2 class="new-offer-program__title">
+              <svg width="48" height="48"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#law"></use></svg>
+              New offer program
+            </h2>
+            <p class="new-offer-program__descr">At this page you can find all information about our new program.</p>
+            <p>Welcome to IEM Katowice 2019 CS:GO Major. The best 24 teams from around the world will compete over three weeks between February 14 and March 3, 2019, for a lion’s share of the US$1,000,000 prize pool, the legendary trophy, and a win counting towards the Intel Grand Slam.</p>
+            <ul class="new-offer-program__list">
+              <li>Northern Virginia Is Keeping Amazon’s 25,000 Jobs, and Wants You to Know It.</li>
+              <li>Are Your Children Racking Up Charges From Mobile Games? Here’s How to Fight Back.</li>
+              <li>How to Make a 3-D Model of, your Home Renovation Vision. <a href="" class="new-offer-program__more-link">Read more</a></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="top-rated">
+          <h2 class="top-rated__title">Top Rated Properties for Sale</h2>
+          <p class="top-rated__descr">last added properties from our community</p>
+          <div class="top-rated__list-wrapper">
+            <div class="top-rated__list  top-rated__list--carousel  owl-carousel">
+              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-01.jpg", "perMo": false})
+              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-02.jpg", "perMo": false})
+              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-01.jpg", "perMo": false})
+              <a class="question" href="">
+                <div class="question__text">
+                  <img class="question__consultant-avatar" src="img/avatar-consultant-01.png" width="160" height="160" alt="Helen Zinger">
+                  <div class="question__msg">«Is it difficult to choose? We offer variations and consult» </div>
+                  <div class="question__consultant">Helen Zinger <br>Lead Consult Manager</div>
+                </div>
+                <div class="question__btn">Ask a Question</div>
+              </a>
+              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-02.jpg", "perMo": false})
+              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-01.jpg", "perMo": false})
+              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-01.jpg", "perMo": false})
+              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-02.jpg", "perMo": false})
+            </div>
+          </div>
+          <footer class="top-rated__footer">
+            <a href="" class="top-rated__more-link">+ More Properties for Sale</a>
+          </footer>
+        </section>
+
+        <section class="top-rated">
+          <h2 class="top-rated__title">Top Rated Properties for Rent</h2>
+          <p class="top-rated__descr">last added properties from our community</p>
+          <div class="top-rated__list-wrapper">
+            <div class="top-rated__list  top-rated__list--carousel  owl-carousel">
+              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-01.jpg", "perMo": true})
+              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-02.jpg", "perMo": true})
+              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-01.jpg", "perMo": true})
+              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-02.jpg", "perMo": true})
+              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-01.jpg", "perMo": true})
+              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-02.jpg", "perMo": true})
+              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-01.jpg", "perMo": true})
+              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-02.jpg", "perMo": true})
+            </div>
+          </div>
+          <footer class="top-rated__footer">
+            <a href="" class="top-rated__more-link">+ More Properties for Rent</a>
+          </footer>
+        </section>
+
+        <section class="feedback">
+          <h2 class="feedback__title">Feedback From Media and Clients</h2>
+          <p class="feedback__descr">read what they said about our company</p>
+          <div class="feedback__slider-and-info">
+            <div class="feedback__stats">
+              <div class="feedback__stats-item">
+                <b class="feedback__stats-num">168</b>
+                <span class="feedback__stats-descr">Reviews from clients</span>
+                <a href="" class="feedback__stats-link">Add a review</a>
+              </div>
+              <div class="feedback__stats-item">
+                <b class="feedback__stats-num">16</b>
+                <span class="feedback__stats-descr">Reviews in mass media</span>
+                <a href="" class="feedback__stats-link">Request an interview</a>
+              </div>
+            </div>
+            <div class="feedback__slider">
+              <div class="feedback__slider-inner  owl-carousel" id="feedback-slider">
+                <article class="feedback__item">
+                  <header class="feedback__item-header">
+                    <img src="img/feedback-avatar-01.png" alt="Jannet von Klingen" class="feedback__item-avatar">
+                    <div class="feedback__item-author-text">
+                      <h3 class="feedback__item-author-name">Jannet von Klingen </h3>
+                      <div class="feedback__item-author-info">Designer</div>
+                    </div>
+                    <svg class="feedback__item-type-icon" width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#clip"></use></svg>
+                  </header>
+                  <div class="feedback__item-text">
+                    <p>Its sometimes her behaviour are contented. Do listening am eagerness oh objection collected. Together gay feelings continue juvenile had off one</p>
+                    <a href="" class="feedback__item-details">
+                      Details
+                      <svg class="feedback__item-details-icon" width="15" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+                    </a>
+                  </div>
+                </article>
+                <article class="feedback__item">
+                  <header class="feedback__item-header  feedback__item-header--company">
+                    <span class="feedback__item-avatar-company"><img src="img/feedback-avatar-company-01.png" alt="lenta" class="feedback__item-avatar"></span>
+                    <div class="feedback__item-author-text">
+                      <div class="feedback__item-author-info">Russian Mass Media </div>
+                    </div>
+                    <svg class="feedback__item-type-icon" width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#microphone"></use></svg>
+                  </header>
+                  <div class="feedback__item-text">
+                    <p>Unfeeling so rapturous discovery he exquisite. Reasonably so middletons or impression by terminated. Old pleasure required removing elegance him had.</p>
+                    <a href="" class="feedback__item-details">
+                      Details
+                      <svg class="feedback__item-details-icon" width="15" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+                    </a>
+                  </div>
+                </article>
+                <article class="feedback__item">
+                  <header class="feedback__item-header">
+                    <img src="img/feedback-avatar-01.png" alt="Jannet von Klingen" class="feedback__item-avatar">
+                    <div class="feedback__item-author-text">
+                      <h3 class="feedback__item-author-name">Jannet von Klingen Jannet von Klingen Jannet von Klingen </h3>
+                      <div class="feedback__item-author-info">Designer Designer</div>
+                    </div>
+                    <svg class="feedback__item-type-icon" width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#clip"></use></svg>
+                  </header>
+                  <div class="feedback__item-text">
+                    <p>Its sometimes her behaviour</p>
+                  </div>
+                </article>
+                <article class="feedback__item">
+                  <header class="feedback__item-header">
+                    <img src="img/feedback-avatar-01.png" alt="Newsweek" class="feedback__item-avatar">
+                    <div class="feedback__item-author-text">
+                      <h3 class="feedback__item-author-name">Jannet von Klingen </h3>
+                      <div class="feedback__item-author-info">Designer</div>
+                    </div>
+                    <svg class="feedback__item-type-icon" width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#clip"></use></svg>
+                  </header>
+                  <div class="feedback__item-text">
+                    <p>Its sometimes her behaviour are contented. Do listening am eagerness oh objection collected. Together gay feelings continue juvenile had off one</p>
+                    <a href="" class="feedback__item-details">
+                      Details
+                      <svg class="feedback__item-details-icon" width="15" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+                    </a>
+                  </div>
+                </article>
+                <article class="feedback__item">
+                  <header class="feedback__item-header">
+                    <img src="img/feedback-avatar-01.png" alt="Jannet von Klingen" class="feedback__item-avatar">
+                    <div class="feedback__item-author-text">
+                      <h3 class="feedback__item-author-name">Jannet von Klingen Jannet von Klingen Jannet von Klingen </h3>
+                      <div class="feedback__item-author-info">Designer Designer</div>
+                    </div>
+                    <svg class="feedback__item-type-icon" width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#clip"></use></svg>
+                  </header>
+                  <div class="feedback__item-text">
+                    <p>Its sometimes her behaviour</p>
+                  </div>
+                </article>
+                <article class="feedback__item">
+                  <header class="feedback__item-header">
+                    <img src="img/feedback-avatar-01.png" alt="Newsweek" class="feedback__item-avatar">
+                    <div class="feedback__item-author-text">
+                      <h3 class="feedback__item-author-name">Jannet von Klingen </h3>
+                      <div class="feedback__item-author-info">Designer</div>
+                    </div>
+                    <svg class="feedback__item-type-icon" width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#clip"></use></svg>
+                  </header>
+                  <div class="feedback__item-text">
+                    <p>Its sometimes her behaviour are contented. Do listening am eagerness oh objection collected. Together gay feelings continue juvenile had off one</p>
+                    <a href="" class="feedback__item-details">
+                      Details
+                      <svg class="feedback__item-details-icon" width="15" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+                    </a>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="feedback__slider-controls">
+              <span class="feedback__slider-control-prev" id="feedback-slider-prev">
+                <svg class="feedback__slider-control-arrow" width="15" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-left"></use></svg>
+              </span>
+              <span class="feedback__slider-control-next" id="feedback-slider-next">
+                <svg class="feedback__slider-control-arrow" width="15" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+              </span>
+            </div>
+          </div>
+          <div class="feedback__logo-list">
+            <img src="img/feedback-logo-01.png" alt="Newsweek" class="feedback__logo-item">
+            <img src="img/feedback-logo-02.png" alt="Independent" class="feedback__logo-item">
+            <img src="img/feedback-logo-05.png" alt="3 канал" class="feedback__logo-item">
+            <img src="img/feedback-logo-03.png" alt="РБК" class="feedback__logo-item">
+            <img src="img/feedback-logo-04.png" alt="naftemporiki.gr" class="feedback__logo-item">
+          </div>
+        </section>
+
+        <section class="blog-latest">
+          <h2 class="blog-latest__title">Latest From Our Blog</h2>
+          <p class="blog-latest__descr">find our the best articles about real estate properties</p>
+          <div class="blog-latest__list-wrap">
+            <div class="blog-latest__list">
+              @@include('blocks/post/post.html', {"imgUrl": "img/post-pict-01--lg.jpg", "addMods": "  post--accent"})
+              @@include('blocks/post/post.html', {"imgUrl": "img/post-pict-02.jpg", "addMods": ""})
+              @@include('blocks/post/post.html', {"imgUrl": "img/post-pict-03.jpg", "addMods": ""})
+            </div>
+          </div>
+          <footer class="blog-latest__footer">
+            <a href="" class="blog-latest__more-link">+ All News & Articles</a>
+          </footer>
+        </section>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  <section class="msg-bottom">
+    <div class="msg-bottom__inner">
+      <div class="msg-bottom__text">
+        <h3 class="msg-bottom__title">This website uses cookies</h3>
+        <div class="msg-bottom__descr">
+          <p>We inform you that this site uses own, technical and third parties cookies to make sure our web page is user-friendly and to guarantee a high functionality of the webpage. By continuing to browse this website, you declare to accept the use of cookies.</p>
+        </div>
+      </div>
+      <div class="msg-bottom__btn-wrap">
+        <button class="btn  btn--wide-s  btn--white">Accept cookies</button>
+      </div>
+      <button class="close  msg-bottom__close-btn" aria-label="Закрыть"><span></span></button>
+    </div>
+  </section>
+
+  <div id="confirm" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Some text</h4>
+        </div>
+        <div class="modal__body">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae soluta, quaerat alias veritatis voluptas sed ut hic ad voluptatibus aut animi, quam eligendi optio ex, quisquam quis cum maxime! Veritatis.</p>
+          <div class="modal__form" action="">
+            <div class="field-actions  field-actions--jcsb">
+              <button class="btn  btn--wide">Yes</button>
+              <button class="btn  btn--white  btn--wide">No</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="addItemToWishlist" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Add Item to Wishlist</h4>
+        </div>
+        <div class="modal__body">
+          <p>To add this item to wishlist, please type your email address below</p>
+          <form class="modal__form" action="">
+            <div class="field-text">
+              <span class="field-text__name">Email</span>
+              <span class="field-text__input-wrap">
+                <input class="field-text__input" type="email" placeholder="Type here your email">
+              </span>
+            </div>
+            <div class="field-actions">
+              <button class="btn  btn--white  btn--wide">Add Item</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="successfullyAdded" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Successfully Added to Wishlist</h4>
+        </div>
+        <div class="modal__body">
+          <div class="card-mini">
+            <a href="" class="card-mini__pict-wrap">
+              <img src="img/card-mini-demo-pict.jpg" alt="">
+            </a>
+            <div class="card-mini__descr">
+              House Apartment «Angelica» <br>
+              2 bed’s, 1 bath, 95.2 sq.m.
+            </div>
+          </div>
+        </div>
+        <div class="modal__footer">
+          You can view and edit saved properties in your <a href="">personal account</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="shedule" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content" action="">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Schedule an Appointment</h4>
+        </div>
+        <form class="modal__body" action="">
+          <p>To schedule an appointment please choose available date</p>
+          <div class="modal__datepicker" id="shedule-calendar"></div>
+          <input id="shedule-date" type="hidden" name="">
+          <p>Please enter your email to create an appointment</p>
+          <div class="modal__form">
+            <div class="field-text">
+              <span class="field-text__name">Email</span>
+              <span class="field-text__input-wrap">
+                <input class="field-text__input" type="email" placeholder="Type here your email">
+              </span>
+            </div>
+            <div class="field-text">
+              <span class="field-text__name">Comment</span>
+              <span class="field-text__input-wrap">
+                <textarea class="field-text__input" type="text" placeholder="Type here..."></textarea>
+              </span>
+            </div>
+            <div class="field-actions">
+              <button class="btn  btn--white  btn--wide">Send Request</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="pro-photos" class="modal  modal--lg  modal--mobile-header" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content" action="">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Header name</h4>
+        </div>
+        <div class="modal__body  modal__body--md-pt0">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, ad?</p>
+          <div class="gallery-photo">
+            <div class="gallery-photo__inner">
+              <div class="gallery-photo__item">
+                <img src="img/demo-card-pict-02.jpg" width="295" height="280" alt="">
+                <div class="gallery-photo__item-descr">Professional photography</div>
+              </div>
+              <div class="gallery-photo__item">
+                <img src="img/demo-card-pict-02.jpg" width="295" height="280" alt="">
+                <div class="gallery-photo__item-descr">Non professional photography</div>
+              </div>
+              <div class="gallery-photo__item">
+                <img src="img/demo-card-pict-02.jpg" width="295" height="280" alt="">
+                <div class="gallery-photo__item-descr">Professional photography</div>
+              </div>
+              <div class="gallery-photo__item">
+                <img src="img/demo-card-pict-02.jpg" width="295" height="280" alt="">
+                <div class="gallery-photo__item-descr">Non professional photography</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="blog-post-2017-04-11" class="modal  modal--lg  modal--mobile-header" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <article class="modal__content" action="">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Uber executive steps back from self-driving cars during waymo l</h4>
+          <div class="modal__header-info">
+            <div class="modal__header-info-left">
+              <date class="modal__header-date" datetime="2017-11-04">04.11.2017</date>,
+              <a href="" class="modal__header-source">Newsweek</a>
+            </div>
+            <div class="modal__header-info-right">
+              <span class="modal__header-share-text">Share:</span>
+              <ul class="social-links  social-links--dark">
+                <li>
+                  <a href="" class="social-links__item">
+                    <span class="social-links__item-text">Facebook</span>
+                    <svg class="social-links__icon" width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#facebook"></use></svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="social-links__item">
+                    <span class="social-links__item-text">Twitter</span>
+                    <svg class="social-links__icon" width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#twitter"></use></svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="social-links__item">
+                    <span class="social-links__item-text">Instagram</span>
+                    <svg class="social-links__icon  social-links__icon--instagram" width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#instagram"></use></svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="social-links__item">
+                    <span class="social-links__item-text">Google Plus</span>
+                    <svg class="social-links__icon" width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#google-plus"></use></svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal__body">
+          <figure class="modal__news-pict">
+            <img src="img/post-pict-01--lg.jpg" alt="An Uber self-driving car in San Francisco last month">
+            <figcaption>An Uber self-driving car in San Francisco last month.</figcaption>
+          </figure>
+          <p>Anthony Levandowski, the Uber executive accused of stealing trade secrets from Google, is stepping aside from leading some of the company’s work on self-driving vehicles, amid a bare-knuckled legal fight between the two technology giants.</p>
+          <p>Mr. Levandowski, one of the self-driving-car industry’s more experienced engineers, has recused himself from working on Uber’s lidar technology — short for light detection and ranging, a key hardware component in the operation of any autonomous vehicle. <a href="">Mr. Levandowski</a> disclosed the change on Thursday in an internal memo that was obtained by Business Insider, adding that he will no longer attend meetings or make decisions about lidar efforts while legal proceedings continue.</p>
+          <p>“We should all be proud that our self-driving technology has been built independently, from the ground up.</p>
+        </div>
+        <div class="modal__footer  modal__footer--sm-gray">
+          Source: <a href="http://www.newsweek.com/curt-schilling-boston-fenway-park-adam-jones-racism-595096">http://www.newsweek.com/curt-schilling-boston-fenway-park-adam-jones-racism-595096</a>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <div id="ask" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Ask a Question</h4>
+        </div>
+        <div class="modal__body">
+          <form class="modal__form" action="">
+            <div class="field-text">
+              <span class="field-text__name">Name</span>
+              <span class="field-text__input-wrap">
+                <input class="field-text__input" type="text" placeholder="Your name">
+              </span>
+            </div>
+            <div class="field-text">
+              <span class="field-text__name">Phone number*</span>
+              <span class="field-text__input-wrap">
+                <input class="field-text__input" type="tel" placeholder="+38 044">
+              </span>
+            </div>
+            <div class="field-text">
+              <span class="field-text__name">Comment</span>
+              <span class="field-text__input-wrap">
+                <textarea class="field-text__input" type="text" placeholder="Type here..."></textarea>
+              </span>
+            </div>
+            <div class="field-actions">
+              <button class="btn  btn--white  btn--wide">Send Request</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal__footer  modal__footer--sm-gray">
+          <svg class="modal__footer-icon" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#security"></use></svg>
+          Your data will not reach to a third parties
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="notice-text" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Notice About Price Drop</h4>
+        </div>
+        <div class="modal__body">
+          <p>Notification about price drop will be sent to <span class="modal__gray-text">evgeniygavr@gmail.com</span></p>
+        </div>
+        <div class="modal__footer">
+          You can change preferences at any time in your <a href="">personal account</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="sign-up" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Sign Up</h4>
+        </div>
+        <div class="modal__body">
+          <form class="modal__form" action="">
+            <div class="field-text">
+              <span class="field-text__name">Email</span>
+              <span class="field-text__input-wrap">
+                <input class="field-text__input" type="email" placeholder="example@mail.com">
+              </span>
+            </div>
+            <div class="field-text">
+              <span class="field-text__name">Create a password</span>
+              <span class="field-text__input-wrap">
+                <input class="field-text__input  field-text__input--password" type="password">
+              </span>
+            </div>
+            <div class="field-actions">
+              <button class="btn  btn--block">Sing Up</button>
+            </div>
+          </form>
+          <div class="or">
+            <span class="or__text">or</span>
+          </div>
+          <div class="share-block">
+            <a href="" class="share-block__btn  share-block__btn--gp">Continue with Google</a>
+            <a href="" class="share-block__btn  share-block__btn--fb">Continue with Facebook</a>
+            <a href="" class="share-block__btn  share-block__btn--vk">Continue with Vkontakte</a>
+          </div>
+          <p class="modal__descr">
+            By clicking Sign up or Continue with, I agree to the <a href="">privacy policy</a> & <a href="">terms and conditions</a>
+          </p>
+        </div>
+        <div class="modal__footer  modal__footer--font-normal">
+          <div class="modal__footer-line">
+            <span>Don’t have an account? </span>
+            <a href="" class="more-link">
+              Sign Up
+              <svg class="more-link__icon" width="11" height="11"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="reset-password" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Reset password</h4>
+        </div>
+        <div class="modal__body  modal__body--form-compact">
+          <form class="modal__form  modal__form--mt0" action="">
+            <div class="field-text">
+              <span class="field-text__input-wrap">
+                <input class="field-text__input  field-text__input--email" type="email" placeholder="example@mail.com">
+              </span>
+            </div>
+            <div class="field-actions  field-actions--mt10">
+              <button class="btn  btn--block">Send reset link</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal__footer  modal__footer--font-normal">
+          <div class="modal__footer-line">
+            <a href="" class="more-link">
+              <svg class="more-link__icon" width="11" height="11"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-left"></use></svg>
+              Back to login
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="login" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Log in</h4>
+        </div>
+        <div class="modal__body  modal__body--form-compact">
+          <div class="share-block">
+            <a href="" class="share-block__btn  share-block__btn--fb">Log in with Facebook</a>
+            <a href="" class="share-block__btn  share-block__btn--gp">Log in with Google</a>
+            <a href="" class="share-block__btn  share-block__btn--vk">Log in with Vkontakte</a>
+          </div>
+          <div class="or  or--sm">
+            <span class="or__text">or</span>
+          </div>
+          <div class="alert alert--danger">Some message</div>
+          <form class="modal__form  modal__form--mt0" action="">
+            <div class="field-text">
+              <span class="field-text__input-wrap">
+                <input class="field-text__input  field-text__input--email" type="email" placeholder="example@mail.com">
+              </span>
+            </div>
+            <div class="field-text  field-text--error">
+              <span class="field-text__input-wrap">
+                <input class="field-text__input  field-text__input--password" type="password" placeholder="Password">
+                <span class="field-text__help-text">This field is required</span>
+                <span class="field-text__help-text  field-text__help-text--line">
+                  <div class="field-checkbox">
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox">
+                      <span class="field-checkbox__name-text">Remember me</span>
+                    </label>
+                  </div>
+                  <a href="">Shown password</a>
+                </span>
+              </span>
+            </div>
+            <div class="field-actions  field-actions--mt10">
+              <button class="btn  btn--block">Log In</button>
+            </div>
+          </form>
+          <div class="modal__form-descr">
+            <a href="">Forgot password?</a>
+          </div>
+        </div>
+        <div class="modal__footer  modal__footer--font-normal">
+          <div class="modal__footer-line">
+            <span>Don’t have an account? </span>
+            <a href="" class="more-link">
+              Sign Up
+              <svg class="more-link__icon" width="11" height="11"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="login-to-continue" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Log in to continue</h4>
+        </div>
+        <div class="modal__body  modal__body--form-compact">
+          <div class="share-block">
+            <a href="" class="share-block__btn  share-block__btn--fb">Log in with Facebook</a>
+            <div class="or  or--xs">
+              <span class="or__text">or continue with</span>
+            </div>
+            <div class="share-block__group">
+              <a href="" class="share-block__btn  share-block__btn--gmail">Email</a>
+              <a href="" class="share-block__btn  share-block__btn--vk">Vkontakte</a>
+            </div>
+          </div>
+        </div>
+        <div class="modal__footer  modal__footer--font-normal">
+          <div class="modal__footer-line">
+            <span>Don’t have an account? </span>
+            <a href="" class="more-link">
+              Sign Up
+              <svg class="more-link__icon" width="11" height="11"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="sign-up-2" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Sign up</h4>
+        </div>
+        <form class="modal__body  modal__body--form-compact">
+          <div class="share-block">
+            <div class="share-block__group">
+              <a href="" class="share-block__btn  share-block__btn--fb">Facebook</a>
+              <a href="" class="share-block__btn  share-block__btn--gp">Google</a>
+            </div>
+          </div>
+          <div class="or  or--xs">
+            <span class="or__text">or</span>
+          </div>
+          <div class="field-text  field-text--error">
+            <span class="field-text__input-wrap">
+              <input class="field-text__input  field-text__input--email" type="email" placeholder="example@mail.com">
+              <span class="field-text__help-text">This field is required</span>
+            </span>
+          </div>
+          <div class="field-text">
+            <span class="field-text__input-wrap">
+              <input class="field-text__input  field-text__input--user" type="text" placeholder="First name">
+            </span>
+          </div>
+          <div class="field-text">
+            <span class="field-text__input-wrap">
+              <input class="field-text__input  field-text__input--user" type="text" placeholder="Last name">
+            </span>
+          </div>
+          <div class="field-text">
+            <span class="field-text__input-wrap">
+              <input class="field-text__input  field-text__input--password" type="password" placeholder="Password">
+            </span>
+          </div>
+          <div class="field-checkbox  field-checkbox--sm  field-checkbox--mt10">
+            <label class="field-checkbox__name">
+              <input class="field-checkbox__input" type="checkbox">
+              <span class="field-checkbox__name-text">Some text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque eius illum suscipit sit asperiores odio</span>
+            </label>
+          </div>
+          <div class="modal__form-descr">Some description</div>
+          <div class="field-actions  field-actions--mt10">
+            <button class="btn  btn--block">Sign up</button>
+          </div>
+        </form>
+        <div class="modal__footer  modal__footer--font-normal">
+          <div class="modal__footer-line">
+            <span>Already have an account? </span>
+            <a href="" class="more-link">
+              Log in
+              <svg class="more-link__icon" width="11" height="11"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="sign-in" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Sign In</h4>
+        </div>
+        <div class="modal__body">
+          <form class="modal__form" action="">
+            <div class="field-text">
+              <span class="field-text__name">Email</span>
+              <span class="field-text__input-wrap">
+                <input class="field-text__input" type="email" placeholder="example@mail.com">
+              </span>
+            </div>
+            <div class="field-text">
+              <span class="field-text__name">Password</span>
+              <span class="field-text__input-wrap">
+                <input class="field-text__input  field-text__input--password" type="password">
+                <span class="field-text__help-text  field-text__help-text--line">
+                  <div class="field-checkbox">
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox">
+                      <span class="field-checkbox__name-text">Remember me</span>
+                    </label>
+                  </div>
+                  <a href="">Forgot password?</a>
+                </span>
+              </span>
+            </div>
+            <div class="field-actions  field-actions--mt10">
+              <button class="btn  btn--block">Sing In</button>
+            </div>
+          </form>
+          <div class="or">
+            <span class="or__text">or</span>
+          </div>
+          <div class="share-block">
+            <a href="" class="share-block__btn  share-block__btn--gp">Continue with Google</a>
+            <a href="" class="share-block__btn  share-block__btn--fb">Continue with Facebook</a>
+            <a href="" class="share-block__btn  share-block__btn--vk">Continue with Vkontakte</a>
+          </div>
+        </div>
+        <div class="modal__footer  modal__footer--font-normal">
+          <div class="modal__footer-line">
+            <span>Don’t have an account? </span>
+            <a href="" class="more-link">
+              Sign Up
+              <svg class="more-link__icon" width="11" height="11"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="notice-price" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Notice About Price Drop</h4>
+        </div>
+        <div class="modal__body">
+          <form class="modal__form" action="">
+            <div class="field-text  field-text--success">
+              <span class="field-text__name">Email</span>
+              <span class="field-text__input-wrap">
+                <input class="field-text__input" type="email" placeholder="Your email" value="billgates@microsoft.com">
+                <span class="field-text__help-text">User with this email already exists. Please enter your password.</span>
+              </span>
+            </div>
+            <div class="field-text">
+              <span class="field-text__name">Password</span>
+              <span class="field-text__input-wrap">
+                <input class="field-text__input" type="password" placeholder="">
+                <span class="field-text__help-text"><a href="">Forgot your password?</a></span>
+              </span>
+            </div>
+            <div class="field-actions">
+              <button class="btn  btn--white  btn--wide">Get Notice</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="interview" class="modal  modal--md" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Request an interview</h4>
+        </div>
+        <div class="modal__body">
+          <form class="modal__form  grid" action="">
+            <div class="grid__row-md">
+              <div class="field-text  field-text--error  grid__col-md-6">
+                <span class="field-text__name">Company name*</span>
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="text" placeholder="Forbes">
+                  <span class="field-text__help-text">This field is required</span>
+                </span>
+              </div>
+              <div class="field-text  grid__col-md-6">
+                <span class="field-text__name">Company website</span>
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="url" placeholder="http://">
+                </span>
+              </div>
+              <div class="field-text  grid__col-md-6">
+                <span class="field-text__name">Email</span>
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="email" placeholder="Your email" value="billgates@microsoft.com">
+                </span>
+              </div>
+              <div class="field-text  grid__col-md-6">
+                <span class="field-text__name">Contact name</span>
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="text" placeholder="Your name">
+                </span>
+              </div>
+              <div class="field-text  grid__col-md-12">
+                <span class="field-text__name">Your message</span>
+                <span class="field-text__input-wrap">
+                  <textarea class="field-text__input" type="text" placeholder="Type here..."></textarea>
+                </span>
+              </div>
+              <div class="field-actions  grid__col-md-12">
+                <button class="btn  btn--white  btn--wide">Send a Request</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/moment-with-locales.js"></script>
+  @@include('_include/page_bottom.html')
+</body>
+</html>

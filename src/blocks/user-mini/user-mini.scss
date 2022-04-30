@@ -1,0 +1,89 @@
+// В этом файле должны быть стили для БЭМ-блока user-mini, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.user-mini {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  width: 100%;
+
+  img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border-radius: 50%;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__username {
+    display: inline-block;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: $text-color;
+  }
+
+  &__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+
+
+  &--md {
+
+    img {
+      width: 40px;
+      height: 40px;
+      margin-right: 16px;
+    }
+  }
+
+  &--lg {
+
+    img {
+      width: 56px;
+      height: 56px;
+      margin-right: 16px;
+    }
+
+    #{$block-name}__text-wrapper {
+      max-width: calc(100% - 72px);
+    }
+
+    #{$block-name}__username {
+      display: block;
+      width: 100%;
+      margin-bottom: 4px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: $font-size;
+      font-weight: 600;
+      line-height: 1.14;
+    }
+
+    #{$block-name}__user-type {
+      display: block;
+      margin-bottom: 6px;
+      font-size: $font-size--small;
+      line-height: 1.33;
+      color: $gray;
+    }
+
+    #{$block-name}__user-phone {
+      font-size: $font-size;
+      font-weight: 600;
+      line-height: 1.14;
+      color: $text-color;
+      text-decoration: none;
+    }
+  }
+}

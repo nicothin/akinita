@@ -1,0 +1,200 @@
+// В этом файле должны быть стили только для БЭМ-блока table, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.table {
+
+  $block-name:                &;
+
+  margin: 15px 0;
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+
+  td,
+  th {
+    text-align: left;
+    border-bottom: 1px solid $border-color;
+    max-width: 0;
+  }
+
+  th {
+    padding: 3px 8px;
+    vertical-align: bottom;
+    font-size: $font-size--small;
+    line-height: $line-height;
+    color: $gray;
+    font-weight: 500;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  td {
+    vertical-align: middle;
+    padding: 8px;
+    height: 54px;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  &__col {
+
+    &--xs-80 {
+        width: 82px;
+
+      #{$block-name} & {
+        max-width: 82px !important;
+      }
+    }
+
+    &--xs-100 {
+        width: 100px;
+
+      #{$block-name} & {
+        max-width: 100px !important;
+      }
+    }
+
+    &--xs-120 {
+        width: 120px;
+
+      #{$block-name} & {
+        max-width: 120px !important;
+      }
+    }
+
+    &--xs-180 {
+        width: 180px;
+
+      #{$block-name} & {
+        max-width: 180px !important;
+      }
+    }
+
+    &--md-30 {
+
+      @media (min-width: $screen-md) {
+        width: 30px;
+
+        #{$block-name} & {
+          max-width: 30px !important;
+        }
+      }
+    }
+
+    &--md-80 {
+
+      @media (min-width: $screen-md) {
+        width: 80px;
+
+        #{$block-name} & {
+          max-width: 80px !important;
+        }
+      }
+    }
+
+    &--md-100 {
+
+      @media (min-width: $screen-md) {
+        width: 100px;
+
+        #{$block-name} & {
+          max-width: 100px !important;
+        }
+      }
+    }
+
+    &--md-120 {
+
+      @media (min-width: $screen-md) {
+        width: 120px;
+
+        #{$block-name} & {
+          max-width: 120px !important;
+        }
+      }
+    }
+
+    &--md-160 {
+
+      @media (min-width: $screen-md) {
+        width: 160px;
+
+        #{$block-name} & {
+          max-width: 160px !important;
+        }
+      }
+    }
+
+    &--xs-hide {
+      display: none;
+
+      @media (min-width: $screen-md) {
+        display: table-cell;
+      }
+    }
+
+    &--toe {
+      white-space: nowrap;
+    }
+
+    &--right {
+      text-align: right !important;
+    }
+
+    &--danger {
+      color: $color-danger;
+    }
+
+    &--success {
+      color: $color-success;
+    }
+  }
+
+  &__toe {
+    display: block;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__status {
+    color: $gray;
+    display: block;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &--paid {
+      color: $color-success;
+    }
+  }
+
+
+
+  &--first-content {
+    margin-top: -6px;
+  }
+
+  &--col-width-auto {
+
+    td,
+    th {
+      max-width: none;
+    }
+  }
+}

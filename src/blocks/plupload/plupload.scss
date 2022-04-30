@@ -1,0 +1,350 @@
+// В этом файле должны быть стили только для БЭМ-блока plupload, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.plupload_wrapper {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: $gray-ultra-lightest;
+  margin-bottom: 80px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, #D3D6DE 1px, #8991A7 2px, #D3D6DE 3px, #fff 4px, #fff 9px);
+    background-size: 10px 1px;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, #D3D6DE 1px, #8991A7 2px, #D3D6DE 3px, #fff 4px, #fff 9px);
+    background-size: 10px 1px;
+  }
+}
+
+.plupload_container {
+  width: 100%;
+  // padding: 30px;
+  border: none !important;
+  background: transparent !important;
+  color: inherit;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    background-image: linear-gradient(to bottom, #D3D6DE 1px, #8991A7 2px, #D3D6DE 3px, #fff 4px, #fff 9px);
+    background-size: 1px 10px;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 1px;
+    background-image: linear-gradient(to bottom, #D3D6DE 1px, #8991A7 2px, #D3D6DE 3px, #fff 4px, #fff 9px);
+    background-size: 1px 10px;
+  }
+}
+
+.plupload_header {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+  border: none !important;
+  background: transparent !important;
+  color: inherit !important;
+  padding: 0;
+}
+
+.plupload_filelist {
+
+  td,
+  th {
+    vertical-align: top;
+  }
+}
+
+.plupload_filelist_footer {
+  display: table;
+  margin: 15px 0;
+  width: 100% !important;
+  height: auto !important;
+  border: none !important;
+  background: transparent !important;
+  color: inherit !important;
+  font-weight: inherit;
+  padding: 0;
+}
+
+.plupload_view_thumbs {
+  // min-height: 200px;
+}
+
+.plupload_button {
+  width: auto !important;
+  height: auto !important;
+  box-sizing: border-box;
+  display: inline-block !important;
+  margin: 0 10px 0 0;
+  padding: ($field-padding-vertical + 4) $field-padding-horizontal !important;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  vertical-align: middle;
+  user-select: none;
+  text-align: center !important;
+  font-family: inherit !important;
+  font-size: $font-size !important;
+  line-height: $font-size + 6;
+  text-decoration: none !important;
+  text-transform: none;
+  font-weight: 500 !important;
+  border-radius: $border-radius !important;
+  border: 1px solid transparent !important;
+  cursor: pointer !important;
+  box-shadow: 0 1px 3px rgba(#737c94, 0.4);
+  transition: background-color $transition-time;
+  color: $color-main !important;
+  background: #fff !important;
+
+  .plupload_buttons &:nth-child(2),
+  .plupload_buttons &:nth-child(3) {
+    display: none !important;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    border-color: transparent !important;
+    color: $color-main !important;
+    background-color: #fff !important;
+    box-shadow: 0 1px 3px rgba(#737c94, 0.2), 0 1px 5px rgba($color-main, 0.25);
+  }
+
+  &:active,
+  &:focus {
+    @include field-focus;
+  }
+
+  &[aria-disabled="true"],
+  &:disabled {
+    cursor: not-allowed !important;
+    opacity: $opacity;
+    color: $color-main !important;
+    background-color: #fff !important;
+    border-color: transparent;
+
+    @at-root a.btn--disabled {
+      pointer-events: none;
+    }
+  }
+
+  @media (min-width: $screen-md) {
+    padding: $field-padding-vertical $field-padding-horizontal;
+  }
+
+  .ui-button-text {
+    display: inline;
+    padding: 0;
+  }
+
+  .ui-button-icon-primary {
+    display: none;
+  }
+}
+
+.plupload_filelist_content {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+  padding: 0;
+  list-style: none;
+}
+
+.plupload_file {
+  display: block;
+  margin: 10px !important;
+  position: relative;
+  width: 160px !important;
+  height: auto !important;
+  border: none !important;
+  background: transparent !important;
+  color: inherit !important;
+
+  .plupload_file_size {
+    display: block;
+    text-align: left;
+    font-size: $font-size--small;
+    color: $gray-light;
+  }
+}
+
+.plupload_file_thumb {
+  width: auto !important;
+  height: auto !important;
+
+  canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.plupload_dropbox {
+  position: relative;
+  padding: 30px;
+  min-height: 200px;
+}
+
+.plupload_droptext {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: $gray-lighten;
+  transform: translate(-50%, -50%);
+}
+
+.plupload_file_status {
+  text-align: right;
+
+  .plupload_file_progress {
+    background: $color-main !important;
+  }
+}
+
+.plupload_file_size {
+  text-align: right;
+}
+
+.plupload_file_action {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.plupload_file_progress {
+  display: block;
+  position: relative;
+  z-index: 1;
+  height: 6px;
+  line-height: 6px;
+  padding: 0;
+  border: none !important;
+  background: transparent !important;
+  color: inherit !important;
+}
+
+.plupload_file_name_wrapper {
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.plupload_total_status,
+.plupload_total_file_size {
+  font-weight: 500;
+  line-height: 48px;
+}
+
+.plupload_started {
+  margin: 15px 0;
+}
+
+.plupload_progress_container {
+  display: block;
+  position: relative;
+  z-index: 1;
+  height: 16px;
+  line-height: 16px;
+  border: none !important;
+  background: none !important;
+  border-radius: 0 !important;
+  margin-bottom: 5px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 16px;
+    border-radius: 8px;
+    background-color: $gray-lightest;
+  }
+
+  .ui-progressbar-value {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 20px;
+    background: $color-main !important;
+    border-radius: 8px !important;
+    border: none !important;
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+  }
+}
+
+.plupload_message {
+  position: relative;
+  padding: 10px;
+
+  p {
+    margin: 0;
+  }
+
+  .ui-icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+}
+
+.plupload_message_close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16px;
+  height: 16px;
+  margin: 0 !important;
+}
+
+
+
+.plupload_logo,
+.plupload_header_title,
+.plupload_header_text,
+.plupload_filelist_header,
+.plupload_header_content,
+.plupload_clearer,
+.ui-resizable-handle,
+.plupload_hidden,
+.plupload_file_percent,
+.plupload_file_dummy {
+  display: none;
+}

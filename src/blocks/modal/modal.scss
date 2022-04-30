@@ -1,0 +1,657 @@
+// В этом файле должны быть стили только для БЭМ-блока modal, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+$font-family:                 -apple-system, BlinkMacSystemFont, 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif !default;
+$font-family--headings:       $font-family !default;
+
+$font-size--h4:               1.25em !default;
+
+$line-height:                 1.375em !default;
+
+$screen-lg:                   992px !default;
+
+$opacity:                     0.7 !default;
+$transition-time:             0.3s !default;
+
+$z-index-modal:               100 !default;
+
+.modal-open {
+  overflow: hidden;
+}
+
+.modal {
+
+  $block-name:                &;
+
+  display: block !important;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $z-index-modal;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  padding-right: 0 !important;
+  -webkit-overflow-scrolling: touch;
+  background-color: #fff;
+  box-shadow: inset 0 12px 10px -10px rgba(72, 72, 72, 0.1);
+  transition: opacity $transition-time;
+
+  @media (min-width: $screen-md) {
+    background: transparent;
+  }
+
+  .modal-open &.in {
+    overflow-x: hidden;
+    overflow-y: auto;
+    top: $header-height;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    opacity: 1;
+
+    @media (min-width: $screen-md) {
+      top: 0;
+    }
+  }
+
+  .modal-mobile-open &.in {
+    overflow-x: hidden;
+    overflow-y: auto;
+    top: $header-height;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    opacity: 1;
+  }
+
+  &__dialog {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: $border-radius;
+
+    @media (min-width: $screen-md) {
+      position: absolute;
+      left: 50%;
+      // top: $header-height;
+      top: 100px;
+      transform: translate(-50%, 0);
+      width: 360px;
+      height: auto;
+      margin-bottom: 30px;
+      background-color: #fff;
+      border-top-left-radius: $border-radius + 3;
+      border-top-right-radius: $border-radius + 3;
+
+      #{$block-name}--mobile-header & {
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+      }
+
+      html:not(.ie) .in & {
+        opacity: 0;
+        transform: translate(-50%, 50px);
+        animation: show-modal 0.6s 0.2s 1 forwards;
+      }
+
+      @keyframes show-modal {
+        from {
+          opacity: 0;
+          transform: translate(-50%, 50px);
+        }
+        to {
+          opacity: 1;
+          transform: translate(-50%, 0);
+        }
+      }
+    }
+
+    &--bdrs-normal {
+
+      @media (min-width: $screen-md) {
+        border-radius: $border-radius;
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    min-height: 100%;
+    outline: 0;
+  }
+
+  &__header {
+    padding: 45px 30px 0;
+    flex-shrink: 0;
+
+    @media (min-width: $screen-md) {
+
+      #{$block-name}--mobile-header & {
+        padding: 23px 30px 0;
+        background-color: #fff;
+        color: $text-color;
+      }
+
+      // &:not(#{$block-name}__header--mobile-view) {
+        padding: 16px 30px;
+        background-color: $text-color;
+        color: #fff;
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+      // }
+
+      // &--mobile-view {
+      //   padding-top: 23px;
+      // }
+    }
+  }
+
+  &__title {
+    margin: 0 0 25px;
+    padding: 5px 0 10px;
+    font-weight: 400;
+    font-size: ($font-size--h3 + 5);
+    border-bottom: 1px solid $gray-lightest;
+
+    @media (min-width: $screen-md) {
+      font-size: $font-size;
+      padding: 0;
+      margin: 0;
+      border: none;
+
+      #{$block-name}--mobile-header & {
+        margin: 0 0 25px;
+        padding: 5px 0 18px;
+        font-weight: 400;
+        font-size: $font-size--h3;
+        border-bottom: 1px solid $gray-lightest;
+      }
+    }
+  }
+
+  &__close {
+    position: absolute !important;
+    top: 15px;
+    right: 15px;
+
+    @media (min-width: $screen-md) {
+      top: -6px;
+      right: -40px;
+
+      & > span:before,
+      & > span:after {
+        background-color: #fff !important;
+      }
+    }
+  }
+
+  &__body {
+    padding: 0 30px 30px;
+    min-height: 190px;
+
+    .field-text + .field-text {
+      margin-top: 40px;
+    }
+
+    .field-text--modest + .field-text--modest {
+      margin-top: 20px;
+    }
+
+    @media (min-width: $screen-md) {
+      padding-top: 25px;
+      min-height: 0;
+
+      > .modal__form:first-child {
+        margin-top: 10px;
+      }
+
+      .grid {
+
+        .field-text + .field-text {
+            margin-top: 0;
+          }
+      }
+
+      .field-text__name {
+        font-size: $font-size--small;
+      }
+    }
+
+    &--pv5 {
+      padding-top: 5px !important;
+      padding-bottom: 5px !important;
+    }
+
+    &--form-compact {
+      .field-text + .field-text {
+        margin-top: 10px;
+      }
+    }
+
+    &--md-pt0 {
+
+      @media (min-width: $screen-md) {
+        padding-top: 0;
+      }
+    }
+  }
+
+  &__footer {
+    margin: 0 30px;
+    padding: 20px 0;
+    flex-shrink: 0;
+    border-top: 1px solid $gray-lightest;
+
+    @media (min-width: $screen-md) {
+      font-size: $font-size--small;
+      line-height: ($font-size--small + 6);
+      // padding: 15px 0;
+    }
+
+    &--sm-gray {
+      font-size: $font-size--small;
+      color: $gray;
+    }
+
+    &--font-normal {
+
+      @media (min-width: $screen-md) {
+        font-size: $font-size;
+      }
+    }
+
+    &--no-border {
+      margin-top: 0;
+      padding-top: 0;
+      padding-bottom: 40px;
+      border-top: 0;
+    }
+  }
+
+  &__footer-icon {
+    display: inline-block;
+    vertical-align: -0.25em;
+    margin-right: 0.3em;
+    fill: $gray;
+  }
+
+  &__footer-line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__form {
+    margin: 35px 0 0;
+    max-width: 420px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 20px;
+      max-width: none;
+
+      .grid__col-md-6 {
+        margin-bottom: 40px;
+      }
+    }
+
+    & + .share-block {
+      max-width: 420px;
+      margin-top: 20px;
+    }
+
+    &--mt0 {
+      margin-top: 0;
+    }
+
+    &--filter {
+      margin-top: 0;
+
+      .field-drop-checkboxes + .field-drop-checkboxes,
+      .field-text + .field-drop-checkboxes {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  &__form-descr {
+    margin-top: 10px;
+    text-align: center;
+    font-size: $font-size--small;
+  }
+
+  &__descr {
+    margin: 20px 0 0;
+    font-size: $font-size--small;
+    line-height: $line-height;
+    color: $gray;
+  }
+
+  &__datepicker {
+    position: relative;
+    border-bottom: 1px solid $gray-lightest;
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+    .ui-datepicker {
+      max-width: 390px;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-top: 25px;
+    }
+  }
+
+  &__header-info {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid $gray-lightest;
+    padding: 10px 0;
+    margin-bottom: 25px;
+    font-size: $font-size--small;
+    color: $gray;
+
+    .modal__title + & {
+      margin-top: -25px;
+    }
+
+    a {
+      color: $gray;
+    }
+
+    @media (min-width: $screen-md) {
+
+      #{$block-name}--mobile-header & {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__header-info-right {
+    display: flex;
+  }
+
+  &__header-info-left {
+    margin-right: auto;
+  }
+
+  &__news-pict {
+    margin: 0 0 23px;
+
+    img {
+      border-radius: $border-radius;
+    }
+
+    figcaption {
+      display: block;
+      margin: 0;
+      font-size: $font-size--small;
+      color: $gray;
+    }
+  }
+
+  &__gray-text {
+    color: $gray;
+  }
+
+  &__change-photo-img {
+    margin-top: 40px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__bottom-link-wrap {
+    margin: 35px 0 16px;
+    text-align: center;
+    font-size: $font-size + 1;
+    font-weight: 600;
+  }
+
+
+
+  &--open {
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &--md {
+
+    .modal-open &.in .modal__dialog {
+
+      @media (min-width: $screen-md) {
+        width: 560px;
+      }
+    }
+  }
+
+  &--lg {
+
+    .modal-open &.in .modal__dialog {
+
+      @media (min-width: $screen-md) {
+        width: 680px;
+      }
+    }
+  }
+
+  &--xl {
+
+    .modal-open &.in .modal__dialog {
+
+      @media (min-width: $screen-md) {
+        width: 640px;
+      }
+
+      @media (min-width: $screen-lg) {
+        width: 880px;
+      }
+
+      @media (min-width: $screen-xl) {
+        width: 940px;
+      }
+    }
+  }
+
+  &--video {
+
+    @media (min-width: $screen-md) {
+
+      #{$block-name}__body {
+        padding: 0;
+      }
+    }
+  }
+
+  &--mobile-view-screen-md {
+
+    @media (max-width: ($screen-lg - 1)) {
+
+      .modal-mobile-open &.in {
+        top: 0;
+      }
+
+      #{$block-name}__dialog {
+        position: relative;
+        width: 100%;
+        height: calc(100% - #{$header-height});
+        margin-bottom: 0;
+        border-radius: 0;
+        box-shadow: inset 0 12px 10px -10px rgba(72, 72, 72, 0.1);
+      }
+
+      #{$block-name}__header {
+        padding: 45px 30px 0;
+        background-color: transparent;
+        color: inherit;
+      }
+
+      #{$block-name}__title {
+        margin: 0 0 25px;
+        padding: 5px 0 10px;
+        font-weight: 400;
+        font-size: ($font-size--h3 + 5);
+        border-bottom: 1px solid $gray-lightest;
+      }
+
+      #{$block-name}__close {
+        top: 15px;
+        left: auto;
+        right: 15px;
+
+        & > span:before,
+        & > span:after {
+          background-color: $text-color !important;
+        }
+      }
+
+      #{$block-name}__body {
+        padding: 0 30px 30px;
+        min-height: 190px;
+      }
+    }
+  }
+
+  &--mobile-bottom {
+
+    @media (max-width: ($screen-md - 1)) {
+
+      .modal-open &.modal.in {
+        top: 0;
+        overflow: hidden;
+        background-color: rgba(49, 53, 63, 0.4);
+      }
+
+      .modal__dialog {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: auto;
+        max-height: calc(100% - 60px);
+        overflow-y: auto;
+        background: #fff;
+        transition: transform 0.3s;
+        transform: translateY(100%);
+      }
+
+      &.modal.in .modal__dialog {
+        transform: translateY(0);
+      }
+
+      .modal__header {
+        padding: 40px 70px 13px 40px;
+        font-size: $font-size--h3;
+        font-weight: 600;
+      }
+
+      .modal__body {
+        padding: 0 40px;
+      }
+
+      .modal__close {
+        top: 33px;
+        right: 38px;
+      }
+    }
+  }
+
+  &--mobile-bottom-drop {
+
+    @media (max-width: ($screen-md - 1)) {
+
+      .modal__body {
+        padding: 0;
+      }
+
+      .drop-menu {
+        margin-top: 22px;
+        margin-bottom: 10px;
+      }
+
+      .drop-menu__item {
+        position: relative;
+
+        &:not(:last-child):before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 40px;
+          right: 90px;
+          border-bottom: 1px solid $border-color;
+        }
+      }
+
+      .drop-menu__link {
+        padding: 16px 90px 16px 40px;
+      }
+    }
+  }
+}
+
+
+
+@keyframes modal-backdrop-show {
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes modal-content-show {
+
+  0% {
+    opacity: 0;
+    transform: translateY(-2em);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+
+
+.modal-backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: ($z-index-modal - 1);
+
+  @media (min-width: $screen-md) {
+    display: block;
+    background-color: rgba(#1c1d20, 0.85);
+    animation: modal-backdrop-show $transition-time 1;
+  }
+}

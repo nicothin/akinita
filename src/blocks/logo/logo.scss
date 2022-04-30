@@ -1,0 +1,26 @@
+// В этом файле должны быть стили только для БЭМ-блока logo, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 12;
+  white-space: nowrap;
+  min-width: $header-height;
+  height: $header-height;
+
+  picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: $header-height;
+  }
+
+  img {
+    display: block;
+    height: 40px;
+  }
+}

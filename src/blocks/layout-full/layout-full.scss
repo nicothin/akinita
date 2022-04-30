@@ -1,0 +1,157 @@
+// В этом файле должны быть стили только для БЭМ-блока layout-full, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.layout-full {
+  flex-grow: 1;
+  position: relative;
+  padding: 30px 15px 45px;
+  width: 100%;
+  max-width: 1330px;
+  margin: 0 auto;
+
+  @media (min-width: $screen-md) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  &__btns-mobile {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-width: 320px;
+    background-color: #fff;
+    border-top: 1px solid $gray-lightest;
+    box-shadow: 0 -2px 10px rgba(72, 72, 72, 0.1);
+
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
+  }
+
+  &__btns-mobile-item {
+    flex-grow: 1;
+    flex-basis: 50%;
+    font-size: ($font-size + 2);
+    font-weight: 500;
+    text-decoration: none;
+    padding: 20px 10px;
+    color: $text-color;
+    text-align: center;
+    border: 0;
+    background: transparent;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+
+    &:not(:first-child) {
+      border-left: 1px solid $gray-lightest;
+    }
+
+    &[disabled],
+    &--disabled {
+      opacity: 0.6;
+      cursor: default;
+      pointer-events: none;
+
+      &:hover,
+      &:focus {
+        color: inherit;
+      }
+    }
+  }
+
+  &__btns-xs-hide {
+
+    @media (max-width: $screen-sm) {
+      display: none;
+    }
+  }
+
+  &__btns-desktop {
+    display: none;
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+      position: fixed;
+      z-index: 1;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 1330px;
+      padding-left: 30px;
+      padding-right: 30px;
+      background-color: #ff0;
+    }
+  }
+
+  &__btns-desktop-pseudocontent {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0 0 0 300px;
+  }
+
+  &__btns-desktop-inner {
+    position: relative;
+    display: flex;
+    padding: 22px 30px 22px 15px;
+    background-color: #fff;
+    max-width: 810px;
+
+    @media (min-width: $screen-osx) {
+      padding-left: 30px;
+    }
+  }
+
+  &__btns-desktop-shadow {
+    position: absolute;
+    bottom: 100%;
+    left: -10px;
+    right: -15px;
+    height: 30px;
+    overflow: hidden;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 16px;
+      right: 16px;
+      height: 50px;
+      box-shadow: 0 -4px 15px rgba(72,72,72, 0.08);
+    }
+  }
+
+  &__btns-desktop-left {
+    display: flex;
+    align-items: center;
+  }
+
+  &__btns-desktop-right {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+
+
+  &--pb15 {
+    padding-bottom: 15px;
+  }
+
+  &--has-desktop-bottom-btns {
+
+    @media (min-width: $screen-lg) {
+      padding-bottom: 84px;
+    }
+  }
+}

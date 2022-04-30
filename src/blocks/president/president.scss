@@ -1,0 +1,48 @@
+// В этом файле должны быть стили только для БЭМ-блока president, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.president {
+
+  &__text {
+
+    .team-item {
+      margin-bottom: 30px;
+      flex-shrink: 0;
+    }
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      padding-top: 20px;
+
+      .team-item {
+        margin-left: 30px;
+        margin-right: 30px;
+      }
+    }
+
+    @media (min-width: $screen-xxl) {
+      display: flex;
+
+      .team-item {
+        margin-left: 30px;
+        margin-right: 60px;
+      }
+    }
+  }
+
+  &__msg {
+    font-weight: 500;
+    margin: 0 0 20px;
+
+    @media (min-width: $screen-xl) {
+      padding-top: 12px;
+    }
+  }
+
+  &__msg-footer {
+    display: block;
+    margin-top: 12px;
+    font-weight: 400;
+  }
+}

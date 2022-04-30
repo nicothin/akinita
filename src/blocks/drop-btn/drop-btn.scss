@@ -1,0 +1,137 @@
+// В этом файле должны быть стили только для БЭМ-блока drop-btn, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.drop-btn {
+
+  $block-name:                &;
+
+  position: relative;
+
+  &.open {
+    color: $color-main;
+    z-index: 1;
+
+    #{$block-name}__drop {
+      height: auto;
+      width: 230px;
+      max-width: 230px;
+      opacity: 1;
+    }
+
+    #{$block-name}__btn svg {
+      fill: $color-main;
+    }
+  }
+
+  &__btn {
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border: 1px solid $gray-lightest;
+    border-radius: $border-radius;
+    outline: none;
+    color: currentColor;
+    cursor: pointer;
+  }
+
+  &__btn-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__drop {
+    position: absolute;
+    top: 0;
+    left: 60px;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity $transition-time;
+    box-shadow: $shadow;
+
+    &--bottom-right {
+      top: calc(100% + 10px);
+      left: auto;
+      right: 0;
+    }
+  }
+
+  &__drop-close {
+    position: absolute;
+    top: 13px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+
+
+  &--bottom {
+
+    .drop-menu__item {
+
+      &:not(:last-child):after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 40px;
+        right: 90px;
+        height: 1px;
+        background-color: $gray-lightest;
+      }
+    }
+
+    .drop-menu__link {
+      padding-left: 40px;
+      padding-right: 90px;
+      padding-top: 21px;
+      padding-bottom: 21px;
+    }
+
+    #{$block-name}__drop {
+      background: #fff;
+      transform: translateY(100%);
+      transition: transform $transition-time;
+    }
+
+    &.open {
+      color: $color-main;
+      z-index: 1;
+
+      #{$block-name}__backdrop {
+        position: fixed;
+        z-index: 9000;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(49, 53, 63, 0.4);
+      }
+
+      #{$block-name}__drop {
+        position: fixed;
+        z-index: 9001;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        height: auto;
+        width: 100%;
+        max-width: 100%;
+        opacity: 1;
+        transform: translateY(0);
+        box-shadow: none;
+      }
+
+      // #{$block-name}__btn svg {
+      //   fill: $color-main;
+      // }
+    }
+  }
+}

@@ -1,0 +1,244 @@
+// В этом файле должны быть стили только для БЭМ-блока layout-tabs, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.layout-tabs {
+  flex-grow: 1;
+
+  $block-name:                &;
+
+  position: relative;
+
+  @media (min-width: $screen-lg) {
+    display: flex;
+    flex-direction: row;
+    padding-right: 33%;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-width: 320px;
+    background-color: #fff;
+    border-top: 1px solid $gray-lightest;
+    box-shadow: 0 -2px 10px rgba(72, 72, 72, 0.1);
+
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
+  }
+
+  &__list-item {
+    flex-grow: 1;
+    flex-basis: 50%;
+    font-size: ($font-size + 2);
+    font-weight: 500;
+    color: $text-color;
+    text-decoration: none;
+    padding: 20px 10px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &:not(:first-child) {
+      border-left: 1px solid $gray-lightest;
+    }
+
+    &--hidden {
+      display: none;
+    }
+  }
+
+  &__list-item-xs-hide {
+    display: none;
+
+    @media (min-width: $screen-sm) {
+      display: inline;
+    }
+  }
+
+  &__filter {
+    position: fixed;
+    z-index: 2;
+    top: $header-height;
+    left: 0;
+    right: 0;
+
+    @media (min-width: $screen-lg) {
+      right: 33%;
+    }
+  }
+
+  &__tab {
+
+    &--wide {
+      width: 100%;
+      position: relative;
+      z-index: 1;
+      padding-top: 78px;
+      padding-bottom: 62px;
+
+      @media (min-width: $screen-lg) {
+        flex-grow: 1;
+        padding-bottom: 0;
+      }
+
+      @media (min-width: $screen-xl) {
+        padding-top: 100px;
+      }
+    }
+
+    &--map {
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+
+      @media (max-width: ($screen-lg - 1)) {
+        position: fixed;
+        z-index: -1;
+        visibility: hidden;
+        opacity: 0;
+        left: 0;
+        right: 0;
+        top: ($header-height + 78);
+        bottom: 61px;
+        min-width: 320px;
+
+        &#{$block-name}__tab--active {
+          visibility: visible;
+          opacity: 1;
+          z-index: 1;
+          transition: opacity $transition-time;
+        }
+      }
+
+      @media (min-width: $screen-md) and (max-width: ($screen-lg - 1)) {
+        top: ($header-height + 70) !important;
+      }
+
+      @media (min-width: $screen-lg) {
+        position: fixed;
+        top: $header-height;
+        bottom: 61px;
+        right: 0;
+        width: 33%;
+        height: calc(100vh - #{$header-height});
+
+        .pagination {
+          display: none;
+        }
+      }
+    }
+
+    &--aside {
+      position: relative;
+      z-index: 1;
+      overflow: auto;
+      background-color: #fff;
+
+      @media (max-width: ($screen-lg - 1)) {
+        position: fixed;
+        z-index: -1;
+        visibility: hidden;
+        opacity: 0;
+        left: 0;
+        right: 0;
+        // top: ($header-height + 78);
+        top: $header-height;
+        bottom: 61px;
+        min-width: 320px;
+
+        &#{$block-name}__tab--active {
+          visibility: visible;
+          opacity: 1;
+          z-index: 2;
+          transition: opacity $transition-time;
+        }
+      }
+
+      @media (min-width: $screen-lg) {
+        padding: 15px;
+        background-color: $gray-ultra-lightest;
+      }
+
+      @media (min-width: $screen-xl) {
+        padding: 30px;
+      }
+    }
+
+    &--aside-ovv {
+      overflow: visible;
+    }
+  }
+
+  &__map {
+    width: 100%;
+    height: calc(100% - 52px);
+
+    @media (min-width: $screen-lg) {
+      height: 100%;
+    }
+  }
+
+  &__text-wrapper {
+    padding: 15px 15px 30px;
+    width: 100%;
+
+    @media (min-width: $screen-xl) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      max-width: 1040px;
+      padding-right: 130px;
+    }
+  }
+
+  &__hide-lg {
+
+    @media (max-width: ($screen-lg - 1)) {
+      display: none;
+    }
+  }
+
+
+
+
+
+  &--normal-aside {
+
+    @media (min-width: $screen-lg) {
+      padding-right: 0;
+
+      .filter-wrapper {
+        width: 100%;
+      }
+
+      .filter-wrapper__inner {
+        max-width: 1040px;
+      }
+
+      #{$block-name}__tab--text {
+        width: 67%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      #{$block-name}__tab--aside {
+        width: 33%;
+      }
+
+      #{$block-name}__aside {
+        max-width: 360px;
+      }
+    }
+  }
+}

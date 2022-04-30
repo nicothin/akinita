@@ -1,0 +1,172 @@
+// В этом файле должны быть стили только для БЭМ-блока search, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.search {
+  padding: 15px 15px 20px;
+  color: #fff;
+  background-color: #2D5AA4;
+  background-image: url(../img/search-bg--small.jpg);
+  background-position: center;
+  background-size: cover;
+
+  @media (min-width: $screen-md) {
+    padding-bottom: 40px;
+    background-position: left top;
+    background-image: url(../img/search-bg.jpg);
+  }
+
+  @media (min-width: $screen-md) {
+    padding-bottom: 200px;
+  }
+
+  &__title {
+    max-width: $screen-xl;
+    margin: 0 auto;
+    padding: 34px 0 50px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 400;
+
+    @media (min-width: $screen-md) {
+      font-size: 32px;
+      line-height: 42px;
+      padding: 64px 0 55px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 450px;
+    margin: auto;
+    padding: 25px 0 30px 30px;
+    background-color: rgba($gray-darkest, 0.25);
+    border-radius: 3px;
+
+    @media (min-width: $screen-md) {
+      max-width: 800px;
+    }
+  }
+
+  &__form-descr {
+    width: 100%;
+    color: #D1D9E2;
+    font-size: $font-size + 2;
+    margin-bottom: 22px;
+    padding-right: 30px;
+  }
+
+  &__part-buy {
+    flex-basis: 100%;
+    max-width: 100%;
+    padding-right: 30px;
+    padding-bottom: 30px;
+
+    @media (min-width: $screen-sm) {
+      flex-basis: 50%;
+      max-width: 50%;
+    }
+
+    @media (min-width: $screen-md) {
+      order: 1;
+      flex-basis: 25%;
+      max-width: 25%;
+      padding-right: 20px;
+
+      .field-drop-checkboxes__pseudoselect {
+        padding: ($field-padding-vertical + 4) ($field-padding-horizontal + 8) ($field-padding-vertical + 4) $field-padding-horizontal;
+      }
+    }
+  }
+
+  &__part-type {
+    flex-basis: 100%;
+    max-width: 100%;
+    padding-right: 30px;
+    padding-bottom: 30px;
+
+    @media (max-width: ($screen-md - 1)) {
+
+      .field-drop-checkboxes__pseudoselect {
+        font-size: $font-size;
+      }
+    }
+
+    @media (min-width: $screen-sm) {
+      flex-basis: 50%;
+      max-width: 50%;
+    }
+
+    @media (min-width: $screen-md) {
+      order: 3;
+      flex-basis: 25%;
+      max-width: 25%;
+      padding-right: 20px;
+      padding-bottom: 0;
+    }
+  }
+
+  &__part-location {
+    flex-basis: 100%;
+    max-width: 100%;
+    padding-right: 30px;
+    padding-bottom: 30px;
+
+    @media (min-width: $screen-md) {
+      order: 2;
+      flex-basis: 75%;
+      max-width: 75%;
+    }
+  }
+
+  &__part-bedrooms {
+    display: none;
+
+    @media (min-width: $screen-md) {
+      display: block;
+      order: 4;
+      flex-basis: 19%;
+      max-width: 19%;
+      padding-right: 20px;
+    }
+  }
+
+  &__part-price {
+    display: none;
+
+    @media (min-width: $screen-md) {
+      display: block;
+      order: 5;
+      padding-right: 20px;
+      flex-basis: 35%;
+      max-width: 35%;
+    }
+  }
+
+  &__part-btn {
+    flex-basis: 100%;
+    max-width: 100%;
+    padding-right: 30px;
+
+    .field-actions {
+      margin: 0;
+    }
+
+    .btn {
+      width: 100%;
+    }
+
+    @media (min-width: $screen-sm) {
+      padding-left: 50%;
+    }
+
+    @media (min-width: $screen-md) {
+      order: 6;
+      padding-left: 0;
+      flex-basis: 21%;
+      max-width: 21%;
+    }
+  }
+}

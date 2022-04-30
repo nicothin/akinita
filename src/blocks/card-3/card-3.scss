@@ -1,0 +1,538 @@
+// В этом файле должны быть стили для БЭМ-блока card-3, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.card-3 {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+
+  @media (min-width: $screen-osx) {
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: -15px;
+      left: 546px;
+      width: 1px;
+      background: $border-color;
+    }
+
+    &:last-child {
+
+      &:before {
+        bottom: 0;
+      }
+    }
+  }
+
+  &__container {
+    position: relative;
+    max-width: 450px;
+    margin-bottom: 10px;
+    border: 1px solid $gray-lightest;
+    border-radius: $border-radius;
+
+    @media (min-width: $screen-lg) {
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+    }
+  }
+
+  &__img-wrap {
+
+    @media (min-width: $screen-lg) {
+      z-index: 1;
+      width: 137px;
+      min-height: 102px;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+
+    @media (min-width: $screen-lg) {
+      height: 102px;
+    }
+  }
+
+  &__btns {
+    position: absolute;
+    z-index: 2;
+    top: 199px;
+    right: 15px;
+    display: flex;
+
+    @media (min-width: $screen-lg) {
+      top: 57px;
+      left: 9px;
+      right: auto;
+    }
+
+    @media (min-width: $screen-xl) {
+      position: static;
+      z-index: auto;
+      display: flex;
+      align-items: center;
+      padding-right: 20px;
+      padding-top: 24px;
+    }
+
+    @media (min-width: $screen-osx) {
+      position: absolute;
+      top: 9px;
+      right: -20px;
+      left: auto;
+      padding-right: 0;
+      width: 92px;
+    }
+
+    .btn-icon {
+      display: block;
+      width: 36px;
+      height: 36px;
+      margin-left: 15px;
+      border: 1px solid $gray-lightest;
+      border-radius: $border-radius;
+      padding: 0;
+      background: #fff;
+      cursor: pointer;
+
+      @media (min-width: $screen-lg) {
+        margin-left: 5px;
+        transition: all 0.3s;
+
+        &:hover,
+        &:focus {
+          background: $gray-lightest;
+        }
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+
+      @media (min-width: $screen-xl) {
+        margin-left: 15px;
+      }
+
+      svg {
+        fill: $gray;
+      }
+    }
+
+    .btn-icon--active {
+      background: $gray-lightest;
+    }
+
+    .drop-btn .btn-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .btn-icon__inner {
+      width: 100%;
+      height: 100%;
+    }
+
+    .open .btn-icon {
+
+      @media (min-width: $screen-lg) {
+        background: $gray-lightest;
+      }
+    }
+
+    .drop-btn .btn-icon {
+
+      @media (min-width: $screen-lg) {
+        margin-left: 5px;
+      }
+
+      @media (min-width: $screen-xl) {
+        margin-left: 15px;
+      }
+    }
+  }
+
+  &__text-wrap {
+    padding: 20px;
+    font-size: $font-size--small;
+    line-height: 1.33;
+    color: $gray;
+    text-align: right;
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
+      max-width: calc(100% - 137px);
+      padding-top: 24px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-left: 24px;
+      padding-right: 24px;
+      max-width: calc(100% - 249px);
+    }
+
+    @media (min-width: $screen-osx) {
+      padding-top: 31px;
+      padding-right: 48px;
+      max-width: calc(100% - 536px);
+    }
+  }
+
+  &__text-inner {
+    min-width: 0;
+    width: 100%;
+    text-align: left;
+
+    @media (min-width: $screen-sm) {
+      display: flex;
+    }
+  }
+
+  &__text-icon {
+    flex-shrink: 0;
+    margin-top: 5px;
+    margin-right: 20px;
+  }
+
+  &__name-wrap {
+    padding-bottom: 20px;
+    flex-grow: 1;
+    min-width: 0;
+
+    @media (min-width: $screen-sm) {
+      padding-bottom: 0;
+    }
+
+    @media (min-width: $screen-lg) {
+
+      _:-ms-fullscreen, :root & {
+        max-width: 50%;
+        margin-right: auto;
+      }
+    }
+  }
+
+  &__name {
+    margin: 0 0 5px;
+    font-size: $font-size;
+    font-weight: 600;
+    color: $text-color;
+    line-height: 1.43;
+
+    @media (min-width: $screen-sm) {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    a {
+      color: $text-color;
+      transition: color 0.3s;
+
+      &:hover,
+      &:focus {
+        color: $link-color--hover;
+      }
+    }
+  }
+
+  &__name-descr {
+    margin: 0;
+  }
+
+  &__price-main-wrap {
+    flex-shrink: 0;
+
+    @media (min-width: $screen-sm) {
+      margin-left: 20px;
+    }
+  }
+
+  &__price-main {
+    margin: 0 0 5px;
+    font-size: $font-size;
+    font-weight: 600;
+    color: $text-color;
+    line-height: 1.43;
+    white-space: nowrap;
+  }
+
+  &__price-main-descr {
+    margin: 0;
+  }
+
+  &__del {
+    position: absolute;
+    z-index: 1;
+    top: -9px;
+    right: -9px;
+
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
+  }
+
+  &__info-btn {
+    display: none;
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 36px;
+      height: 36px;
+      border: 1px solid $border-color;
+      border-radius: $border-radius;
+      background: #fff;
+      cursor: pointer;
+    }
+
+    &:hover,
+    &:focus {
+      background: $gray-lightest;
+    }
+
+    svg {
+      fill: $gray !important;
+    }
+  }
+
+  // Статистика (убрал, ибо нелогично)
+  // &__property-stats {
+  //   transform: translate3d(0,0,0);
+
+  //   .property-stats {
+  //     margin-bottom: 0;
+  //   }
+
+  //   &--hidden {
+  //     display: none;
+  //   }
+  // }
+
+  &__status-wrap {
+    width: 100%;
+
+    @media (min-width: $screen-lg) {
+      margin-top: -20px;
+    }
+
+    @media (min-width: $screen-osx) {
+      flex-shrink: 0;
+      width: 305px;
+      margin-top: 0;
+      padding-top: 31px;
+    }
+
+    &--hidden {
+      display: none;
+    }
+  }
+
+  &__status {
+    padding: 0 20px;
+
+    &--mobile {
+
+      @media (min-width: $screen-lg) {
+        display: none;
+      }
+
+      .card-3__status-descr {
+        text-align: center;
+      }
+
+      .btn {
+        margin-bottom: 10px;
+      }
+
+      .card-3__status-left {
+        padding-right: 0;
+      }
+    }
+
+    &--desktop {
+      display: none;
+
+      @media (min-width: $screen-lg) {
+        display: block;
+        width: 535px;
+        padding-left: 209px;
+      }
+
+      @media (min-width: $screen-xl) {
+        padding-left: 213px;
+      }
+
+      @media (min-width: $screen-osx) {
+        width: auto;
+        padding-left: 0;
+      }
+
+      .btn {
+
+        @media (min-width: $screen-md) {
+          padding-left: 9px;
+          padding-right: 9px;
+        }
+      }
+    }
+
+    &--tar {
+      text-align: right;
+
+      .card-3__status-descr {
+        text-align: right;
+      }
+    }
+
+    &--all {
+      text-align: right;
+
+      @media (min-width: $screen-lg) {
+        padding-left: 209px;
+        text-align: left;
+      }
+
+      @media (min-width: $screen-xl) {
+        padding-left: 213px;
+      }
+
+      @media (min-width: $screen-osx) {
+        padding-left: 0;
+      }
+    }
+  }
+
+  &__status-inner {
+    display: flex;
+  }
+
+  &__status-left {
+    flex-grow: 1;
+    min-width: 0;
+    padding-right: 20px;
+
+    @media (min-width: $screen-osx) {
+      width: 100%;
+      padding-right: 10px;
+    }
+  }
+
+  &__status-right {
+    flex-shrink: 0;
+    padding-left: 20px;
+
+    @media (min-width: $screen-lg) {
+      min-width: 120px;
+      padding-left: 0;
+    }
+
+    &--date {
+      text-align: right;
+
+      @media (min-width: $screen-lg) {
+        min-width: 0;
+      }
+
+      @media (min-width: $screen-osx) {
+        padding-right: 20px;
+      }
+    }
+  }
+
+  &__status-title {
+    margin: 0 0 5px;
+    font-size: $font-size;
+    font-weight: 600;
+    color: $text-color;
+    line-height: 1.43;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__status-title-danger {
+    color: $color-danger-2;
+  }
+
+  &__status-title-success {
+    color: $color-success;
+  }
+
+  &__status-descr {
+    margin: 5px 0 20px;
+    font-size: $font-size--small;
+    line-height: 1.33;
+    color: $gray;
+
+    strong {
+      color: $text-color;
+      font-weight: 700;
+    }
+  }
+
+  &__remove {
+    transform: translate(7px, -7px);
+
+    @media (min-width: $screen-lg) {
+      position: absolute;
+      top: 30px;
+      right: -22px;
+      transform: none;
+    }
+
+    @media (min-width: $screen-osx) {
+      top: 39px;
+      right: -63px;
+    }
+  }
+
+  &__new-offer {
+    margin-bottom: 20px !important;
+  }
+
+
+
+
+
+  &--accent {
+
+    #{$block-name}__container {
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        background: $gray-ultra-lightest-2;
+
+        @media (min-width: $screen-osx) {
+          right: -40px;
+        }
+      }
+    }
+  }
+
+}

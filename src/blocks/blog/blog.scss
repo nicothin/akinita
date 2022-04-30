@@ -1,0 +1,129 @@
+// В этом файле должны быть стили только для БЭМ-блока blog, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.blog {
+  padding: 30px 15px;
+
+  @media (min-width: $screen-lg) {
+    padding: 30px;
+  }
+
+  &__cats {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__cats-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 35px;
+    padding: 0;
+    list-style: none;
+    color: $gray;
+
+    li {
+
+      &:not(:last-child) {
+
+        &:after {
+          content: '|';
+          color: $gray;
+          display: inline-block;
+          margin: 0 0.5em;
+        }
+      }
+    }
+  }
+
+  &__post-list-wrap {
+
+    @media (min-width: $screen-md) {
+      margin: auto;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin: 0;
+    }
+
+    @media (min-width: $screen-xl) {
+      max-width: 100%;
+    }
+  }
+
+  &__post-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media (min-width: $screen-md) {
+      justify-content: flex-start;
+      margin: 0 -15px;
+
+      .post,
+      .subscribing {
+        flex-basis: calc(50% - 30px);
+        max-width: calc(50% - 30px);
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: 30px;
+      }
+
+      .post--accent {
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+    }
+
+    @media (min-width: $screen-xl) {
+      .post,
+      .subscribing {
+        flex-basis: calc(33.3333% - 30px);
+        max-width: calc(33.3333% - 30px);
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: 30px;
+      }
+
+      .post--accent {
+        flex-basis: calc(66.6666% - 30px);
+        max-width: calc(66.6666% - 30px);
+      }
+    }
+
+    @media (min-width: $screen-xxl) {
+      .post,
+      .subscribing {
+        flex-basis: calc(25% - 30px);
+        max-width: calc(25% - 30px);
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: 30px;
+      }
+
+      .post--accent {
+        flex-basis: calc(50% - 30px);
+        max-width: calc(50% - 30px);
+      }
+    }
+
+    .subscribing {
+      margin-bottom: 15px;
+      width: 100%;
+      max-width: 450px;
+
+      @media (min-width: $screen-sm) and (max-width: ($screen-md - 1)) {
+        padding-left: 90px;
+        padding-right: 90px;
+        padding-bottom: 56px;
+      }
+
+      @media (min-width: $screen-lg) and (max-width: ($screen-xl - 1)) {
+        padding-left: 90px;
+        padding-right: 90px;
+        padding-bottom: 56px;
+      }
+    }
+  }
+}

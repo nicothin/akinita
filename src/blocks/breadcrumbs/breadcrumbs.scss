@@ -1,0 +1,28 @@
+// В этом файле должны быть стили только для БЭМ-блока breadcrumbs, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+$line-height:                 1.375em !default;
+
+$text-color:                  hsl(0, 0%, 10%) !default;
+
+.breadcrumbs {
+  font-size: $font-size--small;
+
+  &__item {
+    display: inline-block;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 1.6em;
+
+      &:after {
+        content: '>';
+        position: absolute;
+        top: 0;
+        right: -1.2em;
+        color: $gray;
+      }
+    }
+  }
+}

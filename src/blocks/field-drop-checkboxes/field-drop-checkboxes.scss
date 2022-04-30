@@ -1,0 +1,272 @@
+// В этом файле должны быть стили только для БЭМ-блока field-drop-checkboxes, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.field-drop-checkboxes {
+
+  $block-name:                &;
+
+  position: relative;
+
+  .field-checkbox__name {
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: $color-main;
+    }
+  }
+
+  input:checked ~ .field-checkbox__name-text {
+    color: $color-main;
+  }
+
+  &--fz-small {
+    font-size: $font-size--small;
+
+    #{$block-name}__pseudoselect {
+      font-size: $font-size--small;
+    }
+  }
+
+  &__text-name {
+    display: block;
+    margin-bottom: 11px;
+    line-height: 1;
+    font-weight: 400;
+    color: $gray;
+
+    &--sm {
+      font-size: $font-size--small;
+      font-weight: 400;
+    }
+  }
+
+  &__name {
+    display: block;
+    margin-bottom: 13px;
+    line-height: 1;
+    font-weight: 500;
+  }
+
+  &__pseudoselect {
+    display: block;
+    min-height: 48px;
+    position: relative;
+    padding: ($field-padding-vertical + 4) ($field-padding-horizontal + 18) ($field-padding-vertical + 4) $field-padding-horizontal;
+    font-size: $font-size;
+    line-height: $font-size + 6;
+    font-family: inherit;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: $text-color;
+    background-color: #fff;
+    border: 1px solid $gray-lightest;
+    border-radius: $border-radius;
+    cursor: pointer;
+    transition: color $transition-time;
+
+    @media (min-width: $screen-md) {
+      min-height: 40px;
+      padding: $field-padding-vertical ($field-padding-horizontal + 18) $field-padding-vertical $field-padding-horizontal;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      width: 6px;
+      height: 6px;
+      border-bottom: 1px solid currentColor;
+      border-right: 1px solid currentColor;
+      transform: translateY(-70%) rotate(45deg);
+      transition: transform $transition-time, border-color $transition-time;
+    }
+
+    &--unselected {
+      color: $gray;
+    }
+  }
+
+  &__pseudoselect-text-xxl-show {
+    display: none;
+
+    @media (min-width: $screen-xxl) {
+      display: inline;
+    }
+  }
+
+  &__drop {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    z-index: 1;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    color: $text-color;
+    background-color: #fff;
+    border: 1px solid $gray-lightest;
+    border-radius: $border-radius;
+    box-shadow: $shadow;
+    transition: opacity $transition-time;
+
+    .field-checkbox__name {
+      display: block;
+    }
+
+    #{$block-name}.open & {
+      width: 100%;
+      min-width: 120px;
+      height: auto;
+      padding: 10px 13px;
+      opacity: 1;
+      overflow: visible;
+
+      &--separated-checks {
+        padding: 0;
+
+        .field-checkbox__name {
+          padding: 13px;
+        }
+
+        @at-root .field-checkbox__name--check-only input:checked ~ .field-checkbox__name-text:after {
+            top: 17px;
+            left: 15px;
+          }
+
+        .field-checkbox__input-wrap {
+          padding: 0;
+        }
+
+        .field-checkbox__input-wrap:not(:last-child) {
+          position: relative;
+
+          &:after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background-color: $gray-lightest;
+          }
+        }
+      }
+    }
+
+    &--to-left {
+      left: auto;
+      right: 0;
+    }
+  }
+
+  &.open {
+
+    #{$block-name}__pseudoselect {
+      color: $color-main;
+
+      &:after {
+        border-color: $color-main;
+        transform: translateY(-30%) rotate(225deg);
+      }
+    }
+  }
+
+
+
+  &--error {
+
+    #{$block-name}__pseudoselect {
+      border-color: $color-danger;
+      color: $color-danger;
+    }
+  }
+
+  &--disabled {
+
+    #{$block-name}__pseudoselect {
+      cursor: not-allowed;
+      color: $gray;
+    }
+  }
+
+  // &--bg-error {
+
+  //   #{$block-name}__pseudoselect {
+  //     border-color: $color-danger;
+  //     background-color: $color-danger;
+  //     color: #fff;
+  //   }
+  // }
+
+  &--lg {
+    margin-bottom: 28px;
+
+    &.open #{$block-name}__drop {
+      padding: 21px 18px;
+
+      @media (min-width: $screen-lg) {
+        padding: 21px 24px;
+      }
+    }
+
+    #{$block-name}__text-name {
+      margin-bottom: 18px;
+    }
+
+    #{$block-name}__pseudoselect {
+      padding: 18px 60px 18px 18px;
+      font-size: $font-size + 4;
+      font-weight: 700;
+
+      @media (min-width: $screen-lg) {
+        padding-left: 24px;
+      }
+
+      &:after {
+        right: 30px;
+      }
+    }
+
+    .field-checkbox__name {
+      padding-top: 4px;
+      padding-bottom: 4px;
+      font-size: $font-size + 4;
+      font-weight: 700;
+      color: $gray;
+
+      &:hover,
+      &:focus {
+        color: $color-main;
+      }
+    }
+  }
+
+  &--simple {
+      border-top: 1px solid $gray-lightest;
+
+    & > #{$block-name}__pseudoselect {
+      margin-top: 20px;
+      background-color: transparent;
+      border: none;
+      font-size: $font-size + 4;
+      font-weight: 700;
+      color: $gray !important;
+      padding-left: 0 !important;
+    }
+
+    & > #{$block-name}__drop {
+      position: static;
+      padding: 20px 0 0 !important;
+      margin: 0;
+      box-shadow: none;
+      border: none;
+      background-color: transparent;
+    }
+  }
+}

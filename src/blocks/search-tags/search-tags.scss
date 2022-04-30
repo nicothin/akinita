@@ -1,0 +1,37 @@
+// В этом файле должны быть стили для БЭМ-блока search-tags, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.search-tags {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  &__inner {
+    // display: flex;
+    // flex-wrap: wrap;
+    font-size: $font-size--h3;
+  }
+
+  &__text {
+    display: inline-block;
+    vertical-align: baseline;
+    margin: 0 4px 4px 0;
+    transform: translateY(-3px);
+  }
+
+  &__item {
+    display: inline-block;
+    height: 30px;
+    margin: 0 4px 4px 0;
+    vertical-align: middle;
+
+    &--hidden {
+      display: none;
+    }
+  }
+
+  &__show-all-wrap {
+    margin-top: 4px;
+    text-align: right;
+  }
+}

@@ -1,0 +1,244 @@
+// В этом файле должны быть стили только для БЭМ-блока contacts-map, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.contacts-map {
+  max-width: 100%;
+
+  .layout-text__h2 {
+    margin-top: 10px;
+    margin-bottom: 35px;
+  }
+
+  &__location-wrapper {
+    position: relative;
+    flex-grow: 1;
+
+    .field-text__input {
+      padding-left: 46px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-left: 42px;
+
+      .field-text__input {
+        padding: $field-padding-vertical $field-padding-horizontal;
+      }
+    }
+  }
+
+  &__location-icon {
+    position: absolute;
+    top: 50%;
+    left: 9px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 1px solid $gray-lightest;
+
+    @media (min-width: $screen-xl) {
+      left: 0;
+    }
+
+    svg {
+      fill: $gray;
+    }
+  }
+
+  &__arrow-icon {
+    display: none;
+
+    @media (min-width: $screen-xl) {
+      display: block;
+      margin: 0 7px;
+
+      svg {
+        fill: $gray;
+      }
+    }
+  }
+
+  &__search-line {
+    margin-bottom: 25px;
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .field-text {
+      margin-bottom: 15px;
+
+      @media (min-width: $screen-xl) {
+        margin-bottom: 0;
+        flex-grow: 1;
+      }
+    }
+
+    .btn {
+      margin-top: 8px;
+
+      @media (min-width: $screen-xl) {
+        margin-top: 0;
+        margin-left: 30px;
+        min-width: 220px;
+      }
+    }
+  }
+
+  &__map-wrapper {
+    width: 100%;
+    position: relative;
+  }
+
+  &__map {
+    width: 100%;
+    height: 410px;
+    margin-bottom: 20px;
+    background-color: $gray-lightest;
+
+    &--mb10 {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__data {}
+
+  &__data-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    li {
+
+      @media (min-width: $screen-xl) {
+        flex-basis: 50%;
+        padding-right: 30px;
+      }
+
+      @media (min-width: $screen-osx) {
+        flex-basis: 45%;
+        padding-right: 30px;
+      }
+    }
+
+    b {
+      font-weight: 500;
+    }
+
+    a {
+      color: $text-color;
+
+      &:hover,
+      &:focus {
+        color: $color-main--accent;
+      }
+    }
+  }
+
+  &__data-item {
+    margin-bottom: 6px;
+  }
+
+  &__prop-text {
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: $font-size--small;
+  }
+
+  &__members {
+    display: none;
+    position: absolute;
+    right: 60px;
+    bottom: 10px;
+
+    // @media (min-width: $screen-md) {
+      display: flex;
+      align-items: center;
+    // }
+  }
+
+  &__members-list {
+    position: relative;
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+  }
+
+  &__members-item {
+    position: relative;
+    z-index: 0;
+
+    &:not(:first-child) {
+      margin-left: -26px;
+    }
+
+    a {
+      display: block;
+      width: 64px;
+      height: 64px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    img {
+      display: block;
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+    }
+
+    &--num {
+      z-index: -1;
+    }
+
+    &--active {
+      z-index: 1;
+    }
+  }
+
+  &__members-num {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 60px;
+    height: 60px;
+    padding: 12px;
+    background-color: $gray-lighten;
+    color: $text-color;
+    font-weight: 500;
+  }
+
+  &__members-btn {
+    display: none;
+    margin-left: 20px;
+
+    @media (min-width: $screen-md) {
+      display: inline-block;
+    }
+  }
+
+  &__bottom-descr {
+    margin: 0;
+    font-weight: 500;
+  }
+
+
+
+  &--collect-drachma {
+    margin: 40px 0 0;
+  }
+}
