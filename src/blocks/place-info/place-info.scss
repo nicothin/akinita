@@ -1,0 +1,108 @@
+// В этом файле должны быть стили для БЭМ-блока place-info, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.place-info {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  position: relative;
+  width: 100%;
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+
+  @media (min-width: $screen-md) {
+    min-height: 221px;
+    padding-left: 420px;
+  }
+
+  @media (min-width: $screen-lg) {
+    min-height: 248px;
+    padding-left: 460px;
+  }
+
+  @media (min-width: $screen-xl) {
+    min-height: 316px;
+    padding-left: 602px;
+  }
+
+  &__title {
+    margin: 0 0 24px;
+    font-size: $font-size--h2;
+    font-weight: 500;
+    line-height: 1;
+
+    @media (min-width: $screen-xl) {
+      font-size: $font-size--h1;
+    }
+  }
+
+  &__img-wrap {
+    margin-bottom: 24px;
+    aspect-ratio: 345 / 204;
+
+    @media (min-width: $screen-md) {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      bottom: 0;
+      left: 15px;
+      width: 375px;
+      margin: 0;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 420px;
+    }
+    @media (min-width: $screen-xl) {
+      aspect-ratio: 563 / 316;
+      width: 563px;
+
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: $font-size--h3;
+    line-height: 1.25;
+  }
+
+  &__list-item {
+    position: relative;
+    padding-left: 44px;
+    min-height: 32px;
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text {
+    margin: 0 0 6px;
+  }
+
+  &__price {
+    color: $gray;
+  }
+
+  &__link {
+    font-weight: 500;
+  }
+}

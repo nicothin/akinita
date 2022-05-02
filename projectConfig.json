@@ -170,7 +170,8 @@
     "listed-homes": [],
     "carousel-btn": [],
     "bidding-system": [],
-    "popular-places": []
+    "popular-places": [],
+    "place-info": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

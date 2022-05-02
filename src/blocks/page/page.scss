@@ -201,6 +201,10 @@
     @media (min-width: $screen-xl) {
       margin-bottom: 84px;
     }
+
+    &--content {
+      margin-bottom: 48px;
+    }
   }
 
   &__main-content-listed-homes {
@@ -224,6 +228,53 @@
 
     @media (min-width: $screen-xl) {
       margin-bottom: 100px;
+    }
+  }
+
+  &__main-content-filter {
+    display: none;
+
+    @media (min-width: $screen-xl) {
+      display: block;
+      width: 100%;
+      max-width: 980px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 20px 15px !important;
+    }
+  }
+
+  &__main-content-breadcrumbs {
+    width: 100%;
+    max-width: 980px;
+    margin: 17px auto 16px;
+    padding: 0 15px;
+
+    @media (min-width: $screen-xl) {
+      margin-top: 0;
+      margin-bottom: 24px;
+      padding-bottom: 0;
+    }
+  }
+
+  &__main-content-place-info {
+    margin-bottom: 44px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 100px;
+    }
+  }
+
+  &__main-content-explore-area {
+    width: 100%;
+    max-width: 980px;
+    margin: 17px auto 16px;
+    padding: 0 15px;
+
+    @media (min-width: $screen-xl) {
+      margin-top: 0;
+      margin-bottom: 24px;
+      padding-bottom: 0;
     }
   }
 
