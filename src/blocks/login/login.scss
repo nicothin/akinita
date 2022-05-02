@@ -146,4 +146,16 @@
       transform: translateY(-30%) rotate(225deg);
     }
   }
+
+  &--akinita {
+
+    #{$block-name}__user-info {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    #{$block-name}__avatar {
+      margin-right: 0;
+    }
+  }
 }
