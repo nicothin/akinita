@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   fill="none"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="arrow-2-right.svg"
+   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <path
+     d="M 0.85717361,0 A 0.85715213,0.85715213 0 0 1 1.4632068,0.25111883 L 6.6061196,5.3940315 a 0.85723785,0.85723785 0 0 1 0,1.2120668 L 1.4632068,11.74901 a 0.85715213,0.85715213 0 0 1 -1.21206718,0 0.85715213,0.85715213 0 0 1 0,-1.212066 L 4.7880193,6.000065 0.25113962,1.4631855 a 0.85715213,0.85715213 0 0 1 0,-1.21206667 A 0.85715213,0.85715213 0 0 1 0.85717361,0 Z" />
+</svg>

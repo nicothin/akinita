@@ -1,6 +1,10 @@
-# Проект с gulp [![devDependencies Status](https://david-dm.org/nicothin/greeceru/dev-status.svg)](https://david-dm.org/nicothin/greeceru?type=dev) [![dependencies Status](https://david-dm.org/nicothin/greeceru/status.svg)](https://david-dm.org/nicothin/greeceru)
+# Проект с gulp
 
-**ВНИМАНИЕ** Проект делался относительно давно. Для запуска нужен nodeJS 10-й или 11-й версии, ибо версии 12+ не поддерживают то, что нужно gulp 3, с которым сделана автоматизация. Рекомендовано использовать nvm.
+**ВНИМАНИЕ** Для запуска нужен nodeJS 10-й или 11-й версии, ибо версии 12+ не поддерживают то, что нужно gulp 3, с которым сделана автоматизация. Используй nvm.
+
+https://docs.google.com/document/d/1QQmY4IuD4wYqYOWQ1BHqCkyBiiKAreeiu3NLcP_laCc/edit
+
+https://www.figma.com/file/m7tbooJfqSTppw57xfapCe/%D0%9B%D0%B8%D1%87%D0%BD%D1%8B%D0%B9-%D0%BA%D0%B0%D0%B1%D0%B8%D0%BD%D1%82%D0%B5%2F-Payment-flow?node-id=91%3A46
 
 <table>
   <thead>

@@ -4,6 +4,8 @@
 
 .tabs {
 
+  $block-name: &;
+
   &__list {
     display: flex;
     position: relative;
@@ -63,8 +65,7 @@
     }
   }
 
-  &__content-wrap {
-  }
+  &__content-wrap {}
 
   &__item {
     padding: 5px;
@@ -93,5 +94,42 @@
 
   &--move-top-10 {
     margin-top: -10px;
+  }
+
+  &--tags {
+
+    li {
+      flex-grow: 0;
+      width: auto;
+    }
+
+    #{$block-name}__list {
+      column-gap: 12px;
+
+      a {
+        min-width: 0;
+        padding: 8px 20px;
+        border: 2px solid $color-main !important;
+        border-radius: 20px;
+        font-size: $font-size--h3;
+        line-height: 125%;
+        font-weight: 500;
+        color: $color-main;
+      }
+
+      & li.active a {
+        color: #fff;
+        background: $color-main;
+      }
+
+      &:before {
+        display: none;
+      }
+    }
+
+    #{$block-name}__item {
+      margin: 0;
+      padding: 0;
+    }
   }
 }

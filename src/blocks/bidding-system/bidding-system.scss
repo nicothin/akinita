@@ -1,0 +1,120 @@
+// В этом файле должны быть стили для БЭМ-блока bidding-system, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.bidding-system {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  width: 100%;
+  max-width: 980px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 15px;
+
+  @media (min-width: $screen-lg) {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__header {
+    margin-bottom: 32px;
+
+    @media (min-width: $screen-lg) {
+      width: 308px;
+      min-width: 308px;
+      margin-right: 28px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    margin: 0 0 8px;
+    flex-grow: 1;
+    font-size: $font-size--h3 + 2;
+    line-height: 133%;
+    font-weight: 500;
+
+    @media (min-width: $screen-lg) {
+      font-size: $font-size--h1;
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    font-size: $font-size--h3;
+    line-height: 150%;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @media (min-width: $screen-lg) {
+      padding-top: 5px;
+    }
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      column-gap: 24px;
+    }
+  }
+
+  &__list-item {
+    position: relative;
+    flex-basis: 50%;
+    padding-left: 84px;
+    min-height: 60px;
+
+    &:not(:last-child) {
+      margin-bottom: 32px;
+
+      @media (min-width: $screen-xl) {
+        margin-bottom: 0;
+      }
+    }
+
+    p {
+      margin: 0;
+      font-size: $font-size--h3;
+      line-height: 150%;
+    }
+  }
+
+  &__icon-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: $gray-ultra-lightest;
+  }
+
+  &__subtitle {
+    margin: 0 0 12px;
+    font-size: $font-size--h3;
+    font-weight: 500;
+    line-height: 125%;
+
+    @media (min-width: $screen-xl) {
+      font-size: $font-size--h3 + 2;
+      font-weight: 600;
+    }
+  }
+
+  &__label {
+    display: none;
+
+    @media (min-width: $screen-lg) {
+      display: block;
+      margin-bottom: 16px;
+    }
+  }
+}

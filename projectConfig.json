@@ -163,7 +163,14 @@
     "msg-bottom": [],
     "scroll": [],
     "field-selectric": [],
-    "search-tags": []
+    "search-tags": [],
+    "explore-items": [],
+    "card-4": [],
+    "property-owner-2": [],
+    "listed-homes": [],
+    "carousel-btn": [],
+    "bidding-system": [],
+    "popular-places": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

@@ -181,248 +181,326 @@
           </form>
         </section>
 
-        <section class="property-owner">
-          <h2 class="property-owner__title">Are you a property owner?</h2>
-          <p class="property-owner__descr">Join Greece.Ru community &amp; get access to customers worldwide</p>
-          <p class="property-owner__btn">
-            <button class="btn  btn--white  btn--lg  property-owner__item-btn">List Your Property Online</button>
-          </p>
-        </section>
-
-        <section class="youtube-content">
-          <h2 class="youtube-content__title">Youtube Content</h2>
-          <p class="youtube-content__descr">Join Greece.Ru youtube community &amp; get all videos for free at our channel</p>
-          <div class="youtube-content__row">
-            <div class="youtube-content__embed  embed-responsive  embed-responsive--16-9">
-              <iframe src="https://www.youtube.com/embed/HNpLuXOg7xQ" frameborder="0" allowfullscreen></iframe>
+        <section class="explore-items  page__main-content-explore">
+          <header class="explore-items__header">
+            <h2 class="explore-items__title">Explore homes on Akinita</h2>
+            <div class="explore-items__header-btns">
+              <button class="carousel-btn  explore-items__carousel-btn" type="button" id="explore-items-header-btn-left">
+                <svg width="7" height="12">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-2-left"></use>
+                </svg>
+              </button>
+              <button class="carousel-btn  explore-items__carousel-btn" type="button" id="explore-items-header-btn-right">
+                <svg width="7" height="12">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-2-right"></use>
+                </svg>
+              </button>
             </div>
-            <div class="youtube-content__text-wrap">
-              <div class="youtube-content__text-inner">
-                <h3 class="youtube-content__subtitle">Some title can be place here</h3>
-                <ol>
-                  <li>1. Northern Virginia Is Keeping Amazon’s 25,000 Jobs, and Wants You to Know It. <a href="" class="youtube-content__more-link">Read more</a></li>
-                  <li>2. Are Your Children Racking Up Charges From Mobile Games? Here’s How to Fight Back. <a href="" class="youtube-content__more-link">Read more</a></li>
-                  <li>3. How to Make a 3-D Model of, your Home Renovation Vision. <a href="" class="youtube-content__more-link">Read more</a></li>
-                  <li>4. Germany Is Wary of a Digital World (but Loves Its E-Toothbrushes). <a href="" class="youtube-content__more-link">Read more</a></li>
-                  <li>5. When the Tools of the Trade Are the Keyboard and Mouse. <a href="" class="youtube-content__more-link">Read more</a></li>
-                </ol>
-                <p>Welcome to IEM Katowice 2019 CS:GO Major. The best 24 teams from around the world will compete</p>
-                <a href="" class="btn  btn--youtube  youtube-content__btn">
-                  <svg width="32" height="32"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#youtube"></use></svg>
-                  Subscribe to our channel
-                </a>
-              </div>
+          </header>
+
+          <div class="explore-items__carousel-wrap">
+            <div class="explore-items__carousel-btns">
+              <button class="explore-items__carousel-btn  explore-items__carousel-btn--left  carousel-btn  carousel-btn--lg" type="button" id="explore-items-btn-left">
+                <svg width="7" height="12">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-2-left"></use>
+                </svg>
+              </button>
+              <button class="explore-items__carousel-btn  explore-items__carousel-btn--right  carousel-btn  carousel-btn--lg" type="button" id="explore-items-btn-right">
+                <svg width="7" height="12">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-2-right"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="explore-items__carousel  owl-carousel" id="explore-items-carousel">
+              @@include('blocks/card-4/card-4.html', {"pictUrl": "img/demo-card-pict-01.jpg"})
+              @@include('blocks/card-4/card-4.html', {"pictUrl": "img/demo-card-pict-02.jpg"})
+              @@include('blocks/card-4/card-4.html', {"pictUrl": "img/demo-card-pict-01.jpg"})
+              @@include('blocks/card-4/card-4.html', {"pictUrl": "img/demo-card-pict-01.jpg"})
+              @@include('blocks/card-4/card-4.html', {"pictUrl": "img/demo-card-pict-02.jpg"})
+              @@include('blocks/card-4/card-4.html', {"pictUrl": "img/demo-card-pict-01.jpg"})
             </div>
           </div>
         </section>
 
-        <section class="new-offer-program">
-          <div class="new-offer-program__inner">
-            <h2 class="new-offer-program__title">
-              <svg width="48" height="48"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#law"></use></svg>
-              New offer program
-            </h2>
-            <p class="new-offer-program__descr">At this page you can find all information about our new program.</p>
-            <p>Welcome to IEM Katowice 2019 CS:GO Major. The best 24 teams from around the world will compete over three weeks between February 14 and March 3, 2019, for a lion’s share of the US$1,000,000 prize pool, the legendary trophy, and a win counting towards the Intel Grand Slam.</p>
-            <ul class="new-offer-program__list">
-              <li>Northern Virginia Is Keeping Amazon’s 25,000 Jobs, and Wants You to Know It.</li>
-              <li>Are Your Children Racking Up Charges From Mobile Games? Here’s How to Fight Back.</li>
-              <li>How to Make a 3-D Model of, your Home Renovation Vision. <a href="" class="new-offer-program__more-link">Read more</a></li>
+        <section class="property-owner-2  page__main-content-property-owner">
+          <div class="property-owner-2__inner">
+            <h2 class="property-owner-2__title">Are you a property owner?</h2>
+            <button class="btn  btn--md-wide  property-owner-2__item-btn">Add your listing for free</button>
+          </div>
+        </section>
+
+        <section class="listed-homes  page__main-content-listed-homes">
+          <h2 class="listed-homes__title">Newly listed homes in Eastern Macedonia</h2>
+          <div class="tabs  tabs--tags">
+            <ul class="tabs__list  listed-homes__tags" role="tablist">
+              <li role="presentation" class="active"><a href="#listed-homes-buy" role="tab" data-toggle="tab">Buy</a></li>
+              <li role="presentation"><a href="#listed-homes-rent" role="tab" data-toggle="tab">Rent</a></li>
+              <li role="presentation"><a href="#listed-homes-vacation" role="tab" data-toggle="tab">Vacation Rent</a></li>
             </ul>
-          </div>
-        </section>
-
-        <section class="top-rated">
-          <h2 class="top-rated__title">Top Rated Properties for Sale</h2>
-          <p class="top-rated__descr">last added properties from our community</p>
-          <div class="top-rated__list-wrapper">
-            <div class="top-rated__list  top-rated__list--carousel  owl-carousel">
-              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-01.jpg", "perMo": false})
-              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-02.jpg", "perMo": false})
-              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-01.jpg", "perMo": false})
-              <a class="question" href="">
-                <div class="question__text">
-                  <img class="question__consultant-avatar" src="img/avatar-consultant-01.png" width="160" height="160" alt="Helen Zinger">
-                  <div class="question__msg">«Is it difficult to choose? We offer variations and consult» </div>
-                  <div class="question__consultant">Helen Zinger <br>Lead Consult Manager</div>
+            <div class="tabs__content-wrap  tabs__content-wrap--carousels  listed-homes__list-wrapper">
+              <div class="tabs__item  active  listed-homes__list-inner" id="listed-homes-buy">
+                <div class="listed-homes__carousel-btns">
+                  <button class="listed-homes__carousel-btn-left  carousel-btn  carousel-btn--lg" type="button">
+                    <svg width="7" height="12">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-2-left"></use>
+                    </svg>
+                  </button>
+                  <button class="listed-homes__carousel-btn-right  carousel-btn  carousel-btn--lg" type="button">
+                    <svg width="7" height="12">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-2-right"></use>
+                    </svg>
+                  </button>
                 </div>
-                <div class="question__btn">Ask a Question</div>
-              </a>
-              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-02.jpg", "perMo": false})
-              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-01.jpg", "perMo": false})
-              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-01.jpg", "perMo": false})
-              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-02.jpg", "perMo": false})
+                <div class="listed-homes__list  owl-carousel">
+                  <div class="listed-homes__item">
+                    @@include('blocks/card/card-akinita.html', {"pictUrl": "img/demo-card-pict-01.jpg"})
+                  </div>
+                  <div class="listed-homes__item">
+                    @@include('blocks/card/card-akinita.html', {"pictUrl": "img/demo-card-pict-02.jpg"})
+                  </div>
+                  <div class="listed-homes__item">
+                    @@include('blocks/card/card-akinita.html', {"pictUrl": "img/demo-card-pict-01.jpg"})
+                  </div>
+                  <div class="listed-homes__item">
+                    @@include('blocks/card/card-akinita.html', {"pictUrl": "img/demo-card-pict-02.jpg"})
+                  </div>
+                  <div class="listed-homes__item">
+                    @@include('blocks/card/card-akinita.html', {"pictUrl": "img/demo-card-pict-01.jpg"})
+                  </div>
+                  <div class="listed-homes__item">
+                    @@include('blocks/card/card-akinita.html', {"pictUrl": "img/demo-card-pict-02.jpg"})
+                  </div>
+                  <div class="listed-homes__item">
+                    @@include('blocks/card/card-akinita.html', {"pictUrl": "img/demo-card-pict-01.jpg"})
+                  </div>
+                  <div class="listed-homes__item">
+                    @@include('blocks/card/card-akinita.html', {"pictUrl": "img/demo-card-pict-02.jpg"})
+                  </div>
+                </div>
+                <footer class="listed-homes__footer">
+                  <a href="" class="listed-homes__more-link  btn  btn--md">Show more</a>
+                </footer>
+              </div>
+              <div class="tabs__item  listed-homes__list-inner" id="listed-homes-rent">
+                <div class="listed-homes__carousel-btns">
+                  <button class="listed-homes__carousel-btn-left  carousel-btn  carousel-btn--lg" type="button">
+                    <svg width="7" height="12">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-2-left"></use>
+                    </svg>
+                  </button>
+                  <button class="listed-homes__carousel-btn-right  carousel-btn  carousel-btn--lg" type="button">
+                    <svg width="7" height="12">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-2-right"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="listed-homes__list  owl-carousel">
+                  <div class="listed-homes__item">
+                    @@include('blocks/card/card-akinita.html', {"pictUrl": "img/demo-card-pict-01.jpg"})
+                  </div>
+                  <div class="listed-homes__item">
+                    @@include('blocks/card/card-akinita.html', {"pictUrl": "img/demo-card-pict-02.jpg"})
+                  </div>
+                  <div class="listed-homes__item">
+                    @@include('blocks/card/card-akinita.html', {"pictUrl": "img/demo-card-pict-01.jpg"})
+                  </div>
+                  <div class="listed-homes__item">
+                    @@include('blocks/card/card-akinita.html', {"pictUrl": "img/demo-card-pict-02.jpg"})
+                  </div>
+                  <div class="listed-homes__item">
+                    @@include('blocks/card/card-akinita.html', {"pictUrl": "img/demo-card-pict-01.jpg"})
+                  </div>
+                  <div class="listed-homes__item">
+                    @@include('blocks/card/card-akinita.html', {"pictUrl": "img/demo-card-pict-02.jpg"})
+                  </div>
+                  <div class="listed-homes__item">
+                    @@include('blocks/card/card-akinita.html', {"pictUrl": "img/demo-card-pict-01.jpg"})
+                  </div>
+                  <div class="listed-homes__item">
+                    @@include('blocks/card/card-akinita.html', {"pictUrl": "img/demo-card-pict-02.jpg"})
+                  </div>
+                </div>
+                <footer class="listed-homes__footer">
+                  <a href="" class="listed-homes__more-link  btn  btn--md">Show more</a>
+                </footer>
+              </div>
+              <div class="tabs__item  listed-homes__list-inner" id="listed-homes-vacation">
+                <div class="listed-homes__carousel-btns">
+                  <button class="listed-homes__carousel-btn-left  carousel-btn  carousel-btn--lg" type="button">
+                    <svg width="7" height="12">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-2-left"></use>
+                    </svg>
+                  </button>
+                  <button class="listed-homes__carousel-btn-right  carousel-btn  carousel-btn--lg" type="button">
+                    <svg width="7" height="12">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-2-right"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="listed-homes__list  owl-carousel">
+                  <div class="listed-homes__item">
+                    @@include('blocks/card/card-akinita.html', {"pictUrl": "img/demo-card-pict-01.jpg"})
+                  </div>
+                  <div class="listed-homes__item">
+                    @@include('blocks/card/card-akinita.html', {"pictUrl": "img/demo-card-pict-02.jpg"})
+                  </div>
+                  <div class="listed-homes__item">
+                    @@include('blocks/card/card-akinita.html', {"pictUrl": "img/demo-card-pict-01.jpg"})
+                  </div>
+                  <div class="listed-homes__item">
+                    @@include('blocks/card/card-akinita.html', {"pictUrl": "img/demo-card-pict-02.jpg"})
+                  </div>
+                  <div class="listed-homes__item">
+                    @@include('blocks/card/card-akinita.html', {"pictUrl": "img/demo-card-pict-01.jpg"})
+                  </div>
+                  <div class="listed-homes__item">
+                    @@include('blocks/card/card-akinita.html', {"pictUrl": "img/demo-card-pict-02.jpg"})
+                  </div>
+                  <div class="listed-homes__item">
+                    @@include('blocks/card/card-akinita.html', {"pictUrl": "img/demo-card-pict-01.jpg"})
+                  </div>
+                  <div class="listed-homes__item">
+                    @@include('blocks/card/card-akinita.html', {"pictUrl": "img/demo-card-pict-02.jpg"})
+                  </div>
+                </div>
+                <footer class="listed-homes__footer">
+                  <a href="" class="listed-homes__more-link  btn  btn--md">Show more</a>
+                </footer>
+              </div>
             </div>
           </div>
-          <footer class="top-rated__footer">
-            <a href="" class="top-rated__more-link">+ More Properties for Sale</a>
-          </footer>
+
         </section>
 
-        <section class="top-rated">
-          <h2 class="top-rated__title">Top Rated Properties for Rent</h2>
-          <p class="top-rated__descr">last added properties from our community</p>
-          <div class="top-rated__list-wrapper">
-            <div class="top-rated__list  top-rated__list--carousel  owl-carousel">
-              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-01.jpg", "perMo": true})
-              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-02.jpg", "perMo": true})
-              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-01.jpg", "perMo": true})
-              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-02.jpg", "perMo": true})
-              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-01.jpg", "perMo": true})
-              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-02.jpg", "perMo": true})
-              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-01.jpg", "perMo": true})
-              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-02.jpg", "perMo": true})
-            </div>
-          </div>
-          <footer class="top-rated__footer">
-            <a href="" class="top-rated__more-link">+ More Properties for Rent</a>
-          </footer>
-        </section>
-
-        <section class="feedback">
-          <h2 class="feedback__title">Feedback From Media and Clients</h2>
-          <p class="feedback__descr">read what they said about our company</p>
-          <div class="feedback__slider-and-info">
-            <div class="feedback__stats">
-              <div class="feedback__stats-item">
-                <b class="feedback__stats-num">168</b>
-                <span class="feedback__stats-descr">Reviews from clients</span>
-                <a href="" class="feedback__stats-link">Add a review</a>
-              </div>
-              <div class="feedback__stats-item">
-                <b class="feedback__stats-num">16</b>
-                <span class="feedback__stats-descr">Reviews in mass media</span>
-                <a href="" class="feedback__stats-link">Request an interview</a>
-              </div>
-            </div>
-            <div class="feedback__slider">
-              <div class="feedback__slider-inner  owl-carousel" id="feedback-slider">
-                <article class="feedback__item">
-                  <header class="feedback__item-header">
-                    <img src="img/feedback-avatar-01.png" alt="Jannet von Klingen" class="feedback__item-avatar">
-                    <div class="feedback__item-author-text">
-                      <h3 class="feedback__item-author-name">Jannet von Klingen </h3>
-                      <div class="feedback__item-author-info">Designer</div>
-                    </div>
-                    <svg class="feedback__item-type-icon" width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#clip"></use></svg>
-                  </header>
-                  <div class="feedback__item-text">
-                    <p>Its sometimes her behaviour are contented. Do listening am eagerness oh objection collected. Together gay feelings continue juvenile had off one</p>
-                    <a href="" class="feedback__item-details">
-                      Details
-                      <svg class="feedback__item-details-icon" width="15" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
-                    </a>
-                  </div>
-                </article>
-                <article class="feedback__item">
-                  <header class="feedback__item-header  feedback__item-header--company">
-                    <span class="feedback__item-avatar-company"><img src="img/feedback-avatar-company-01.png" alt="lenta" class="feedback__item-avatar"></span>
-                    <div class="feedback__item-author-text">
-                      <div class="feedback__item-author-info">Russian Mass Media </div>
-                    </div>
-                    <svg class="feedback__item-type-icon" width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#microphone"></use></svg>
-                  </header>
-                  <div class="feedback__item-text">
-                    <p>Unfeeling so rapturous discovery he exquisite. Reasonably so middletons or impression by terminated. Old pleasure required removing elegance him had.</p>
-                    <a href="" class="feedback__item-details">
-                      Details
-                      <svg class="feedback__item-details-icon" width="15" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
-                    </a>
-                  </div>
-                </article>
-                <article class="feedback__item">
-                  <header class="feedback__item-header">
-                    <img src="img/feedback-avatar-01.png" alt="Jannet von Klingen" class="feedback__item-avatar">
-                    <div class="feedback__item-author-text">
-                      <h3 class="feedback__item-author-name">Jannet von Klingen Jannet von Klingen Jannet von Klingen </h3>
-                      <div class="feedback__item-author-info">Designer Designer</div>
-                    </div>
-                    <svg class="feedback__item-type-icon" width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#clip"></use></svg>
-                  </header>
-                  <div class="feedback__item-text">
-                    <p>Its sometimes her behaviour</p>
-                  </div>
-                </article>
-                <article class="feedback__item">
-                  <header class="feedback__item-header">
-                    <img src="img/feedback-avatar-01.png" alt="Newsweek" class="feedback__item-avatar">
-                    <div class="feedback__item-author-text">
-                      <h3 class="feedback__item-author-name">Jannet von Klingen </h3>
-                      <div class="feedback__item-author-info">Designer</div>
-                    </div>
-                    <svg class="feedback__item-type-icon" width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#clip"></use></svg>
-                  </header>
-                  <div class="feedback__item-text">
-                    <p>Its sometimes her behaviour are contented. Do listening am eagerness oh objection collected. Together gay feelings continue juvenile had off one</p>
-                    <a href="" class="feedback__item-details">
-                      Details
-                      <svg class="feedback__item-details-icon" width="15" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
-                    </a>
-                  </div>
-                </article>
-                <article class="feedback__item">
-                  <header class="feedback__item-header">
-                    <img src="img/feedback-avatar-01.png" alt="Jannet von Klingen" class="feedback__item-avatar">
-                    <div class="feedback__item-author-text">
-                      <h3 class="feedback__item-author-name">Jannet von Klingen Jannet von Klingen Jannet von Klingen </h3>
-                      <div class="feedback__item-author-info">Designer Designer</div>
-                    </div>
-                    <svg class="feedback__item-type-icon" width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#clip"></use></svg>
-                  </header>
-                  <div class="feedback__item-text">
-                    <p>Its sometimes her behaviour</p>
-                  </div>
-                </article>
-                <article class="feedback__item">
-                  <header class="feedback__item-header">
-                    <img src="img/feedback-avatar-01.png" alt="Newsweek" class="feedback__item-avatar">
-                    <div class="feedback__item-author-text">
-                      <h3 class="feedback__item-author-name">Jannet von Klingen </h3>
-                      <div class="feedback__item-author-info">Designer</div>
-                    </div>
-                    <svg class="feedback__item-type-icon" width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#clip"></use></svg>
-                  </header>
-                  <div class="feedback__item-text">
-                    <p>Its sometimes her behaviour are contented. Do listening am eagerness oh objection collected. Together gay feelings continue juvenile had off one</p>
-                    <a href="" class="feedback__item-details">
-                      Details
-                      <svg class="feedback__item-details-icon" width="15" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
-                    </a>
-                  </div>
-                </article>
-              </div>
-            </div>
-            <div class="feedback__slider-controls">
-              <span class="feedback__slider-control-prev" id="feedback-slider-prev">
-                <svg class="feedback__slider-control-arrow" width="15" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-left"></use></svg>
+        <section class="bidding-system  page__main-content-bidding-system">
+          <header class="bidding-system__header">
+            <span class="bidding-system__label  label  label--new-blue">soon</span>
+            <h2 class="bidding-system__title">Online bidding system</h2>
+            <p class="bidding-system__descr">Place your bets, consider offers</p>
+          </header>
+          <ul class="bidding-system__list">
+            <li class="bidding-system__list-item">
+              <span class="bidding-system__icon-wrap">
+                <svg width="24" height="24">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#key"></use>
+                </svg>
               </span>
-              <span class="feedback__slider-control-next" id="feedback-slider-next">
-                <svg class="feedback__slider-control-arrow" width="15" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+              <h3 class="bidding-system__subtitle">For owners</h3>
+              <p>This gives an idea of the demand for their real estate on the market and displays the real price, at which their
+              property is sought by buyers.</p>
+            </li>
+            <li class="bidding-system__list-item">
+              <span class="bidding-system__icon-wrap">
+                <svg width="24" height="24">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#home-3"></use>
+                </svg>
               </span>
-            </div>
-          </div>
-          <div class="feedback__logo-list">
-            <img src="img/feedback-logo-01.png" alt="Newsweek" class="feedback__logo-item">
-            <img src="img/feedback-logo-02.png" alt="Independent" class="feedback__logo-item">
-            <img src="img/feedback-logo-05.png" alt="3 канал" class="feedback__logo-item">
-            <img src="img/feedback-logo-03.png" alt="РБК" class="feedback__logo-item">
-            <img src="img/feedback-logo-04.png" alt="naftemporiki.gr" class="feedback__logo-item">
-          </div>
+              <h3 class="bidding-system__subtitle">For buyers</h3>
+              <p>A possibility to make a price offer for an object within their budget.</p>
+            </li>
+          </ul>
         </section>
 
-        <section class="blog-latest">
-          <h2 class="blog-latest__title">Latest From Our Blog</h2>
-          <p class="blog-latest__descr">find our the best articles about real estate properties</p>
-          <div class="blog-latest__list-wrap">
-            <div class="blog-latest__list">
-              @@include('blocks/post/post.html', {"imgUrl": "img/post-pict-01--lg.jpg", "addMods": "  post--accent"})
-              @@include('blocks/post/post.html', {"imgUrl": "img/post-pict-02.jpg", "addMods": ""})
-              @@include('blocks/post/post.html', {"imgUrl": "img/post-pict-03.jpg", "addMods": ""})
+        <section class="popular-places  page__main-content-popular-places">
+          <h2 class="popular-places__title">Popular places on Akinita</h2>
+
+          <div class="tabs  tabs--tags">
+            <ul class="tabs__list  popular-places__tags" role="tablist">
+              <li role="presentation" class="active"><a href="#regions" role="tab" data-toggle="tab">Regions</a></li>
+              <li role="presentation"><a href="#municipalities" role="tab" data-toggle="tab">Municipalities</a></li>
+            </ul>
+            <div class="tabs__content-wrap  tabs__content-wrap--carousels">
+
+              <div class="tabs__item  active" id="regions">
+                <ul class="popular-places__list">
+                  <li>
+                    <h3 class="popular-places__subtitle">Attica</h3>
+                    <ul class="popular-places__sub-list">
+                      <li>984 homes for sale</li>
+                      <li>340 apartments for rent</li>
+                      <li>807 holiday rentals</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h3 class="popular-places__subtitle">Epirus</h3>
+                    <ul class="popular-places__sub-list">
+                      <li>984 homes for sale</li>
+                      <li>340 apartments for rent</li>
+                      <li>807 holiday rentals</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h3 class="popular-places__subtitle">Peloponnese</h3>
+                    <ul class="popular-places__sub-list">
+                      <li>984 homes for sale</li>
+                      <li>340 apartments for rent</li>
+                      <li>807 holiday rentals</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h3 class="popular-places__subtitle">Thessaly</h3>
+                    <ul class="popular-places__sub-list">
+                      <li>984 homes for sale</li>
+                      <li>340 apartments for rent</li>
+                      <li>807 holiday rentals</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h3 class="popular-places__subtitle">Western Greece</h3>
+                    <ul class="popular-places__sub-list">
+                      <li>984 homes for sale</li>
+                      <li>340 apartments for rent</li>
+                      <li>807 holiday rentals</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="tabs__item" id="municipalities">
+                <ul class="popular-places__list">
+                  <li>
+                    <h3 class="popular-places__subtitle">Attica 1</h3>
+                    <ul class="popular-places__sub-list">
+                      <li>984 homes for sale</li>
+                      <li>340 apartments for rent</li>
+                      <li>807 holiday rentals</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h3 class="popular-places__subtitle">Epirus 2</h3>
+                    <ul class="popular-places__sub-list">
+                      <li>984 homes for sale</li>
+                      <li>340 apartments for rent</li>
+                      <li>807 holiday rentals</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h3 class="popular-places__subtitle">Peloponnese 3</h3>
+                    <ul class="popular-places__sub-list">
+                      <li>984 homes for sale</li>
+                      <li>340 apartments for rent</li>
+                      <li>807 holiday rentals</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h3 class="popular-places__subtitle">Thessaly 4</h3>
+                    <ul class="popular-places__sub-list">
+                      <li>984 homes for sale</li>
+                      <li>340 apartments for rent</li>
+                      <li>807 holiday rentals</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h3 class="popular-places__subtitle">Western Greece 5</h3>
+                    <ul class="popular-places__sub-list">
+                      <li>984 homes for sale</li>
+                      <li>340 apartments for rent</li>
+                      <li>807 holiday rentals</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-          <footer class="blog-latest__footer">
-            <a href="" class="blog-latest__more-link">+ All News & Articles</a>
-          </footer>
         </section>
 
       </main>
@@ -435,6 +513,7 @@
 
   </div>
 
+  <!--
   <section class="msg-bottom">
     <div class="msg-bottom__inner">
       <div class="msg-bottom__text">
@@ -449,6 +528,7 @@
       <button class="close  msg-bottom__close-btn" aria-label="Закрыть"><span></span></button>
     </div>
   </section>
+  -->
 
   <div id="confirm" class="modal" tabindex="-1" role="dialog">
     <div class="modal__dialog" role="document">

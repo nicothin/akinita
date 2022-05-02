@@ -523,5 +523,65 @@ $( document ).ready(function() {
   });
   */
 
+  // карусель Explore homes on Akinita
+  $('#explore-items-carousel').owlCarousel({
+    responsive: {
+      0: {
+        // autoWidth: false,
+        items: 1,
+        loop: true,
+      },
+      768: {
+        // autoWidth: false,
+        items: 2,
+        loop: true,
+        margin: 24,
+      },
+      1170: {
+        // autoWidth: false,
+        items: 3,
+        loop: true,
+        margin: 24,
+      },
+    }
+  });
+  $('#explore-items-header-btn-left, #explore-items-btn-left').on('click', function (e) {
+    e.preventDefault();
+    $('#explore-items-carousel').trigger('next.owl.carousel');
+  });
+  $('#explore-items-header-btn-right, #explore-items-btn-right').on('click', function (e) {
+    e.preventDefault();
+    $('#explore-items-carousel').trigger('prev.owl.carousel');
+  });
+
+
+
+  // // карусели в Newly listed homes in...
+  const $newlyListedCarousel = $('.listed-homes__list');
+  const newlyListedCarouselSettings = {
+    responsive: {
+      0: {
+        autoWidth: true,
+        dots: false,
+        loop: true,
+      },
+      1170: {
+        items: 3,
+        loop: true,
+        margin: 24,
+      },
+    }
+  };
+  $newlyListedCarousel.each(function() {
+    $(this).owlCarousel(newlyListedCarouselSettings);
+  });
+  $(document).on('click', '.listed-homes__carousel-btn-left', function (e) {
+    e.preventDefault();
+    $(this).closest('.listed-homes__list-inner').find('.owl-carousel').trigger('prev.owl.carousel');
+  });
+  $(document).on('click', '.listed-homes__carousel-btn-right', function (e) {
+    e.preventDefault();
+    $(this).closest('.listed-homes__list-inner').find('.owl-carousel').trigger('next.owl.carousel');
+  });
 
 });

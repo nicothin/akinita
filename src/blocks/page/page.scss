@@ -185,6 +185,48 @@
     }
   }
 
+  &__main-content-explore {
+    margin-top: 32px;
+    margin-bottom: 20px;
+
+    @media (min-width: $screen-xl) {
+      margin-top: 85px;
+      margin-bottom: 74px;
+    }
+  }
+
+  &__main-content-property-owner {
+    margin-bottom: 64px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 84px;
+    }
+  }
+
+  &__main-content-listed-homes {
+    margin-bottom: 64px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 140px;
+    }
+  }
+
+  &__main-content-bidding-system {
+    margin-bottom: 48px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 140px;
+    }
+  }
+
+  &__main-content-popular-places {
+    margin-bottom: 53px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 100px;
+    }
+  }
+
   &--no-scroll {
     overflow: hidden;
   }

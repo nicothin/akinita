@@ -52,4 +52,13 @@
     background: $color-success--light-2;
     cursor: inherit;
   }
+
+  &--new-blue {
+    padding: 0;
+    font-variant: small-caps;
+    font-size: $font-size--h3 - 1;
+    line-height: 160%;
+    background: transparent;
+    color: $color-main;
+  }
 }

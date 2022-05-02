@@ -593,4 +593,22 @@
       }
     }
   }
+
+  &--akinita {
+    width: 290px;
+
+    @media (min-width: $screen-xl) {
+      width: 100% !important;
+    }
+
+    #{$block-name}__photo {
+      height: auto;
+      aspect-ratio: 312 / 240;
+    }
+
+    &:hover,
+    &--active {
+      box-shadow: none;
+    }
+  }
 }
