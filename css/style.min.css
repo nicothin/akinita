@@ -518,6 +518,9 @@
     margin-bottom: 64px; }
 .page__main-content-rating {
     margin-bottom: 64px; }
+.page__main-content-regions {
+    margin-top: 40px;
+    margin-bottom: 67px; }
 .page--no-scroll {
     overflow: hidden; }
 *,
@@ -12478,6 +12481,68 @@ input:checked + .rating-add__label .rating-add__input-descr {
           height: 1em;
           line-height: 1.3;
           color: #31353f; }
+.popular-places__link {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 16px;
+    line-height: 1.5; }
+.popular-places__btns-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-width: 320px;
+    background-color: #fff;
+    border-top: 1px solid #d9e0e9;
+    -webkit-box-shadow: 0 -2px 10px rgba(72, 72, 72, 0.1);
+            box-shadow: 0 -2px 10px rgba(72, 72, 72, 0.1); }
+.popular-places__btns-mobile-item {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    font-size: 16px;
+    font-family: "San Francisco", -apple-system, BlinkMacSystemFont, "Roboto", "Ubuntu", "Droid Sans", "Helvetica Neue", "Arial", sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+    background-color: #fff;
+    padding: 20px 10px;
+    color: #5547FB;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer; }
+.popular-places__btns-mobile-item:not(:first-child) {
+      border-left: 1px solid #d9e0e9; }
+.popular-places__btns-mobile-item--gray {
+      color: #31353f; }
+.popular-places--inside {
+    padding: 0; }
+.popular-places--has-img .popular-places__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 24px;
+    width: 100%; }
+.popular-places--has-img .popular-places__list li {
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%; }
+.popular-places--has-img .popular-places__img {
+    display: none; }
+.popular-places--has-img .popular-places__subtitle {
+    margin-top: 0; }
 .place-info {
   position: relative;
   width: 100%;
@@ -12576,6 +12641,22 @@ input:checked + .rating-add__label .rating-add__input-descr {
     margin-bottom: 20px; }
 .rating__write-link-bottom {
     margin-top: 24px; }
+.regions {
+  width: 100%;
+  max-width: 1010px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 15px; }
+.regions .card-4__photo-wrap {
+    display: none; }
+.regions__title {
+    margin: 0 0 40px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    font-size: 18px;
+    line-height: 133%;
+    font-weight: 500; }
 @media screen and (min-width: 480px) and (-ms-high-contrast: active), (min-width: 480px) and (-ms-high-contrast: none) {
     .add-type__item-wrap {
       -ms-flex-preferred-size: auto !important;
@@ -13658,6 +13739,9 @@ input:checked + .rating-add__label .rating-add__input-descr {
           -ms-flex-preferred-size: calc(100% / 2 - 48px / 2);
               flex-basis: calc(100% / 2 - 48px / 2);
           margin-bottom: 8px; }
+        .popular-places--has-img .popular-places__list li {
+          -ms-flex-preferred-size: calc(100% / 3 - 48px / 3);
+              flex-basis: calc(100% / 3 - 48px / 3); }
     .place-info {
       min-height: 221px;
       padding-left: 420px; }
@@ -13740,6 +13824,11 @@ input:checked + .rating-add__label .rating-add__input-descr {
         .card-2__offers-item--disable .card-2__offers-item-time {
           padding-right: 30px; } }
 @media (min-width: 970px) {
+      .page__main-content--lg-bg-gray {
+        background-color: #f3f5f9; }
+      .page__main-content-regions {
+        margin-top: 100px;
+        margin-bottom: 100px; }
       .page-header__inner {
         -webkit-box-pack: start;
             -ms-flex-pack: start;
@@ -15033,6 +15122,19 @@ input:checked + .rating-add__label .rating-add__input-descr {
         -ms-flex-preferred-size: calc(100% / 3 - 48px / 3);
             flex-basis: calc(100% / 3 - 48px / 3);
         margin-bottom: 8px; }
+      .popular-places__btns-mobile {
+        display: none; }
+      .popular-places--has-img .popular-places__img {
+        display: block;
+        margin-bottom: 16px;
+        aspect-ratio: 312 / 200; }
+        .popular-places--has-img .popular-places__img img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          -o-object-fit: cover;
+             font-family: "object-fit:cover";
+             object-fit: cover; }
     .place-info {
       min-height: 248px;
       padding-left: 460px; }
@@ -15045,7 +15147,12 @@ input:checked + .rating-add__label .rating-add__input-descr {
             flex-basis: 330px; }
     .rating__selector {
       -ms-flex-preferred-size: calc(100% - 330px);
-          flex-basis: calc(100% - 330px); } }
+          flex-basis: calc(100% - 330px); }
+      .regions .card-4__photo-wrap {
+        display: block; }
+      .regions__title {
+        font-size: 32px;
+        text-align: center; } }
 @media screen and (min-width: 970px) and (-ms-high-contrast: active), (min-width: 970px) and (-ms-high-contrast: none) {
   .add-type__list {
     max-width: 622px; } }
