@@ -480,9 +480,12 @@
 .page__404-title {
     color: #31353f;
     font-weight: 700; }
+.page__main-content-search {
+    margin-bottom: 48px; }
 .page__main-content-explore {
-    margin-top: 32px;
-    margin-bottom: 20px; }
+    margin-bottom: 64px; }
+.page__main-content-explore--homepage {
+      margin-bottom: 44px; }
 .page__main-content-property-owner {
     margin-bottom: 64px; }
 .page__main-content-property-owner--content {
@@ -505,8 +508,16 @@
 .page__main-content-explore-area {
     width: 100%;
     max-width: 980px;
-    margin: 17px auto 16px;
+    margin: 17px auto 64px;
     padding: 0 15px; }
+.page__main-content-explore-area .contacts-map__title {
+      font-size: 18px; }
+.page__main-content-explore-area-btn {
+    margin-top: 24px !important; }
+.page__main-content-simple-text {
+    margin-bottom: 64px; }
+.page__main-content-rating {
+    margin-bottom: 64px; }
 .page--no-scroll {
     overflow: hidden; }
 *,
@@ -12155,7 +12166,7 @@ input:checked + .rating-add__label .rating-add__input-descr {
   max-width: 980px;
   margin-right: auto;
   margin-left: auto;
-  padding: 15px; }
+  padding: 0 15px; }
 .explore-items__header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -12189,6 +12200,12 @@ input:checked + .rating-add__label .rating-add__input-descr {
     font-size: 18px;
     line-height: 133%;
     font-weight: 500; }
+.explore-items__carousel--sm-short {
+    margin-left: -15px;
+    margin-right: -15px;
+    width: calc(100% + 30px); }
+.explore-items__carousel-short-item {
+    padding-left: 15px; }
 .explore-items__carousel-wrap {
     position: relative; }
 .explore-items__carousel-btns {
@@ -12246,6 +12263,21 @@ input:checked + .rating-add__label .rating-add__input-descr {
   font-size: 16px;
   line-height: 150%;
   font-weight: 500; }
+.card-4__link-homes {
+  margin: 0;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 500; }
+.card-4--sm-short {
+  width: 290px; }
+.card-4--sm-short .card-4__title {
+    margin-bottom: 8px; }
+.card-4--sm-short .card-4__info-list {
+    display: none; }
+.card-4--sm-short .card-4__link {
+    display: none; }
+.card-4--sm-short .card-4__title-arrow {
+    display: none; }
 .property-owner-2 {
   width: 100%;
   max-width: 980px;
@@ -12490,6 +12522,60 @@ input:checked + .rating-add__label .rating-add__input-descr {
     color: #8891a6; }
 .place-info__link {
     font-weight: 500; }
+.simple-text {
+  width: 100%;
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+  font-size: 16px;
+  line-height: 1.5; }
+.simple-text__title {
+    margin: 0 0 16px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1; }
+.simple-text__inner p {
+    margin: 0;
+    padding: 0 0 1.5em 0; }
+.simple-text__hidden {
+    display: none; }
+.simple-text__hidden p {
+      margin: 0;
+      padding: 0 0 1.5em 0; }
+.simple-text__readmore-wrap {
+    margin: 0; }
+.simple-text__readmore {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font-family: "San Francisco", -apple-system, BlinkMacSystemFont, "Roboto", "Ubuntu", "Droid Sans", "Helvetica Neue", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 1;
+    color: #5547FB;
+    cursor: pointer; }
+.simple-text__readmore svg {
+      margin-left: 0.3em;
+      vertical-align: middle;
+      fill: currentColor; }
+.rating {
+  position: relative;
+  width: 100%;
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px; }
+.rating__title {
+    margin: 0 0 32px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1; }
+.rating__write-link-top {
+    display: none; }
+.rating__result {
+    margin-bottom: 20px; }
+.rating__write-link-bottom {
+    margin-top: 24px; }
 @media screen and (min-width: 480px) and (-ms-high-contrast: active), (min-width: 480px) and (-ms-high-contrast: none) {
     .add-type__item-wrap {
       -ms-flex-preferred-size: auto !important;
@@ -12832,6 +12918,8 @@ input:checked + .rating-add__label .rating-add__input-descr {
         max-width: 446px; }
       .page__404-title {
         font-size: 44px; }
+      .page__main-content-explore-area-btn {
+        display: none; }
         .page-header__inner--new {
           -webkit-box-pack: start;
               -ms-flex-pack: start;
@@ -13580,7 +13668,37 @@ input:checked + .rating-add__label .rating-add__input-descr {
         bottom: 0;
         left: 15px;
         width: 375px;
-        margin: 0; } }
+        margin: 0; }
+    .rating {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+      .rating:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 15px;
+        right: 15px;
+        height: 1px;
+        background: #DAE0E8; }
+      .rating .rating-view__list {
+        margin-bottom: 12px; }
+      .rating__title {
+        width: 100%; }
+      .rating__write-link-top {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex; }
+      .rating__result {
+        -ms-flex-preferred-size: 220px;
+            flex-basis: 220px; }
+    .rating__selector {
+      -ms-flex-preferred-size: calc(100% - 220px);
+          flex-basis: calc(100% - 220px); }
+      .rating__write-link-bottom {
+        display: none; } }
 @media screen and (min-width: 768px) and (-ms-high-contrast: active), (min-width: 768px) and (-ms-high-contrast: none) {
     .add-type__item-wrap {
       -ms-flex-preferred-size: auto !important;
@@ -14877,6 +14995,8 @@ input:checked + .rating-add__label .rating-add__input-descr {
         top: 0px; }
       .explore-items__title {
         font-size: 32px; }
+    .card-4--sm-short {
+      width: 360px; }
       .property-owner-2__inner {
         padding: 84px 40px 80px; }
       .property-owner-2__title {
@@ -14917,7 +15037,15 @@ input:checked + .rating-add__label .rating-add__input-descr {
       min-height: 248px;
       padding-left: 460px; }
       .place-info__img-wrap {
-        width: 420px; } }
+        width: 420px; }
+    .rating .rating-view__item {
+      width: 50%; }
+      .rating__result {
+        -ms-flex-preferred-size: 330px;
+            flex-basis: 330px; }
+    .rating__selector {
+      -ms-flex-preferred-size: calc(100% - 330px);
+          flex-basis: calc(100% - 330px); } }
 @media screen and (min-width: 970px) and (-ms-high-contrast: active), (min-width: 970px) and (-ms-high-contrast: none) {
   .add-type__list {
     max-width: 622px; } }
@@ -14930,9 +15058,12 @@ input:checked + .rating-add__label .rating-add__input-descr {
       min-width: 1px !important;
       width: 100%; } }
 @media (min-width: 1170px) {
+      .page__main-content-search {
+        margin-bottom: 85px; }
       .page__main-content-explore {
-        margin-top: 85px;
-        margin-bottom: 74px; }
+        margin-bottom: 100px; }
+        .page__main-content-explore--homepage {
+          margin-bottom: 100px; }
       .page__main-content-property-owner {
         margin-bottom: 84px; }
       .page__main-content-listed-homes {
@@ -14954,10 +15085,18 @@ input:checked + .rating-add__label .rating-add__input-descr {
         padding-bottom: 0; }
       .page__main-content-place-info {
         margin-bottom: 100px; }
+      .page__main-content-place-info--no-breadcrumbs {
+        margin-top: 48px; }
       .page__main-content-explore-area {
         margin-top: 0;
-        margin-bottom: 24px;
+        margin-bottom: 100px;
         padding-bottom: 0; }
+        .page__main-content-explore-area .contacts-map__title {
+          font-size: 32px; }
+      .page__main-content-simple-text {
+        margin-bottom: 100px; }
+      .page__main-content-rating {
+        margin-bottom: 100px; }
       .page-header__inner {
         padding-left: 0; }
         .page-header__inner .logo {
@@ -15685,8 +15824,26 @@ input:checked + .rating-add__label .rating-add__input-descr {
         display: block; }
       .explore-items__header-btns {
         display: none; }
+      .explore-items__carousel--sm-short {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%; }
+      .explore-items__carousel-short-item {
+        padding: 0; }
       .explore-items__carousel-btns {
         display: block; }
+    .card-4__link-homes {
+      display: none; }
+    .card-4--sm-short {
+      width: 100%; }
+      .card-4--sm-short .card-4__title {
+        margin-bottom: 16px; }
+      .card-4--sm-short .card-4__info-list {
+        display: block; }
+      .card-4--sm-short .card-4__link {
+        display: inline-block; }
+      .card-4--sm-short .card-4__title-arrow {
+        display: inline-block; }
       .owl-loaded .listed-homes__item {
         padding: 0; }
       .listed-homes__title {
@@ -15724,7 +15881,15 @@ input:checked + .rating-add__label .rating-add__input-descr {
         font-size: 32px; }
       .place-info__img-wrap {
         aspect-ratio: 563 / 316;
-        width: 563px; } }
+        width: 563px; }
+      .simple-text__title {
+        font-size: 32px;
+        margin-bottom: 40px; }
+      .simple-text__readmore-wrap {
+        margin-top: 1.45em; }
+      .rating__title {
+        font-size: 32px;
+        margin-bottom: 40px; } }
 @media (min-width: 1440px) {
       .page-header__steps {
         padding-left: 46px; }
