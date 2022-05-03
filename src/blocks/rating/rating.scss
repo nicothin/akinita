@@ -1,0 +1,96 @@
+// В этом файле должны быть стили для БЭМ-блока rating, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.rating {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  position: relative;
+  width: 100%;
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+
+  @media (min-width: $screen-md) {
+    display: flex;
+    flex-wrap: wrap;
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 15px;
+      right: 15px;
+      height: 1px;
+      background: #DAE0E8;
+    }
+
+    .rating-view__list {
+      margin-bottom: 12px;
+    }
+  }
+
+  @media (min-width: $screen-lg) {
+
+    .rating-view__item {
+      width: 50%;
+    }
+  }
+
+  &__title {
+    margin: 0 0 32px;
+    font-size: $font-size--h3 + 2;
+    font-weight: 500;
+    line-height: 1;
+
+    @media (min-width: $screen-md) {
+      width: 100%;
+    }
+
+    @media (min-width: $screen-xl) {
+      font-size: $font-size--h1;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__write-link-top {
+    display: none;
+
+    @media (min-width: $screen-md) {
+      display: inline-flex;
+    }
+  }
+
+  &__result {
+    margin-bottom: 20px;
+
+    @media (min-width: $screen-md) {
+      flex-basis: 220px;
+    }
+
+    @media (min-width: $screen-lg) {
+      flex-basis: 330px;
+    }
+  }
+
+  &__selector {
+
+    @media (min-width: $screen-md) {
+      flex-basis: calc(100% - 220px);
+    }
+
+    @media (min-width: $screen-lg) {
+      flex-basis: calc(100% - 330px);
+    }
+  }
+
+  &__write-link-bottom {
+    margin-top: 24px;
+
+    @media (min-width: $screen-md) {
+      display: none;
+    }
+  }
+}

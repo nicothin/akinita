@@ -37,36 +37,39 @@
 
       <main class="page__main-content" role="main">
 
-        <section class="search  page__main-content-search">
-          <h1 class="search__title">Find the right home <br>and the right neighborhood</h1>
-          <form action="" class="search__form">
-            <div class="search__form-descr">Search properties for</div>
-            <div class="search__part-buy">
-              <div class="field-drop-checkboxes">
-                <div class="field-drop-checkboxes__pseudoselect" id="buy-rent-pseudoselect" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Buy</div>
-                <div class="field-drop-checkboxes__drop  field-drop-checkboxes__drop--separated-checks  field-checkbox" aria-labelledby="buy-rent-pseudoselect">
+        <div class="filter  page__main-content-filter">
+          <div class="filter__line">
+            <div class="filter__part  filter__part--wide">
+              <div class="field-text">
+                <input class="field-text__input  field-text__input--fz-small" type="text" placeholder="Enter an address" value="">
+              </div>
+            </div>
+            <div class="filter__part  filter__part--mobile-hide">
+              <div class="field-drop-checkboxes field-drop-checkboxes--fz-small">
+                <div class="field-drop-checkboxes__pseudoselect" id="type-of-deal" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sale</div>
+                <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="type-of-deal">
                   <div class="field-checkbox__input-wrap">
-                    <label class="field-checkbox__name  field-checkbox__name--check-only">
-                      <input class="field-checkbox__input" type="radio" name="buy-rent" checked>
-                      <span class="field-checkbox__name-text">Buy</span>
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox" checked="">
+                      <span class="field-checkbox__name-text">Sale</span>
                     </label>
                   </div>
                   <div class="field-checkbox__input-wrap">
-                    <label class="field-checkbox__name  field-checkbox__name--check-only">
-                      <input class="field-checkbox__input" type="radio" name="buy-rent">
-                      <span class="field-checkbox__name-text">Rent</span>
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox">
+                      <span class="field-checkbox__name-text">Type two</span>
                     </label>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="search__part-type">
-              <div class="field-drop-checkboxes  field-drop-checkboxes--fz-small">
-                <div class="field-drop-checkboxes__pseudoselect" id="property-types" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All property types</div>
+            <div class="filter__part  filter__part--mobile-hide">
+              <div class="field-drop-checkboxes field-drop-checkboxes--fz-small">
+                <div class="field-drop-checkboxes__pseudoselect" id="property-types" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All property types</span></div>
                 <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="property-types">
                   <div class="field-checkbox__input-wrap">
                     <label class="field-checkbox__name">
-                      <input class="field-checkbox__input" type="checkbox" checked>
+                      <input class="field-checkbox__input" type="checkbox" checked="">
                       <span class="field-checkbox__name-text">Apartment</span>
                     </label>
                   </div>
@@ -115,20 +118,13 @@
                 </div>
               </div>
             </div>
-            <div class="search__part-location">
-              <label class="field-text">
-                <span class="field-text__input-wrap">
-                  <input class="field-text__input  field-text__input--lg" type="text" placeholder="Type in to find location or address">
-                </span>
-              </label>
-            </div>
-            <div class="search__part-bedrooms">
-              <div class="field-drop-checkboxes  field-drop-checkboxes--fz-small">
-                <div class="field-drop-checkboxes__pseudoselect" id="bedrooms" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bedrooms</div>
+            <div class="filter__part  filter__part--mobile-hide">
+              <div class="field-drop-checkboxes field-drop-checkboxes--fz-small">
+                <div class="field-drop-checkboxes__pseudoselect" id="bedrooms" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bed's</div>
                 <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="bedrooms">
                   <div class="field-checkbox__input-wrap">
                     <label class="field-checkbox__name">
-                      <input class="field-checkbox__input" type="checkbox" checked>
+                      <input class="field-checkbox__input" type="checkbox" checked="">
                       <span class="field-checkbox__name-text">Studio</span>
                     </label>
                   </div>
@@ -165,37 +161,60 @@
                 </div>
               </div>
             </div>
-            <div class="search__part-price">
-              <div class="field-text">
-                <span class="field-text__input-wrap  field-text__input-wrap--input-group">
-                  <input class="field-text__input  field-text__input--fz-small" type="number" placeholder="Min price">
-                  <input class="field-text__input  field-text__input--fz-small" type="number" placeholder="Max price">
-                </span>
-              </div>
+
+            <div class="filter__part">
+              <button class="btn">Search</button>
             </div>
-            <div class="search__part-btn">
-              <div class="field-actions">
-                <button class="btn">Search</button>
-              </div>
+          </div>
+        </div>
+
+        <div class="breadcrumbs  breadcrumbs--akinita  page__main-content-breadcrumbs">
+          <a href="" class="breadcrumbs__item">Eastern Macedonia</a>
+          <span class="breadcrumbs__item">Drama</span>
+        </div>
+
+        <section class="place-info  page__main-content-place-info">
+          <div class="place-info__wrap">
+            <h2 class="place-info__title">Drama</h2>
+            <div class="place-info__img-wrap">
+              <img src="img/some-map.jpg" alt="PLACE%NAME">
             </div>
-          </form>
+            <ul class="place-info__list">
+              <li class="place-info__list-item">
+                <svg width="32" height="32">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#home-2"></use>
+                </svg>
+                <p class="place-info__text">Sale: <span class="place-info__price">€ 300k–€ 600k</span></p>
+                <a href="" class="place-info__link">70 homes</a>
+              </li>
+              <li class="place-info__list-item">
+                <svg width="32" height="32">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#vacation"></use>
+                </svg>
+                <p class="place-info__text">Long Term Rent: <span class="place-info__price">€ 300k–€ 600k</span></p>
+                <a href="" class="place-info__link">70 homes</a>
+              </li>
+              <li class="place-info__list-item">
+                <svg width="32" height="32">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#long-term-rent"></use>
+                </svg>
+                <p class="place-info__text">Vacation Rent: <span class="place-info__price">€ 300k–€ 600k</span></p>
+                <a href="" class="place-info__link">70 homes</a>
+              </li>
+            </ul>
+          </div>
         </section>
 
-        <section class="explore-items  page__main-content-explore  page__main-content-explore--homepage">
+        <section class="property-owner-2  page__main-content-property-owner  page__main-content-property-owner--content">
+          <div class="property-owner-2__inner">
+            <h2 class="property-owner-2__title">Are you a property owner?</h2>
+            <button class="btn  btn--md-wide  property-owner-2__item-btn">Add your listing for free</button>
+          </div>
+        </section>
+
+        <section class="explore-items  page__main-content-explore">
           <header class="explore-items__header">
-            <h2 class="explore-items__title">Explore homes on Akinita</h2>
-            <div class="explore-items__header-btns">
-              <button class="carousel-btn  explore-items__carousel-btn  js-explore-items-header-btn-left" type="button">
-                <svg width="7" height="12">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-2-left"></use>
-                </svg>
-              </button>
-              <button class="carousel-btn  explore-items__carousel-btn  js-explore-items-header-btn-right" type="button">
-                <svg width="7" height="12">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-2-right"></use>
-                </svg>
-              </button>
-            </div>
+            <h2 class="explore-items__title">Incoming municipalities</h2>
           </header>
 
           <div class="explore-items__carousel-wrap">
@@ -211,26 +230,551 @@
                 </svg>
               </button>
             </div>
-            <div class="explore-items__carousel  owl-carousel  js-explore-items-carousel">
-              @@include('blocks/card-4/card-4.html', {"pictUrl": "img/demo-card-pict-01.jpg"})
-              @@include('blocks/card-4/card-4.html', {"pictUrl": "img/demo-card-pict-02.jpg"})
-              @@include('blocks/card-4/card-4.html', {"pictUrl": "img/demo-card-pict-01.jpg"})
-              @@include('blocks/card-4/card-4.html', {"pictUrl": "img/demo-card-pict-01.jpg"})
-              @@include('blocks/card-4/card-4.html', {"pictUrl": "img/demo-card-pict-02.jpg"})
-              @@include('blocks/card-4/card-4.html', {"pictUrl": "img/demo-card-pict-01.jpg"})
+            <div class="explore-items__carousel  explore-items__carousel--sm-short  owl-carousel  js-explore-items-carousel-short">
+              <div class="explore-items__carousel-short-item">
+                @@include('blocks/card-4/card-4-sm-short.html', {"pictUrl": "img/demo-card-pict-01.jpg"})
+              </div>
+              <div class="explore-items__carousel-short-item">
+                @@include('blocks/card-4/card-4-sm-short.html', {"pictUrl": "img/demo-card-pict-02.jpg"})
+              </div>
+              <div class="explore-items__carousel-short-item">
+                @@include('blocks/card-4/card-4-sm-short.html', {"pictUrl": "img/demo-card-pict-01.jpg"})
+              </div>
+              <div class="explore-items__carousel-short-item">
+                @@include('blocks/card-4/card-4-sm-short.html', {"pictUrl": "img/demo-card-pict-01.jpg"})
+              </div>
+              <div class="explore-items__carousel-short-item">
+                @@include('blocks/card-4/card-4-sm-short.html', {"pictUrl": "img/demo-card-pict-02.jpg"})
+              </div>
+              <div class="explore-items__carousel-short-item">
+                @@include('blocks/card-4/card-4-sm-short.html', {"pictUrl": "img/demo-card-pict-01.jpg"})
+              </div>
             </div>
           </div>
         </section>
 
-        <section class="property-owner-2  page__main-content-property-owner">
-          <div class="property-owner-2__inner">
-            <h2 class="property-owner-2__title">Are you a property owner?</h2>
-            <button class="btn  btn--md-wide  property-owner-2__item-btn">Add your listing for free</button>
+        <section class="page__main-content-explore-area">
+          <div class="contacts-map">
+            <h2 class="contacts-map__title">Explore the area</h2>
+            <div class="contacts-map__map-wrapper">
+              <div class="contacts-map__map" id="contacts-map" style="position: relative; overflow: hidden;"><div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);"><div class="gm-err-container"><div class="gm-err-content"><div class="gm-err-icon"><img src="https://maps.gstatic.com/mapfiles/api-3/images/icon_error.png" alt="" draggable="false" style="user-select: none;"></div><div class="gm-err-title">Ошибка</div><div class="gm-err-message">При загрузке Google Карт на этой странице возникла проблема. Подробности вы найдете в консоли JavaScript.</div></div></div></div></div>
+              <div class="contacts-map__members">
+                <ul class="contacts-map__members-list">
+                  <li class="contacts-map__members-item">
+                    <a href=""><img src="img/feedback-avatar-01.png" alt="User name"></a>
+                  </li>
+                  <li class="contacts-map__members-item">
+                    <a href=""><img src="img/feedback-avatar-01.png" alt="User name"></a>
+                  </li>
+                  <li class="contacts-map__members-item">
+                    <a href=""><img src="img/feedback-avatar-01.png" alt="User name"></a>
+                  </li>
+                  <li class="contacts-map__members-item  contacts-map__members-item--active">
+                    <a href=""><img src="img/feedback-avatar-01.png" alt="User name"></a>
+                  </li>
+                  <li class="contacts-map__members-item">
+                    <a href=""><img src="img/feedback-avatar-01.png" alt="User name"></a>
+                  </li>
+                  <li class="contacts-map__members-item  contacts-map__members-item--num">
+                    <a href=""><span class="contacts-map__members-num">+16</span></a>
+                  </li>
+                </ul>
+                <a href="" class="btn  contacts-map__members-btn">Become a Member</a>
+              </div>
+              <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjGAiz42P2243i_aoNCu4Pf0vU_xDWcZk&amp;signed_in=true&amp;callback=initMap"></script>
+              <script>
+                var mapPoints = [
+                  [
+                    'Map point',
+                    59.95016094,
+                    30.31612718,
+                    'img/contacts-map-marker.png',
+                    70, 80,
+                    35, 63
+                  ],
+                ];
+                var mapStyle = [];
+                function initMap() {
+                  var mapDiv = document.getElementById('contacts-map');
+                  var center = {lat: 59.95016094, lng: 30.31612718};
+                  var map = new google.maps.Map(mapDiv, {
+                    zoom: 13,
+                    center: center,
+                    // disableDefaultUI: true,
+                    styles: mapStyle
+                  });
+                  setMapMarkers(map);
+                  map.addListener('resize', function() {
+                    map.panTo(center);
+                  });
+                  google.maps.event.addDomListener(window, 'resize', function(){
+                    google.maps.event.trigger(map, 'resize');
+                  });
+                }
+                function setMapMarkers(map) {
+                  for (var i = 0; i < mapPoints.length; i++) {
+                    var point = mapPoints[i];
+                    var marker = new google.maps.Marker({
+                      position: {lat: point[1], lng: point[2]},
+                      map: map,
+                      icon: {
+                        url: point[3],
+                        size: new google.maps.Size(point[4], point[5]),
+                        anchor: new google.maps.Point(point[6], point[7])
+                      },
+                      title: point[0]
+                    });
+                  }
+                }
+              </script>
+            </div>
+          </div>
+
+          <div class="objects  objects--akinita">
+            <section class="objects__group-wrap  objects__group-wrap--active">
+              <div class="objects__header">
+                <h3 class="objects__title">All (73)</h3>
+                <div class="objects__show-list-toggler"></div>
+              </div>
+              <div class="objects__list-wrap">
+                <ul class="objects__list">
+                  <li class="objects__item-wrap"> <!-- .objects__item-wrap--active -->
+                    <div class="objects__item  object"> <!-- object--active -->
+                      <div class="object__main-info">
+                        <div class="object__icon-wrap">
+                          <svg class="object__icon" width="32" height="32"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#map-gym"></use></svg>
+                        </div>
+                        <h4 class="object__title">
+                          <div class="object__type">Gym</div>
+                          <div class="object__name">Strong Man’s</div>
+                        </h4>
+                        <div class="object__distance-wrap">
+                          <div class="object__distance-time">2 min</div>
+                          <div class="object__distance">185 m</div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="objects__item-wrap"> <!-- .objects__item-wrap--active -->
+                    <div class="objects__item  object"> <!-- object--active -->
+                      <div class="object__main-info">
+                        <div class="object__icon-wrap">
+                          <svg class="object__icon" width="32" height="32"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#map-gym"></use></svg>
+                        </div>
+                        <h4 class="object__title">
+                          <div class="object__type">Gym</div>
+                          <div class="object__name">Strong Man’s</div>
+                        </h4>
+                        <div class="object__distance-wrap">
+                          <div class="object__distance-time">2 min</div>
+                          <div class="object__distance">185 m</div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="objects__item-wrap"> <!-- .objects__item-wrap--active -->
+                    <div class="objects__item  object"> <!-- object--active -->
+                      <div class="object__main-info">
+                        <div class="object__icon-wrap">
+                          <svg class="object__icon" width="32" height="32"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#map-gym"></use></svg>
+                        </div>
+                        <h4 class="object__title">
+                          <div class="object__type">Gym</div>
+                          <div class="object__name">Strong Man’s</div>
+                        </h4>
+                        <div class="object__distance-wrap">
+                          <div class="object__distance-time">2 min</div>
+                          <div class="object__distance">185 m</div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="objects__item-wrap"> <!-- .objects__item-wrap--active -->
+                    <div class="objects__item  object"> <!-- object--active -->
+                      <div class="object__main-info">
+                        <div class="object__icon-wrap">
+                          <svg class="object__icon" width="32" height="32"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#map-gym"></use></svg>
+                        </div>
+                        <h4 class="object__title">
+                          <div class="object__type">Gym</div>
+                          <div class="object__name">Strong Man’s</div>
+                        </h4>
+                        <div class="object__distance-wrap">
+                          <div class="object__distance-time">2 min</div>
+                          <div class="object__distance">185 m</div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="objects__item-wrap"> <!-- .objects__item-wrap--active -->
+                    <div class="objects__item  object"> <!-- object--active -->
+                      <div class="object__main-info">
+                        <div class="object__icon-wrap">
+                          <svg class="object__icon" width="32" height="32"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#map-gym"></use></svg>
+                        </div>
+                        <h4 class="object__title">
+                          <div class="object__type">Gym</div>
+                          <div class="object__name">Strong Man’s</div>
+                        </h4>
+                        <div class="object__distance-wrap">
+                          <div class="object__distance-time">2 min</div>
+                          <div class="object__distance">185 m</div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="objects__item-wrap"> <!-- .objects__item-wrap--active -->
+                    <div class="objects__item  object"> <!-- object--active -->
+                      <div class="object__main-info">
+                        <div class="object__icon-wrap">
+                          <svg class="object__icon" width="28" height="28"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#map-pharmacy"></use></svg>
+                        </div>
+                        <h4 class="object__title">
+                          <div class="object__type">Farmacy 1</div>
+                          <div class="object__name">Doctor Green INC</div>
+                        </h4>
+                        <div class="object__distance-wrap">
+                          <div class="object__distance-time">999 min</div>
+                          <div class="object__distance">99999 m</div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="objects__item-wrap">
+                    <div class="objects__item  object">
+                      <div class="object__main-info">
+                        <div class="object__icon-wrap">
+                          <svg class="object__icon" width="28" height="28"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#map-shop"></use></svg>
+                        </div>
+                        <h4 class="object__title">
+                          <div class="object__type">Shop</div>
+                          <div class="object__name">Doctor Green INC</div>
+                        </h4>
+                        <div class="object__distance-wrap">
+                          <div class="object__distance-time">999 min</div>
+                          <div class="object__distance">99999 m</div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="objects__item-wrap">
+                    <div class="objects__item  object">
+                      <div class="object__main-info">
+                        <div class="object__icon-wrap">
+                          <svg class="object__icon" width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#map-transport"></use></svg>
+                        </div>
+                        <h4 class="object__title">
+                          <div class="object__type">Transit</div>
+                          <div class="object__name">Doctor Green INC</div>
+                        </h4>
+                        <div class="object__distance-wrap">
+                          <div class="object__distance-time">999 min</div>
+                          <div class="object__distance">99999 m</div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="objects__item-wrap">
+                    <div class="objects__item  object">
+                      <div class="object__main-info">
+                        <div class="object__icon-wrap">
+                          <svg class="object__icon" width="28" height="28"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#map-rest"></use></svg>
+                        </div>
+                        <h4 class="object__title">
+                          <div class="object__type">Resaurant</div>
+                          <div class="object__name">Doctor Green INC</div>
+                        </h4>
+                        <div class="object__distance-wrap">
+                          <div class="object__distance-time">999 min</div>
+                          <div class="object__distance">99999 m</div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <section class="objects__group-wrap">
+              <div class="objects__header">
+                <h3 class="objects__title">Transit (16)</h3>
+                <div class="objects__show-list-toggler"></div>
+              </div>
+              <div class="objects__list-wrap">
+                <ul class="objects__list">
+                  <li class="objects__item-wrap">
+                    <div class="objects__item  object">
+                      <div class="object__main-info">
+                        <div class="object__icon-wrap">
+                          <svg class="object__icon" width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#map-bus"></use></svg>
+                        </div>
+                        <h4 class="object__title">
+                          <div class="object__type">Transit</div>
+                          <div class="object__name">Doctor Green INC</div>
+                        </h4>
+                        <div class="object__distance-wrap">
+                          <div class="object__distance-time">999 min</div>
+                          <div class="object__distance">99999 m</div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="objects__item-wrap">
+                    <div class="objects__item  object">
+                      <div class="object__main-info">
+                        <div class="object__icon-wrap">
+                          <svg class="object__icon" width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#map-bus"></use></svg>
+                        </div>
+                        <h4 class="object__title">
+                          <div class="object__type">Transit</div>
+                          <div class="object__name">Doctor Green INC</div>
+                        </h4>
+                        <div class="object__distance-wrap">
+                          <div class="object__distance-time">999 min</div>
+                          <div class="object__distance">99999 m</div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="objects__item-wrap">
+                    <div class="objects__item  object">
+                      <div class="object__main-info">
+                        <div class="object__icon-wrap">
+                          <svg class="object__icon" width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#map-bus"></use></svg>
+                        </div>
+                        <h4 class="object__title">
+                          <div class="object__type">Transit</div>
+                          <div class="object__name">Doctor Green INC</div>
+                        </h4>
+                        <div class="object__distance-wrap">
+                          <div class="object__distance-time">999 min</div>
+                          <div class="object__distance">99999 m</div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <section class="objects__group-wrap">
+              <div class="objects__header">
+                <h3 class="objects__title">Shops (46)</h3>
+                <div class="objects__show-list-toggler"></div>
+              </div>
+              <div class="objects__list-wrap">
+                <ul class="objects__list">
+                  <li class="objects__item-wrap">
+                    <div class="objects__item  object">
+                      <div class="object__main-info">
+                        <div class="object__icon-wrap">
+                          <svg class="object__icon" width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#map-bus"></use></svg>
+                        </div>
+                        <h4 class="object__title">
+                          <div class="object__type">Transit</div>
+                          <div class="object__name">Doctor Green INC</div>
+                        </h4>
+                        <div class="object__distance-wrap">
+                          <div class="object__distance-time">999 min</div>
+                          <div class="object__distance">99999 m</div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="objects__item-wrap">
+                    <div class="objects__item  object">
+                      <div class="object__main-info">
+                        <div class="object__icon-wrap">
+                          <svg class="object__icon" width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#map-bus"></use></svg>
+                        </div>
+                        <h4 class="object__title">
+                          <div class="object__type">Transit</div>
+                          <div class="object__name">Doctor Green INC</div>
+                        </h4>
+                        <div class="object__distance-wrap">
+                          <div class="object__distance-time">999 min</div>
+                          <div class="object__distance">99999 m</div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="objects__item-wrap">
+                    <div class="objects__item  object">
+                      <div class="object__main-info">
+                        <div class="object__icon-wrap">
+                          <svg class="object__icon" width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#map-bus"></use></svg>
+                        </div>
+                        <h4 class="object__title">
+                          <div class="object__type">Transit</div>
+                          <div class="object__name">Doctor Green INC</div>
+                        </h4>
+                        <div class="object__distance-wrap">
+                          <div class="object__distance-time">999 min</div>
+                          <div class="object__distance">99999 m</div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <section class="objects__group-wrap">
+              <div class="objects__header">
+                <h3 class="objects__title">Farmacy (1)</h3>
+                <div class="objects__show-list-toggler"></div>
+              </div>
+              <div class="objects__list-wrap">
+                <ul class="objects__list">
+                  <li class="objects__item-wrap">
+                    <div class="objects__item  object">
+                      <div class="object__main-info">
+                        <div class="object__icon-wrap">
+                          <svg class="object__icon" width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#map-bus"></use></svg>
+                        </div>
+                        <h4 class="object__title">
+                          <div class="object__type">Transit</div>
+                          <div class="object__name">Doctor Green INC</div>
+                        </h4>
+                        <div class="object__distance-wrap">
+                          <div class="object__distance-time">999 min</div>
+                          <div class="object__distance">99999 m</div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="objects__item-wrap">
+                    <div class="objects__item  object">
+                      <div class="object__main-info">
+                        <div class="object__icon-wrap">
+                          <svg class="object__icon" width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#map-bus"></use></svg>
+                        </div>
+                        <h4 class="object__title">
+                          <div class="object__type">Transit</div>
+                          <div class="object__name">Doctor Green INC</div>
+                        </h4>
+                        <div class="object__distance-wrap">
+                          <div class="object__distance-time">999 min</div>
+                          <div class="object__distance">99999 m</div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="objects__item-wrap">
+                    <div class="objects__item  object">
+                      <div class="object__main-info">
+                        <div class="object__icon-wrap">
+                          <svg class="object__icon" width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#map-bus"></use></svg>
+                        </div>
+                        <h4 class="object__title">
+                          <div class="object__type">Transit</div>
+                          <div class="object__name">Doctor Green INC</div>
+                        </h4>
+                        <div class="object__distance-wrap">
+                          <div class="object__distance-time">999 min</div>
+                          <div class="object__distance">99999 m</div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </div>
+
+          <a class="btn  btn--block  page__main-content-explore-area-btn" href="#">See featured properties</a>
+        </section>
+
+        <section class="simple-text  page__main-content-simple-text">
+          <h2 class="simple-text__title">About Apokorona</h2>
+          <div class="simple-text__inner">
+            <p>
+              One of Greece’s thirteen administrative regions, Eastern Macedonia and Thrace makes up the most north-eastern portion of
+              mainland Greece. This region includes the islands of Thasos and Samothrace as well as the eastern part of Greek
+              Macedonia and the western part of Thrace.
+            </p>
+
+            <p>
+              Split into Macedonian and Thracian territories, Eastern Macedonia and Thrace is home to the majority of Greece’s Muslim
+              population. The presence of Muslim people in this area links directly back to Ottoman rule and many local people are
+              directly descended from this invading force.
+            </p>
+
+            <p>
+              The largest five cities in the region are Alexandroupoli, Drama Kavala, Xanthi and Komotini, which is also the region’s
+              capital. Despite being one of Greece’s most unique and dramatic regions, Thrace and East Macedonia and rarely visited by
+              tourists.
+            </p>
+          </div>
+          <p class="simple-text__readmore-wrap">
+            <button class="simple-text__readmore" type="button">
+              Read more
+              <svg width="10" height="6">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-2-down"></use>
+              </svg>
+            </button>
+          </p>
+          <div class="simple-text__hidden">
+            <p>
+              One of Greece’s thirteen administrative regions, Eastern Macedonia and Thrace makes up the most north-eastern portion of
+              mainland Greece. This region includes the islands of Thasos and Samothrace as well as the eastern part of Greek
+              Macedonia and the western part of Thrace.
+            </p>
+
+            <p>
+              Split into Macedonian and Thracian territories, Eastern Macedonia and Thrace is home to the majority of Greece’s Muslim
+              population. The presence of Muslim people in this area links directly back to Ottoman rule and many local people are
+              directly descended from this invading force.
+            </p>
+
+            <p>
+              The largest five cities in the region are Alexandroupoli, Drama Kavala, Xanthi and Komotini, which is also the region’s
+              capital. Despite being one of Greece’s most unique and dramatic regions, Thrace and East Macedonia and rarely visited by
+              tourists.
+            </p>
+          </div>
+        </section>
+
+        <section class="explore-items  page__main-content-explore">
+          <header class="explore-items__header">
+            <h2 class="explore-items__title">Neighbouring municipalities</h2>
+          </header>
+
+          <div class="explore-items__carousel-wrap">
+            <div class="explore-items__carousel-btns">
+              <button class="explore-items__carousel-btn  explore-items__carousel-btn--left  carousel-btn  carousel-btn--lg  js-explore-items-btn-left" type="button">
+                <svg width="7" height="12">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-2-left"></use>
+                </svg>
+              </button>
+              <button class="explore-items__carousel-btn  explore-items__carousel-btn--right  carousel-btn  carousel-btn--lg  js-explore-items-btn-right" type="button">
+                <svg width="7" height="12">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-2-right"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="explore-items__carousel  explore-items__carousel--sm-short  owl-carousel  js-explore-items-carousel-short">
+              <div class="explore-items__carousel-short-item">
+                @@include('blocks/card-4/card-4-sm-short.html', {"pictUrl": "img/demo-card-pict-01.jpg"})
+              </div>
+              <div class="explore-items__carousel-short-item">
+                @@include('blocks/card-4/card-4-sm-short.html', {"pictUrl": "img/demo-card-pict-02.jpg"})
+              </div>
+              <div class="explore-items__carousel-short-item">
+                @@include('blocks/card-4/card-4-sm-short.html', {"pictUrl": "img/demo-card-pict-01.jpg"})
+              </div>
+              <div class="explore-items__carousel-short-item">
+                @@include('blocks/card-4/card-4-sm-short.html', {"pictUrl": "img/demo-card-pict-01.jpg"})
+              </div>
+              <div class="explore-items__carousel-short-item">
+                @@include('blocks/card-4/card-4-sm-short.html', {"pictUrl": "img/demo-card-pict-02.jpg"})
+              </div>
+              <div class="explore-items__carousel-short-item">
+                @@include('blocks/card-4/card-4-sm-short.html', {"pictUrl": "img/demo-card-pict-01.jpg"})
+              </div>
+            </div>
           </div>
         </section>
 
         <section class="listed-homes  page__main-content-listed-homes">
-          <h2 class="listed-homes__title">Newly listed homes in Eastern Macedonia</h2>
+          <h2 class="listed-homes__title">Newly listed homes in Apokorona</h2>
           <div class="tabs  tabs--tags">
             <ul class="tabs__list  listed-homes__tags" role="tablist">
               <li role="presentation" class="active"><a href="#listed-homes-buy" role="tab" data-toggle="tab">Buy</a></li>
@@ -370,35 +914,6 @@
             </div>
           </div>
 
-        </section>
-
-        <section class="bidding-system  page__main-content-bidding-system">
-          <header class="bidding-system__header">
-            <span class="bidding-system__label  label  label--new-blue">soon</span>
-            <h2 class="bidding-system__title">Online bidding system</h2>
-            <p class="bidding-system__descr">Place your bets, consider offers</p>
-          </header>
-          <ul class="bidding-system__list">
-            <li class="bidding-system__list-item">
-              <span class="bidding-system__icon-wrap">
-                <svg width="24" height="24">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#key"></use>
-                </svg>
-              </span>
-              <h3 class="bidding-system__subtitle">For owners</h3>
-              <p>This gives an idea of the demand for their real estate on the market and displays the real price, at which their
-              property is sought by buyers.</p>
-            </li>
-            <li class="bidding-system__list-item">
-              <span class="bidding-system__icon-wrap">
-                <svg width="24" height="24">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#home-3"></use>
-                </svg>
-              </span>
-              <h3 class="bidding-system__subtitle">For buyers</h3>
-              <p>A possibility to make a price offer for an object within their budget.</p>
-            </li>
-          </ul>
         </section>
 
         <section class="popular-places  page__main-content-popular-places">

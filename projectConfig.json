@@ -171,7 +171,9 @@
     "carousel-btn": [],
     "bidding-system": [],
     "popular-places": [],
-    "place-info": []
+    "place-info": [],
+    "simple-text": [],
+    "rating": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
