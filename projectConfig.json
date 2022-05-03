@@ -173,7 +173,8 @@
     "popular-places": [],
     "place-info": [],
     "simple-text": [],
-    "rating": []
+    "rating": [],
+    "regions": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

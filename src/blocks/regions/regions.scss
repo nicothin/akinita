@@ -1,0 +1,41 @@
+// В этом файле должны быть стили для БЭМ-блока regions, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.regions {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  width: 100%;
+  max-width: 1010px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 15px;
+
+  .card-4__photo-wrap {
+    display: none;
+
+    @media (min-width: $screen-lg) {
+      display: block;
+    }
+  }
+
+  &__title {
+    margin: 0 0 40px;
+    flex-grow: 1;
+    font-size: $font-size--h3 + 2;
+    line-height: 133%;
+    font-weight: 500;
+
+    @media (min-width: $screen-lg) {
+      font-size: $font-size--h1;
+      text-align: center;
+    }
+  }
+
+  // &__list {
+  //   margin: 0;
+  //   padding: 0;
+  //   list-style: none;
+  // }
+}

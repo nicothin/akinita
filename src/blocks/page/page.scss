@@ -60,11 +60,12 @@
       min-height: calc(100vh - #{$header-height});
     }
 
-    // @media (max-width: ($screen-md - 1)) {
-    //   .modal-open & {
-    //     opacity: 0;
-    //   }
-    // }
+    &--lg-bg-gray {
+
+      @media (min-width: $screen-lg) {
+        background-color: $gray-ultra-lightest;
+      }
+    }
   }
 
   &__footer-wrapper {
@@ -330,6 +331,18 @@
       margin-bottom: 100px;
     }
   }
+
+  &__main-content-regions {
+    margin-top: 40px;
+    margin-bottom: 67px;
+
+    @media (min-width: $screen-lg) {
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+  }
+
+
 
   &--no-scroll {
     overflow: hidden;
