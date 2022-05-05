@@ -60,11 +60,8 @@
       min-height: calc(100vh - #{$header-height});
     }
 
-    &--lg-bg-gray {
-
-      @media (min-width: $screen-lg) {
-        background-color: $gray-ultra-lightest;
-      }
+    &--bg-gray {
+      background-color: $gray-ultra-lightest;
     }
   }
 
@@ -337,9 +334,17 @@
     margin-bottom: 67px;
 
     @media (min-width: $screen-lg) {
-      margin-top: 100px;
+      margin-top: 80px; // 100
       margin-bottom: 100px;
     }
+  }
+
+  &__wide-filter {
+    width: 100%;
+    max-width: 1014px;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
 
