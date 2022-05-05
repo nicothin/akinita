@@ -427,6 +427,8 @@
             flex-direction: column;
     -webkit-transition: opacity 0.3s;
     transition: opacity 0.3s; }
+.page__main-content--bg-gray {
+      background-color: #f3f5f9; }
 .page__footer-wrapper {
     z-index: 1;
     -ms-flex-negative: 0;
@@ -521,6 +523,12 @@
 .page__main-content-regions {
     margin-top: 40px;
     margin-bottom: 67px; }
+.page__wide-filter {
+    width: 100%;
+    max-width: 1014px;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto; }
 .page--no-scroll {
     overflow: hidden; }
 *,
@@ -4154,6 +4162,8 @@ a:hover .feedback__slider-control-arrow,
       border-bottom: 1px solid #d9e0e9; }
 .filter--bg-white {
     background-color: #fff; }
+.filter--p0 {
+    padding: 0 !important; }
 .locations-list-wrapper {
   padding: 15px 15px 30px; }
 .locations-list-wrapper__inner {
@@ -12466,8 +12476,12 @@ input:checked + .rating-add__label .rating-add__input-descr {
     list-style: none;
     font-size: 16px;
     line-height: 2;
-    font-weight: 500;
+    font-weight: 300;
     color: #8891a6; }
+.popular-places__sub-list a {
+      color: inherit; }
+.popular-places__sub-list a:hover, .popular-places__sub-list a:focus {
+        color: #4F34F4; }
 .popular-places__sub-list li {
       display: inline; }
 .popular-places__sub-list li:not(:first-child) {
@@ -12528,21 +12542,23 @@ input:checked + .rating-add__label .rating-add__input-descr {
       color: #31353f; }
 .popular-places--inside {
     padding: 0; }
+.popular-places--has-img {
+    max-width: 984px; }
 .popular-places--has-img .popular-places__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    gap: 24px;
-    width: 100%; }
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      gap: 24px;
+      width: 100%; }
 .popular-places--has-img .popular-places__list li {
-      -ms-flex-preferred-size: 100%;
-          flex-basis: 100%; }
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%; }
 .popular-places--has-img .popular-places__img {
-    display: none; }
+      display: none; }
 .popular-places--has-img .popular-places__subtitle {
-    margin-top: 0; }
+      margin-top: 0; }
 .place-info {
   position: relative;
   width: 100%;
@@ -12643,7 +12659,7 @@ input:checked + .rating-add__label .rating-add__input-descr {
     margin-top: 24px; }
 .regions {
   width: 100%;
-  max-width: 1010px;
+  max-width: 1014px;
   margin-right: auto;
   margin-left: auto;
   padding: 0 15px; }
@@ -13739,9 +13755,15 @@ input:checked + .rating-add__label .rating-add__input-descr {
           -ms-flex-preferred-size: calc(100% / 2 - 48px / 2);
               flex-basis: calc(100% / 2 - 48px / 2);
           margin-bottom: 8px; }
-        .popular-places--has-img .popular-places__list li {
-          -ms-flex-preferred-size: calc(100% / 3 - 48px / 3);
-              flex-basis: calc(100% / 3 - 48px / 3); }
+        .popular-places--has-img .popular-places__list {
+          row-gap: 64px; }
+          .popular-places--has-img .popular-places__list li {
+            -ms-flex-preferred-size: calc(100% / 3 - 48px / 3);
+                flex-basis: calc(100% / 3 - 48px / 3);
+            margin-bottom: 0; }
+        .popular-places--has-img .popular-places__subtitle {
+          font-size: 18px;
+          font-weight: 600; }
     .place-info {
       min-height: 221px;
       padding-left: 420px; }
@@ -13820,14 +13842,9 @@ input:checked + .rating-add__label .rating-add__input-descr {
         -ms-flex-preferred-size: 32% !important;
             flex-basis: 32% !important;
         min-width: 32% !important; } }
-@media (min-width: 970px) and (max-width: 1439px) {
-        .card-2__offers-item--disable .card-2__offers-item-time {
-          padding-right: 30px; } }
 @media (min-width: 970px) {
-      .page__main-content--lg-bg-gray {
-        background-color: #f3f5f9; }
       .page__main-content-regions {
-        margin-top: 100px;
+        margin-top: 80px;
         margin-bottom: 100px; }
       .page-header__inner {
         -webkit-box-pack: start;
@@ -15124,17 +15141,18 @@ input:checked + .rating-add__label .rating-add__input-descr {
         margin-bottom: 8px; }
       .popular-places__btns-mobile {
         display: none; }
-      .popular-places--has-img .popular-places__img {
-        display: block;
-        margin-bottom: 16px;
-        aspect-ratio: 312 / 200; }
-        .popular-places--has-img .popular-places__img img {
+        .popular-places--has-img .popular-places__img {
           display: block;
-          width: 100%;
-          height: 100%;
-          -o-object-fit: cover;
-             font-family: "object-fit:cover";
-             object-fit: cover; }
+          margin-bottom: 16px;
+          aspect-ratio: 312 / 200; }
+          .popular-places--has-img .popular-places__img img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            -o-object-fit: cover;
+               font-family: "object-fit:cover";
+               object-fit: cover;
+            border-radius: 4px; }
     .place-info {
       min-height: 248px;
       padding-left: 460px; }
@@ -15153,6 +15171,9 @@ input:checked + .rating-add__label .rating-add__input-descr {
       .regions__title {
         font-size: 32px;
         text-align: center; } }
+@media (min-width: 970px) and (max-width: 1439px) {
+        .card-2__offers-item--disable .card-2__offers-item-time {
+          padding-right: 30px; } }
 @media screen and (min-width: 970px) and (-ms-high-contrast: active), (min-width: 970px) and (-ms-high-contrast: none) {
   .add-type__list {
     max-width: 622px; } }
@@ -15981,6 +16002,9 @@ input:checked + .rating-add__label .rating-add__input-descr {
       .popular-places__subtitle {
         font-size: 18px;
         font-weight: 600; }
+          .popular-places--has-img .popular-places__list li {
+            -ms-flex-preferred-size: 312px;
+                flex-basis: 312px; }
     .place-info {
       min-height: 316px;
       padding-left: 602px; }
