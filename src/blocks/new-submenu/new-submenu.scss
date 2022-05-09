@@ -14,7 +14,7 @@
     a {
       position: relative;
       display: block;
-      padding: 13px 0;
+      padding: 13px 16px 0 0;
       color: $text-color;
 
       &:hover,
@@ -105,7 +105,7 @@
     a {
       position: relative;
       display: block;
-      padding: 14px 0;
+      padding: 14px 16px 0 0;
 
       @media (max-width: ($menu-desktop-width - 1)) {
 
