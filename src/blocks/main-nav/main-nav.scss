@@ -26,6 +26,7 @@ $main-menu-mobile-width:      334px !default;
   position: relative;
   z-index: 10;
   height: $header-height;
+  font-size: $font-size + 2;
 
   @media (max-width: ($menu-desktop-width - 1)) {
     position: absolute;
@@ -54,7 +55,7 @@ $main-menu-mobile-width:      334px !default;
       z-index: 2;
       width: $main-menu-mobile-width;
       height: calc(100vh - #{$header-height});
-      padding: 10px 30px;
+      padding: 10px 20px;
       overflow-y: auto;
       background-color: #fff;
 
@@ -739,7 +740,9 @@ $main-menu-mobile-width:      334px !default;
     &--new-submenu {
 
       @media (max-width: ($menu-desktop-width - 1)) {
-        padding: 0;
+        padding-top: 45px;
+        padding-left: 20px;
+        padding-right: 20px;
       }
     }
   }
@@ -750,14 +753,12 @@ $main-menu-mobile-width:      334px !default;
     @media (max-width: ($menu-desktop-width - 1)) {
       display: flex !important;
       color: $gray;
-      margin-bottom: 10px;
-      border-bottom: 1px solid $gray-lightest;
     }
   }
 
   &__breadcrumbs-item {
     display: inline-block;
-    padding: 10px 0 16px;
+    padding: 10px 0 10px;
     transform: translateX(-20px);
 
     &--back {
@@ -886,8 +887,8 @@ $main-menu-mobile-width:      334px !default;
         right: 0;
         bottom: 0;
         left: 0;
-        background-color: #000;
-        opacity: 0.85;
+        background-color: $gray-darker;
+        opacity: 1;
       }
     }
 

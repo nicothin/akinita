@@ -523,7 +523,7 @@ $( document ).ready(function() {
   });
   */
 
-
+  // NOTE[@nicothin]: 3 05 22 +
 
   $('.js-explore-items-carousel').owlCarousel({
     responsive: {
@@ -612,6 +612,25 @@ $( document ).ready(function() {
   $('.simple-text__readmore').on('click', function() {
     $(this).closest('.simple-text').find('.simple-text__hidden').slideDown();
     $(this).closest('.simple-text__readmore-wrap').hide();
+  });
+
+  $('.new-submenu__list a').on('click', function(e) {
+    e.preventDefault();
+    const target = e.target.attributes.href.value;
+    $(target).addClass('new-submenu__content--open');
+  });
+  $('[data-main-nav-new-submenu-hide]').on('click', function (e) {
+    e.preventDefault();
+    $('.new-submenu__content--open').removeClass('new-submenu__content--open');
+    $('.new-submenu__active-link').removeClass('new-submenu__active-link');
+    $('.new-submenu__subcontent').hide();
+  });
+
+  $('.new-submenu__sublist a').on('click', function(e) {
+    e.preventDefault();
+    const target = e.target.attributes.href.value;
+    $(target).slideToggle();
+    $(this).closest('a').toggleClass('new-submenu__active-link');
   });
 
 });

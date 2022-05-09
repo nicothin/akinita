@@ -1,0 +1,180 @@
+// В этом файле должны быть стили для БЭМ-блока new-submenu, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.new-submenu {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  &__list {
+    margin: 12px 0 0;
+    padding: 0;
+    list-style: none;
+
+    a {
+      position: relative;
+      display: block;
+      padding: 13px 0;
+      color: $text-color;
+
+      &:hover,
+      &:focus {
+        color: $color-main--accent;
+      }
+
+      @media (max-width: ($menu-desktop-width - 1)) {
+
+        &:after {
+          content: '';
+          position: absolute;
+          right: 2px;
+          top: 50%;
+          width: 7px;
+          height: 7px;
+          border-bottom: 1px solid currentColor;
+          border-right: 1px solid currentColor;
+          transform: translateY(-50%) rotate(-45deg);
+        }
+      }
+
+
+
+        // @media (max-width: ($menu-desktop-width - 1)) {
+        //   transform: translateY(-50%) rotate(-45deg);
+        // }
+
+        // @media (min-width: $screen-xl) {
+        //   right: 14px;
+        //   border-bottom: 1px solid $gray;
+        //   border-right: 1px solid $gray;
+        //   transform: translateY(-70%) rotate(45deg);
+        //   transition: transform $transition-time, border-color $transition-time;
+
+        //   // #{$block-name}__item--show-child & {
+        //   //   transform: translateY(-30%) rotate(225deg);
+        //   // }
+
+        //   // #{$block-name}__item--more #{$block-name}__lvl--more & {
+        //   //   right: 22px;
+        //   //   transform: translateY(-30%) rotate(-45deg);
+        //   // }
+        // }
+    }
+  }
+
+  &__content {
+
+    @media (max-width: ($menu-desktop-width - 1)) {
+      position: fixed;
+      top: 0;
+      left: -$main-menu-mobile-width;
+      z-index: 2;
+      width: $main-menu-mobile-width;
+      height: calc(100vh - #{$header-height});
+      padding: 45px 20px 20px;
+      overflow: hidden;
+      background-color: #fff;
+      transition: left $transition-time, box-shadow $transition-time;
+
+      &--open {
+        left: 0;
+        overflow-y: auto;
+        box-shadow: 0 2px 40px rgba(72, 72, 72, 0.35);
+      }
+    }
+
+    a {
+      color: $text-color;
+
+      &:hover,
+      &:focus {
+        color: $color-main--accent;
+      }
+    }
+  }
+
+  &__about {
+    margin: 26px 0 14px;
+  }
+
+  &__sublist {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    a {
+      position: relative;
+      display: block;
+      padding: 14px 0;
+
+      @media (max-width: ($menu-desktop-width - 1)) {
+
+        &:after {
+          content: '';
+          position: absolute;
+          right: 2px;
+          top: 50%;
+          width: 7px;
+          height: 7px;
+          border-bottom: 1px solid currentColor;
+          border-right: 1px solid currentColor;
+          transform: translateY(-50%) rotate(45deg);
+        }
+
+        &.new-submenu__active-link:after {
+          transform: translateY(-50%) rotate(-135deg);
+        }
+      }
+    }
+  }
+
+  &__subcontent {
+    display: none;
+
+    p {
+      margin: 10px 0;
+      color: $gray;
+      text-transform: uppercase;
+    }
+
+    a {
+      display: flex;
+      align-items: baseline;
+      color: $gray;
+
+      &:hover,
+      &:focus {
+        color: $color-main--accent;
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  &__subcontent-list {
+    margin: 0;
+    padding: 0 0 0 36px;
+    list-style: none;
+  }
+
+  &__subcontent-number {
+    margin-left: auto;
+    font-size: $font-size--h4;
+    font-weight: 600;
+    color: $color-main;
+  }
+
+  &__all-municipals {
+    display: inline-block;
+    margin-left: 36px;
+    font-weight: 500;
+    color: $color-main !important;
+
+    &:hover,
+    &:focus {
+      color: $color-main--accent !important;
+    }
+  }
+}
