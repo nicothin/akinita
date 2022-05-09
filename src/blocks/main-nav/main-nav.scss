@@ -744,6 +744,26 @@ $main-menu-mobile-width:      334px !default;
         padding-left: 20px;
         padding-right: 20px;
       }
+
+      @media (min-width: $screen-xl) {
+        position: fixed;
+        z-index: -10;
+        top: 56px;
+        left: 0;
+        right: 0;
+        width: auto !important;
+        height: 0 !important;
+        display: flex;
+        flex-direction: column;
+        box-shadow: none !important;
+        background: transparent;
+        overflow: hidden;
+
+        .main-nav__item--show-child & {
+          z-index: 10;
+          height: calc(100vh - 56px) !important;
+        }
+      }
     }
   }
 
@@ -895,5 +915,12 @@ $main-menu-mobile-width:      334px !default;
     @media (min-width: $screen-lg) {
       display: none;
     }
+  }
+
+  &__lvl-backdrop {
+    width: 100%;
+    flex-grow: 1;
+    background-color: $gray-darker;
+    opacity: 0.4;
   }
 }

@@ -11,6 +11,13 @@
     hideAllSubmenu();
   });
 
+  $('.main-nav__lvl-backdrop').on('click', function(e){
+    e.preventDefault();
+    $('body').removeClass('no-scroll');
+    $('#main-nav').removeClass('main-nav--open');
+    hideAllSubmenu();
+  });
+
   // Показ/сокрытие подменю уровня
   $('[data-main-nav-submenu-toggler]').on('click', function(e){
     e.preventDefault();

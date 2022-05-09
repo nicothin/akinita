@@ -394,6 +394,8 @@ $( document ).ready(function() {
 
   // плавный скролл для якорных ссылок
   $('a[href^="#"]:not([data-toggle]):not([data-no-scroll])').on('click',function(e){
+    const isMainMenuLink = $(this).closest('.main-nav');
+    if (isMainMenuLink) return;
     var target_position = $(this.hash).offset().top - 56; // 56 — высота хедера, прибитого к верху вьюпорта
     $('body,html').animate({'scrollTop':target_position},350);
   });
@@ -614,10 +616,18 @@ $( document ).ready(function() {
     $(this).closest('.simple-text__readmore-wrap').hide();
   });
 
+
+
   $('.new-submenu__list a').on('click', function(e) {
     e.preventDefault();
-    const target = e.target.attributes.href.value;
-    $(target).addClass('new-submenu__content--open');
+
+    $('.new-submenu__active-link').removeClass('new-submenu__active-link');
+    $(this).closest('a').addClass('new-submenu__active-link');
+
+    const target = this.closest('a').attributes.href.value;
+    $('.new-submenu__content--open').removeClass('new-submenu__content--open');
+    $('.new-submenu__content--xl-open').removeClass('new-submenu__content--xl-open');
+    $(target).addClass('new-submenu__content--open new-submenu__content--xl-open');
   });
   $('[data-main-nav-new-submenu-hide]').on('click', function (e) {
     e.preventDefault();
@@ -628,9 +638,14 @@ $( document ).ready(function() {
 
   $('.new-submenu__sublist a').on('click', function(e) {
     e.preventDefault();
+    $('.new-submenu__sublist > li > a').removeClass('new-submenu__active-link new-submenu__xl-active-link');
+    $(this).closest('a').addClass('new-submenu__active-link  new-submenu__xl-active-link');
+
+    $('.new-submenu__subcontent--xl-shown').removeClass('new-submenu__subcontent--xl-shown');
     const target = e.target.attributes.href.value;
-    $(target).slideToggle();
-    $(this).closest('a').toggleClass('new-submenu__active-link');
+    $(target).addClass('new-submenu__subcontent--xl-shown');
+    $('.new-submenu__subcontent--xl-shown').slideDown();
+    $('.new-submenu__subcontent:not(.new-submenu__subcontent--xl-shown)').slideUp();
   });
 
 });
