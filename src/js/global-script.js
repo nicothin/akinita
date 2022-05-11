@@ -625,9 +625,15 @@ $( document ).ready(function() {
     $(this).closest('a').addClass('new-submenu__active-link');
 
     const target = this.closest('a').attributes.href.value;
+    console.log('target', target);
     $('.new-submenu__content--open').removeClass('new-submenu__content--open');
     $('.new-submenu__content--xl-open').removeClass('new-submenu__content--xl-open');
     $(target).addClass('new-submenu__content--open new-submenu__content--xl-open');
+
+    $('.new-submenu__sublist > li > a').removeClass('new-submenu__active-link new-submenu__xl-active-link');
+    $('.new-submenu__subcontent--xl-shown').removeClass('new-submenu__subcontent--xl-shown');
+    const link = $(target).find('.new-submenu__sublist > li:first-child > a');
+    $(link).addClass('new-submenu__xl-active-link').siblings('.new-submenu__subcontent').addClass('new-submenu__subcontent--xl-shown');
   });
   $('[data-main-nav-new-submenu-hide]').on('click', function (e) {
     e.preventDefault();
