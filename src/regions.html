@@ -1,0 +1,3081 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>akinita</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <div class="page__inner">
+    <!-- page__inner--has-bottom-btns если, таки, нужна кнопка внизу -->
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header.html')
+
+      <main class="page__main-content  page__main-content--bg-gray" role="main">
+
+        <div class="page__wide-filter">
+          <div class="filter  filter--p0">
+            <div class="filter__line">
+              <div class="filter__part  filter__part--wide">
+                <div class="field-text">
+                  <input class="field-text__input  field-text__input--fz-small" type="text" placeholder="Enter an address" value="">
+                </div>
+              </div>
+              <div class="filter__part  filter__part--mobile-hide">
+                <div class="field-drop-checkboxes field-drop-checkboxes--fz-small">
+                  <div class="field-drop-checkboxes__pseudoselect" id="type-of-deal" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sale</div>
+                  <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="type-of-deal">
+                    <div class="field-checkbox__input-wrap">
+                      <label class="field-checkbox__name">
+                        <input class="field-checkbox__input" type="checkbox" checked="">
+                        <span class="field-checkbox__name-text">Sale</span>
+                      </label>
+                    </div>
+                    <div class="field-checkbox__input-wrap">
+                      <label class="field-checkbox__name">
+                        <input class="field-checkbox__input" type="checkbox">
+                        <span class="field-checkbox__name-text">Type two</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="filter__part  filter__part--mobile-hide">
+                <div class="field-drop-checkboxes field-drop-checkboxes--fz-small">
+                  <div class="field-drop-checkboxes__pseudoselect" id="property-types" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All property types</span></div>
+                  <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="property-types">
+                    <div class="field-checkbox__input-wrap">
+                      <label class="field-checkbox__name">
+                        <input class="field-checkbox__input" type="checkbox" checked="">
+                        <span class="field-checkbox__name-text">Apartment</span>
+                      </label>
+                    </div>
+                    <div class="field-checkbox__input-wrap">
+                      <label class="field-checkbox__name">
+                        <input class="field-checkbox__input" type="checkbox">
+                        <span class="field-checkbox__name-text">Townhouse</span>
+                      </label>
+                    </div>
+                    <div class="field-checkbox__input-wrap">
+                      <label class="field-checkbox__name">
+                        <input class="field-checkbox__input" type="checkbox">
+                        <span class="field-checkbox__name-text">House</span>
+                      </label>
+                    </div>
+                    <div class="field-checkbox__input-wrap">
+                      <label class="field-checkbox__name">
+                        <input class="field-checkbox__input" type="checkbox">
+                        <span class="field-checkbox__name-text">Villa</span>
+                      </label>
+                    </div>
+                    <div class="field-checkbox__input-wrap">
+                      <label class="field-checkbox__name">
+                        <input class="field-checkbox__input" type="checkbox">
+                        <span class="field-checkbox__name-text">Office</span>
+                      </label>
+                    </div>
+                    <div class="field-checkbox__input-wrap">
+                      <label class="field-checkbox__name">
+                        <input class="field-checkbox__input" type="checkbox">
+                        <span class="field-checkbox__name-text">Storage space</span>
+                      </label>
+                    </div>
+                    <div class="field-checkbox__input-wrap">
+                      <label class="field-checkbox__name">
+                        <input class="field-checkbox__input" type="checkbox">
+                        <span class="field-checkbox__name-text">Parking space</span>
+                      </label>
+                    </div>
+                    <div class="field-checkbox__input-wrap">
+                      <label class="field-checkbox__name">
+                        <input class="field-checkbox__input" type="checkbox">
+                        <span class="field-checkbox__name-text">Industrial building</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="filter__part  filter__part--mobile-hide">
+                <div class="field-drop-checkboxes field-drop-checkboxes--fz-small">
+                  <div class="field-drop-checkboxes__pseudoselect" id="bedrooms" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bed's</div>
+                  <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="bedrooms">
+                    <div class="field-checkbox__input-wrap">
+                      <label class="field-checkbox__name">
+                        <input class="field-checkbox__input" type="checkbox" checked="">
+                        <span class="field-checkbox__name-text">Studio</span>
+                      </label>
+                    </div>
+                    <div class="field-checkbox__input-wrap">
+                      <label class="field-checkbox__name">
+                        <input class="field-checkbox__input" type="checkbox">
+                        <span class="field-checkbox__name-text">1 bed</span>
+                      </label>
+                    </div>
+                    <div class="field-checkbox__input-wrap">
+                      <label class="field-checkbox__name">
+                        <input class="field-checkbox__input" type="checkbox">
+                        <span class="field-checkbox__name-text">2 bed’s</span>
+                      </label>
+                    </div>
+                    <div class="field-checkbox__input-wrap">
+                      <label class="field-checkbox__name">
+                        <input class="field-checkbox__input" type="checkbox">
+                        <span class="field-checkbox__name-text">3 bed’s</span>
+                      </label>
+                    </div>
+                    <div class="field-checkbox__input-wrap">
+                      <label class="field-checkbox__name">
+                        <input class="field-checkbox__input" type="checkbox">
+                        <span class="field-checkbox__name-text">4 bed’s</span>
+                      </label>
+                    </div>
+                    <div class="field-checkbox__input-wrap">
+                      <label class="field-checkbox__name">
+                        <input class="field-checkbox__input" type="checkbox">
+                        <span class="field-checkbox__name-text">5+</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="filter__part">
+                <button class="btn">Search</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section id="all-regions" class="regions  page__main-content-regions">
+          <h1 class="regions__title">Greece reagions</h1>
+
+          <div class="popular-places  popular-places--inside  popular-places--has-img">
+            <ul class="popular-places__list">
+
+              <li>
+                <a href="#esma" class="popular-places__img" data-show-regions-details>
+                  <img src="img/demo-card-pict-01.jpg" alt="PLACE%NAME">
+                </a>
+                <h3 class="popular-places__subtitle"><a href="#esma" data-show-regions-details>Eastern Macedonia</a></h3>
+                <ul class="popular-places__sub-list">
+                  <li><a href="#">984 homes for sale</a></li>
+                  <li><a href="#">340 apartments for rent</a></li>
+                  <li><a href="#">807 holiday rentals</a></li>
+                </ul>
+                <a href="#esma" class="popular-places__link" data-show-regions-details>Nomoses & municipalities</a>
+
+                <div class="popular-places__lvl-2-wrap">
+
+                </div>
+              </li>
+
+              <li>
+                <a href="#cenma" class="popular-places__img" data-show-regions-details>
+                  <img src="img/demo-card-pict-01.jpg" alt="PLACE%NAME">
+                </a>
+                <h3 class="popular-places__subtitle"><a href="#cenma" data-show-regions-details>Central Macedonia</a></h3>
+                <ul class="popular-places__sub-list">
+                  <li><a href="#">984 homes for sale</a></li>
+                  <li><a href="#">340 apartments for rent</a></li>
+                  <li><a href="#">807 holiday rentals</a></li>
+                </ul>
+                <a href="#cenma" class="popular-places__link" data-show-regions-details>Nomoses & municipalities</a>
+              </li>
+
+              <li>
+                <a href="#cengre" class="popular-places__img" data-show-regions-details>
+                  <img src="img/demo-card-pict-01.jpg" alt="PLACE%NAME">
+                </a>
+                <h3 class="popular-places__subtitle"><a href="#cengre" data-show-regions-details>Central Greece</a></h3>
+                <ul class="popular-places__sub-list">
+                  <li><a href="#">984 homes for sale</a></li>
+                  <li><a href="#">340 apartments for rent</a></li>
+                  <li><a href="#">807 holiday rentals</a></li>
+                </ul>
+                <a href="#cengre" class="popular-places__link" data-show-regions-details>Nomoses & municipalities</a>
+              </li>
+
+            </ul>
+          </div>
+
+          <!-- <div class="popular-places__btns-mobile  layout-text__btns-mobile">
+            <a href="" class="popular-places__btns-mobile-item  popular-places__btns-mobile-item--gray">Search</a>
+          </div> -->
+        </section>
+
+        <section id="esma" class="regions-details  page__main-content-regions-details">
+          <header class="regions-details__header">
+            <p class="regions-details__breadcrumbs-wrap">
+              <a href="#all-regions" data-hide-regions-details>See all regions</a>
+            </p>
+            <h2 class="regions-details__title">Eastern Macedonia</h2>
+          </header>
+          <div class="regions-details__wrapper">
+            <ul class="regions-details__list-primary">
+              <li><a href="#darma1" class="regions-details__list-primary-link  regions-details__list-primary-link--active">Drama</a></li>
+              <li><a href="#evros1" class="regions-details__list-primary-link">Evros</a></li>
+              <li><a href="#kavala1" class="regions-details__list-primary-link">Kavala</a></li>
+              <li><a href="#roooody1" class="regions-details__list-primary-link">Rhodope</a></li>
+            </ul>
+            <ul id="darma1" class="regions-details__list-secondary  regions-details__list-secondary--shown">
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+            </ul>
+            <ul id="evros1" class="regions-details__list-secondary">
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+            </ul>
+            <ul id="kavala1" class="regions-details__list-secondary">
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+            </ul>
+            <ul id="roooody1" class="regions-details__list-secondary">
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Дубликаты списка городов (см .regions-details__list-secondary), использующиеся только для мобилки -->
+        <!-- Семантически связаны с оригиналами одинаковыми атрибутами id и data-regions-details-id -->
+        <section data-regions-details-id="darma1" class="regions-details">
+          <header class="regions-details__header">
+            <p class="regions-details__breadcrumbs-wrap">
+              <a href="#esma" data-hide-regions-cities>Eastern Macedonia</a>
+            </p>
+            <h2 class="regions-details__title">Drama</h2>
+          </header>
+          <div class="regions-details__wrapper">
+            <ul class="regions-details__list-secondary  regions-details__list-secondary--always-shown">
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section data-regions-details-id="evros1" class="regions-details">
+          <header class="regions-details__header">
+            <p class="regions-details__breadcrumbs-wrap">
+              <a href="#esma" data-hide-regions-cities>Eastern Macedonia</a>
+            </p>
+            <h2 class="regions-details__title">Evros</h2>
+          </header>
+          <div class="regions-details__wrapper">
+            <ul class="regions-details__list-secondary  regions-details__list-secondary--always-shown">
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section data-regions-details-id="kavala1" class="regions-details">
+          <header class="regions-details__header">
+            <p class="regions-details__breadcrumbs-wrap">
+              <a href="#esma" data-hide-regions-cities>Eastern Macedonia</a>
+            </p>
+            <h2 class="regions-details__title">Kavala</h2>
+          </header>
+          <div class="regions-details__wrapper">
+            <ul class="regions-details__list-secondary  regions-details__list-secondary--always-shown">
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section data-regions-details-id="roooody1" class="regions-details">
+          <header class="regions-details__header">
+            <p class="regions-details__breadcrumbs-wrap">
+              <a href="#esma" data-hide-regions-cities>Eastern Macedonia</a>
+            </p>
+            <h2 class="regions-details__title">Rhodope</h2>
+          </header>
+          <div class="regions-details__wrapper">
+            <ul class="regions-details__list-secondary  regions-details__list-secondary--always-shown">
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="cenma" class="regions-details  page__main-content-regions-details">
+          <header class="regions-details__header">
+            <p class="regions-details__breadcrumbs-wrap">
+              <a href="#all-regions" data-hide-regions-details>See all regions</a>
+            </p>
+            <h2 class="regions-details__title">Central Macedonia</h2>
+          </header>
+          <div class="regions-details__wrapper">
+            <ul class="regions-details__list-primary">
+              <li><a href="#darma2" class="regions-details__list-primary-link  regions-details__list-primary-link--active">Drama</a></li>
+              <li><a href="#evros2" class="regions-details__list-primary-link">Evros</a></li>
+              <li><a href="#kavala2" class="regions-details__list-primary-link">Kavala</a></li>
+              <li><a href="#roooody2" class="regions-details__list-primary-link">Rhodope</a></li>
+            </ul>
+            <ul id="darma2" class="regions-details__list-secondary  regions-details__list-secondary--shown">
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+            </ul>
+            <ul id="evros2" class="regions-details__list-secondary">
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+            </ul>
+            <ul id="kavala2" class="regions-details__list-secondary">
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+            </ul>
+            <ul id="roooody2" class="regions-details__list-secondary">
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Дубликаты списка городов (см .regions-details__list-secondary), использующиеся только для мобилки -->
+        <!-- Семантически связаны с оригиналами одинаковыми атрибутами id и data-regions-details-id -->
+        <section data-regions-details-id="darma2" class="regions-details">
+          <header class="regions-details__header">
+            <p class="regions-details__breadcrumbs-wrap">
+              <a href="#cenma" data-hide-regions-cities>Central Macedonia</a>
+            </p>
+            <h2 class="regions-details__title">Drama</h2>
+          </header>
+          <div class="regions-details__wrapper">
+            <ul class="regions-details__list-secondary  regions-details__list-secondary--always-shown">
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section data-regions-details-id="evros2" class="regions-details">
+          <header class="regions-details__header">
+            <p class="regions-details__breadcrumbs-wrap">
+              <a href="#cenma" data-hide-regions-cities>Central Macedonia</a>
+            </p>
+            <h2 class="regions-details__title">Evros</h2>
+          </header>
+          <div class="regions-details__wrapper">
+            <ul class="regions-details__list-secondary  regions-details__list-secondary--always-shown">
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section data-regions-details-id="kavala2" class="regions-details">
+          <header class="regions-details__header">
+            <p class="regions-details__breadcrumbs-wrap">
+              <a href="#cenma" data-hide-regions-cities>Central Macedonia</a>
+            </p>
+            <h2 class="regions-details__title">Kavala</h2>
+          </header>
+          <div class="regions-details__wrapper">
+            <ul class="regions-details__list-secondary  regions-details__list-secondary--always-shown">
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section data-regions-details-id="roooody2" class="regions-details">
+          <header class="regions-details__header">
+            <p class="regions-details__breadcrumbs-wrap">
+              <a href="#cenma" data-hide-regions-cities>Central Macedonia</a>
+            </p>
+            <h2 class="regions-details__title">Rhodope</h2>
+          </header>
+          <div class="regions-details__wrapper">
+            <ul class="regions-details__list-secondary  regions-details__list-secondary--always-shown">
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="cengre" class="regions-details  page__main-content-regions-details">
+          <header class="regions-details__header">
+            <p class="regions-details__breadcrumbs-wrap">
+              <a href="#all-regions" data-hide-regions-details>See all regions</a>
+            </p>
+            <h2 class="regions-details__title">Central Greece</h2>
+          </header>
+          <div class="regions-details__wrapper">
+            <ul class="regions-details__list-primary">
+              <li><a href="#darma3" class="regions-details__list-primary-link  regions-details__list-primary-link--active">Drama</a></li>
+              <li><a href="#evros3" class="regions-details__list-primary-link">Evros</a></li>
+              <li><a href="#kavala3" class="regions-details__list-primary-link">Kavala</a></li>
+              <li><a href="#roooody3" class="regions-details__list-primary-link">Rhodope</a></li>
+            </ul>
+            <ul id="darma3" class="regions-details__list-secondary  regions-details__list-secondary--shown">
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+            </ul>
+            <ul id="evros3" class="regions-details__list-secondary">
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+            </ul>
+            <ul id="kavala3" class="regions-details__list-secondary">
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+            </ul>
+            <ul id="roooody3" class="regions-details__list-secondary">
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Дубликаты списка городов (см .regions-details__list-secondary), использующиеся только для мобилки -->
+        <!-- Семантически связаны с оригиналами одинаковыми атрибутами id и data-regions-details-id -->
+        <section data-regions-details-id="darma3" class="regions-details">
+          <header class="regions-details__header">
+            <p class="regions-details__breadcrumbs-wrap">
+              <a href="#cengre" data-hide-regions-cities>Central Greece</a>
+            </p>
+            <h2 class="regions-details__title">Drama</h2>
+          </header>
+          <div class="regions-details__wrapper">
+            <ul class="regions-details__list-secondary  regions-details__list-secondary--always-shown">
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section data-regions-details-id="evros3" class="regions-details">
+          <header class="regions-details__header">
+            <p class="regions-details__breadcrumbs-wrap">
+              <a href="#cengre" data-hide-regions-cities>Central Greece</a>
+            </p>
+            <h2 class="regions-details__title">Evros</h2>
+          </header>
+          <div class="regions-details__wrapper">
+            <ul class="regions-details__list-secondary  regions-details__list-secondary--always-shown">
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section data-regions-details-id="kavala3" class="regions-details">
+          <header class="regions-details__header">
+            <p class="regions-details__breadcrumbs-wrap">
+              <a href="#cengre" data-hide-regions-cities>Central Greece</a>
+            </p>
+            <h2 class="regions-details__title">Kavala</h2>
+          </header>
+          <div class="regions-details__wrapper">
+            <ul class="regions-details__list-secondary  regions-details__list-secondary--always-shown">
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section data-regions-details-id="roooody3" class="regions-details">
+          <header class="regions-details__header">
+            <p class="regions-details__breadcrumbs-wrap">
+              <a href="#cengre" data-hide-regions-cities>Central Greece</a>
+            </p>
+            <h2 class="regions-details__title">Rhodope</h2>
+          </header>
+          <div class="regions-details__wrapper">
+            <ul class="regions-details__list-secondary  regions-details__list-secondary--always-shown">
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Nea Kromi</span>
+                  <span class="regions-details__list-secondary-link-num">345</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Ambelokipoi</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sinoikismos Ambelouipoi</span>
+                  <span class="regions-details__list-secondary-link-num">34</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">145</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">1</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Proasteion</span>
+                  <span class="regions-details__list-secondary-link-num">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="regions-details__list-secondary-link">
+                  <span class="regions-details__list-secondary-link-text">Sadik Chiflik</span>
+                  <span class="regions-details__list-secondary-link-num">5</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  <script src="js/moment-with-locales.js"></script>
+  @@include('_include/page_bottom.html')
+</body>
+</html>

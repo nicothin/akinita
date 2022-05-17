@@ -175,7 +175,8 @@
     "simple-text": [],
     "rating": [],
     "regions": [],
-    "new-submenu": []
+    "new-submenu": [],
+    "regions-details": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

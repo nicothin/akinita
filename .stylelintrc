@@ -247,7 +247,7 @@
     "media-feature-range-operator-space-before": ["always", {
       "message": "Пробел перед оператором диапазона ставить следует"
     }],
-    "at-rule-blacklist": [["extend"], {
+    "at-rule-disallowed-list": [["extend"], {
       "message": "В чёрном списке @-правило это"
     }],
     "at-rule-empty-line-before": ["always", {

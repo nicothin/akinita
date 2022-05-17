@@ -525,6 +525,8 @@ $( document ).ready(function() {
   });
   */
 
+
+
   // NOTE[@nicothin]: 3 05 22 +
 
   $('.js-explore-items-carousel').owlCarousel({
@@ -625,7 +627,6 @@ $( document ).ready(function() {
     $(this).closest('a').addClass('new-submenu__active-link');
 
     const target = this.closest('a').attributes.href.value;
-    console.log('target', target);
     $('.new-submenu__content--open').removeClass('new-submenu__content--open');
     $('.new-submenu__content--xl-open').removeClass('new-submenu__content--xl-open');
     $(target).addClass('new-submenu__content--open new-submenu__content--xl-open');
@@ -654,4 +655,36 @@ $( document ).ready(function() {
     $('.new-submenu__subcontent:not(.new-submenu__subcontent--xl-shown)').slideUp();
   });
 
+
+
+  $('a[data-show-regions-details]').on('click', (e) => {
+    e.preventDefault();
+    const target = e.target.closest('a').attributes.href.value;
+    $('.regions-details--shown').removeClass('regions-details--shown');
+    $(target).addClass('regions-details--shown');
+    $('.regions').addClass('regions--hidden');
+    $('.page__wide-filter').hide();
+  });
+  $('a[data-hide-regions-details]').on('click', (e) => {
+    e.preventDefault();
+    $('.regions-details--shown').removeClass('regions-details--shown');
+    $('.regions').removeClass('regions--hidden');
+    $('.page__wide-filter').show();
+  });
+  $('.regions-details__list-primary a').on('click', (e) => {
+    e.preventDefault();
+    const parent = $(e.target).closest('.regions-details__wrapper');
+    $(parent).find('.regions-details__list-secondary').removeClass('regions-details__list-secondary--shown');
+    $(parent).find('.regions-details__list-primary-link--active').removeClass('regions-details__list-primary-link--active');
+    $(e.target.closest('a')).addClass('regions-details__list-primary-link--active');
+    const target = e.target.closest('a').attributes.href.value;
+    $(target).addClass('regions-details__list-secondary--shown');
+    $('.regions-details').addClass('regions-details--mobile-hide');
+    $(`.regions-details[data-regions-details-id="${target.replace(/#/, '')}"]`).addClass('regions-details--mobile-double-show');
+  });
+  $('a[data-hide-regions-cities]').on('click', (e) => {
+    e.preventDefault();
+    $('[data-regions-details-id').removeClass('regions-details--mobile-double-show');
+    $('.regions-details--mobile-hide').removeClass('regions-details--mobile-hide');
+  });
 });

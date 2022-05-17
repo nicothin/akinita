@@ -23,19 +23,20 @@
   &__title {
     margin: 0 0 40px;
     flex-grow: 1;
-    font-size: $font-size--h3 + 2;
+    font-size: $font-size--h2;
     line-height: 133%;
     font-weight: 500;
 
     @media (min-width: $screen-lg) {
       font-size: $font-size--h1;
       text-align: center;
+      font-weight: 600;
     }
   }
 
-  // &__list {
-  //   margin: 0;
-  //   padding: 0;
-  //   list-style: none;
-  // }
+
+
+  &--hidden {
+    display: none;
+  }
 }
