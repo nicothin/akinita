@@ -374,4 +374,18 @@ $border-radius:               3px !default;
       box-shadow: 0 1px 3px 0 rgba(115, 124, 148, 0.4);
     }
   }
+
+  &--has-drop {
+
+    &:after {
+      content: '';
+      display: inline-block;
+      vertical-align: baseline;
+      width: 10px;
+      height: 6px;
+      margin-left: 10px;
+      background-image: svg-load('../blocks/btn/img_to_bg/arrow-down.svg');
+      transform: translateY(-0.1em);
+    }
+  }
 }

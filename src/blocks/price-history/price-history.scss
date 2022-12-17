@@ -9,7 +9,7 @@
   width: 100%;
   font-size: $font-size--small;
   border-collapse: collapse;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
 
   @media (max-width: ($screen-sm - 1)) {
     display: block;
@@ -124,20 +124,37 @@
   &__percent {
     display: inline-block;
     padding-left: 5px;
-    font-weight: 600;
+    // font-weight: 600;
     color: $color-danger;
 
     &--green {
       color: $color-success;
     }
-  }
-}
-.user-mini {
 
-  &__inner {
-  }
-
-  &__username {
+    &--blue {
+      color: $color-main;
+    }
   }
 
+
+
+  &--no-border {
+
+    @media (min-width: $screen-sm) {
+
+      td {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &--compact {
+
+    @media (min-width: $screen-sm) {
+
+      td {
+        padding: 8px 0;
+      }
+    }
+  }
 }

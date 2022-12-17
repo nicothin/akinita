@@ -120,6 +120,12 @@ $arr-bd-1:                    8px;
     }
   }
 
+  &__auction-text {
+    font-size: $font-size--small;
+    line-height: 1.33em;
+    color: $gray;
+  }
+
   &__content {
     width: 266px;
     font-size: $font-size--small;

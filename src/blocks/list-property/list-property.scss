@@ -28,7 +28,7 @@
 
   &__header {
     // border-bottom: 1px solid $gray-lightest;
-    padding-bottom: 20px;
+    padding-bottom: 16px;
 
     & > *:last-child {
       margin-bottom: 0;
@@ -83,6 +83,10 @@
     }
   }
 
+  &__subtitle-inner {
+    margin-right: 24px;
+  }
+
   &__content-col {
 
     @media (min-width: $screen-md) {
@@ -91,6 +95,13 @@
 
     &--max433 {
       max-width: 433px;
+    }
+
+    &--full {
+
+      @media (min-width: $screen-md) {
+        width: 100%;
+      }
     }
   }
 
@@ -263,6 +274,13 @@
         align-items: top;
       }
     }
+
+    &--pt0 {
+
+      @media (min-width: $screen-lg) {
+        padding-top: 8px;
+      }
+    }
   }
 
   &__select-type {
@@ -379,6 +397,11 @@
       margin-bottom: 0;
     }
 
+    &--first {
+      margin: 0;
+      padding: 0;
+    }
+
     & + .breadcrumbs {
       margin-bottom: 25px;
     }
@@ -406,6 +429,7 @@
 
   &__price-follow {
     display: inline-block;
+    color: $gray-light;
   }
 
   &__price-follow-success {
@@ -569,6 +593,30 @@
     svg {
       vertical-align: middle;
       margin-right: 0.8em;
+    }
+  }
+
+  &__auction-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .field-num {
+      margin-right: 33px;
+    }
+  }
+
+  &__offers-list {
+    display: none;
+    overflow: hidden;
+    padding-top: 16px;
+
+    @media (min-width: $screen-md) {
+      margin-left: -200px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-left: -260px;
     }
   }
 

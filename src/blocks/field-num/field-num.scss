@@ -11,7 +11,7 @@
   &__input-and-btns {
     position: relative;
     display: inline-flex;
-    min-width: 206px;
+    // min-width: 206px;
   }
 
   &__input {
@@ -24,9 +24,10 @@
 
   &__btn {
     flex-shrink: 0;
-    width: 34px;
-    height: 34px;
-    border: 2px solid $color-main--border;
+    width: 24px;
+    height: 24px;
+    // border: 2px solid $color-main--border;
+    border: 1px solid $gray-light;
     padding: 0;
     border-radius: 50%;
     font: 0/0 a; // stylelint-disable-line
@@ -35,6 +36,7 @@
     &:hover,
     &:focus {
       cursor: pointer;
+      border-color: $color-main;
     }
 
     &:focus {
@@ -42,13 +44,25 @@
     }
 
     &--plus {
-      background: $color-main--ultralight svg-load('../blocks/field-num/bg-img/plus.svg') center no-repeat;
-      background-size: 17px 17px;
+      background: transparent svg-load('../blocks/field-num/bg-img/plus.svg') center no-repeat;
+      background-size: 10px 10px;
+
+      &:hover,
+      &:focus {
+        background: transparent svg-load('../blocks/field-num/bg-img/plus-hover.svg') center no-repeat;
+        background-size: 10px 10px;
+      }
     }
 
     &--minus {
-      background: $color-main--ultralight svg-load('../blocks/field-num/bg-img/minus.svg') center no-repeat;
-      background-size: 17px 17px;
+      background: transparent svg-load('../blocks/field-num/bg-img/minus.svg') center no-repeat;
+      background-size: 10px 10px;
+
+      &:hover,
+      &:focus {
+        background: transparent svg-load('../blocks/field-num/bg-img/minus-hover.svg') center no-repeat;
+        background-size: 10px 10px;
+      }
     }
   }
 
@@ -56,7 +70,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 134px;
+    // width: 134px;
+    padding: 0 8px;
     font-size: $font-size--h2 - 4;
   }
 

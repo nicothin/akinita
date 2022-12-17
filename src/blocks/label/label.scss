@@ -53,6 +53,30 @@
     cursor: inherit;
   }
 
+  &--new-danger {
+    display: inline-block;
+    vertical-align: baseline;
+    line-height: 20px;
+    padding: 0 12px;
+    border-radius: 10px;
+    font-weight: 400;
+    color: $color-danger-2;
+    background: $color-danger--light-2;
+    cursor: inherit;
+  }
+
+  &--new-success {
+    display: inline-block;
+    vertical-align: baseline;
+    line-height: 20px;
+    padding: 0 12px;
+    border-radius: 10px;
+    font-weight: 400;
+    color: $color-success-3;
+    background: $color-success--light-2;
+    cursor: inherit;
+  }
+
   &--new-blue {
     padding: 0;
     font-variant: small-caps;
@@ -60,5 +84,20 @@
     line-height: 160%;
     background: transparent;
     color: $color-main;
+  }
+
+  &--new-blue-2 {
+    display: inline-block;
+    vertical-align: bottom;
+    max-width: none;
+    padding: 4px;
+    font-size: $font-size--small;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #5547FB;
+    background: #DAD9FF;
+    border-radius: 4px;
   }
 }

@@ -1,0 +1,37 @@
+// В этом файле должны быть стили для БЭМ-блока list-2, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.list-2 {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    margin-bottom: 24px;
+    padding-right: 10px;
+    flex-basis: 50%;
+    max-width: 50%;
+
+    &:last-child,
+    &:nth-last-child(-n+2) {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-osx) {
+      flex-basis: 33.3334%;
+      max-width: 33.3334%;
+
+      &:last-child,
+      &:nth-last-child(-n+2),
+      &:nth-last-child(-n+3) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

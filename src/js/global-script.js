@@ -620,6 +620,15 @@ $( document ).ready(function() {
 
 
 
+  $('[data-toggle="collapse-other-offers"]').on('click', function() {
+    $('#other-offers').slideToggle();
+    if (this.classList.contains('other-offers-hide')) $(this).find('[data-text]').text(this.dataset.show);
+    else $(this).find('[data-text]').text(this.dataset.hide);
+    $(this).toggleClass('other-offers-hide');
+  });
+
+
+
   $('.new-submenu__list a').on('click', function(e) {
     e.preventDefault();
 

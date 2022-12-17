@@ -176,7 +176,8 @@
     "rating": [],
     "regions": [],
     "new-submenu": [],
-    "regions-details": []
+    "regions-details": [],
+    "list-2": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

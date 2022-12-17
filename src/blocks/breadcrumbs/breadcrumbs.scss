@@ -29,6 +29,30 @@ $text-color:                  hsl(0, 0%, 10%) !default;
     }
   }
 
+  &__wrapper {
+    width: 100%;
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      justify-content: flex-end;
+      width: 66%;
+    }
+  }
+
+  &__inner {
+    padding: 15px 15px 0;
+
+    @media (min-width: $screen-lg) {
+      padding: 25px 15px 11px;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 860px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+
   &--akinita {
     font-size: $font-size--h3;
     line-height: 1.5;
@@ -60,6 +84,16 @@ $text-color:                  hsl(0, 0%, 10%) !default;
       &:before {
         background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 7 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0a.857.857 0 0 0-.606.251L.251 5.394a.857.857 0 0 0 0 1.212l5.143 5.143a.857.857 0 0 0 1.212 0 .857.857 0 0 0 0-1.212L2.07 6l4.537-4.537a.857.857 0 0 0 0-1.212A.857.857 0 0 0 6 0Z' fill='%2331353f'/%3E%3C/svg%3E");
       }
+    }
+  }
+
+  &--head {
+    display: flex;
+    width: 100%;
+    padding: 0;
+
+    @media (min-width: $screen-lg) {
+      background-color: $gray-ultra-lightest;
     }
   }
 }
