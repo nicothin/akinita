@@ -1380,6 +1380,9 @@ a.btn--disabled {
 .btn--lg {
     font-size: 1.3em;
     padding: 20px; }
+.btn--lg-2 {
+    font-size: 16px;
+    padding: 14px; }
 .btn--md {
     padding: 9px 20px; }
 .btn--md-wide {
@@ -4352,6 +4355,8 @@ a:hover .feedback__slider-control-arrow,
     background-color: #fff; }
 .layout-tabs__tab--aside-ovv {
     overflow: visible; }
+.layout-tabs__tab--akinita-aside-mobile-hidden {
+    display: none; }
 .layout-tabs__map {
     width: 100%;
     height: calc(100% - 52px); }
@@ -5013,6 +5018,8 @@ a:hover .feedback__slider-control-arrow,
       padding-bottom: 25px; }
 .aside-block__content--ovv {
       overflow: hidden; }
+.aside-block__content--compact {
+      padding: 16px; }
 .aside-block__content-text {
     padding: 15px 30px; }
 .aside-block__mortgage-price {
@@ -5083,6 +5090,9 @@ a:hover .feedback__slider-control-arrow,
       border-bottom: 1px solid #d9e0e9; }
 .aside-block--blog-posts .post__text {
     border: 0; }
+.aside-block--has-shadow {
+    -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.226619);
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.226619); }
 .card-map-wrap {
   position: absolute;
   -webkit-transform: translateX(-50%);
@@ -7556,6 +7566,7 @@ a:hover .feedback__slider-control-arrow,
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%); }
 .request-info {
+  width: 100%;
   margin-bottom: 35px; }
 .request-info .field-text {
     margin-bottom: 25px; }
@@ -7569,6 +7580,8 @@ a:hover .feedback__slider-control-arrow,
     padding-bottom: 24px;
     border-bottom: 1px solid #d9e0e9;
     margin-bottom: 25px; }
+.request-info__user-wrap {
+    margin-bottom: 16px; }
 .request-info__manager-avatar {
     -ms-flex-negative: 0;
         flex-shrink: 0;
@@ -7580,12 +7593,27 @@ a:hover .feedback__slider-control-arrow,
 .request-info__manager-name {
     margin: 0;
     font-weight: 500; }
-.request-info__manager-post, .request-info__manager-contact {
+.request-info__manager-post {
     font-size: 12px;
     line-height: 1.375em;
     color: #8891a6; }
+.request-info__manager-contact {
+    color: inherit;
+    font-weight: 500; }
 .request-info__manager-post {
     margin-bottom: 5px; }
+.request-info__sub-btn-text {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: #8891a6; }
+.request-info__sub-btn-text--success {
+      color: #2fb74f; }
+.request-info--mb0 {
+    margin-bottom: 0; }
+.request-info--p15 {
+    padding: 15px; }
 .field-range-jquery-ui {
   margin-bottom: 45px; }
 .field-range-jquery-ui .ui-slider-horizontal .ui-slider-handle {
@@ -10602,9 +10630,10 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
     max-width: 100%;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
-    color: #999999;
-    text-transform: uppercase; }
+    text-overflow: ellipsis; }
+.user-mini__username--gray-caps {
+      color: #999999;
+      text-transform: uppercase; }
 .user-mini__text-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -13361,6 +13390,8 @@ input:checked + .rating-add__label .rating-add__input-descr {
         padding-right: 50px; }
       .btn--lg {
         padding: 20px; }
+      .btn--lg-2 {
+        padding: 14px; }
       .btn--md {
         padding: 9px 20px; }
       .btn--md-wide {
@@ -14570,6 +14601,8 @@ input:checked + .rating-add__label .rating-add__input-descr {
       .layout-tabs__tab--aside {
         padding: 15px;
         background-color: #f3f5f9; }
+      .layout-tabs__tab--akinita-aside-mobile-hidden {
+        display: block; }
       .layout-tabs__map {
         height: 100%; }
     .layout-tabs--normal-aside {
@@ -17274,6 +17307,8 @@ input:checked + .rating-add__label .rating-add__input-descr {
 @media (max-width: 969px) {
       .page__inner--has-bottom-btns {
         padding-bottom: 61px; }
+      .page__inner--has-bottom-user-block {
+        padding-bottom: 144px; }
       .page__footer-wrapper--xs-hide {
         display: none; }
   .pagination--mobile-compact {
