@@ -3,6 +3,7 @@
 // Не пишите здесь другие селекторы.
 
 .request-info {
+  width: 100%;
   margin-bottom: 35px;
 
   .field-text {
@@ -15,6 +16,10 @@
     padding-bottom: 24px;
     border-bottom: 1px solid $gray-lightest;
     margin-bottom: 25px;
+  }
+
+  &__user-wrap {
+    margin-bottom: 16px;
   }
 
   &__manager-avatar {
@@ -34,14 +39,40 @@
     font-weight: 500;
   }
 
-  &__manager-post,
-  &__manager-contact {
+  &__manager-post {
     font-size: $font-size--small;
     line-height: $line-height;
     color: $gray;
   }
 
+  &__manager-contact {
+    color: inherit;
+    font-weight: 500;
+  }
+
   &__manager-post {
     margin-bottom: 5px;
+  }
+
+  &__sub-btn-text {
+    margin-top: 12px;
+    text-align: center;
+    font-size: $font-size--small;
+    font-weight: 500;
+    color: $gray;
+
+    &--success {
+      color: $color-success;
+    }
+  }
+
+
+
+  &--mb0 {
+    margin-bottom: 0;
+  }
+
+  &--p15 {
+    padding: 15px;
   }
 }

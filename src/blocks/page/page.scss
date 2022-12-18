@@ -29,6 +29,13 @@
       }
     }
 
+    &--has-bottom-user-block {
+
+      @media (max-width: ($screen-lg - 1)) {
+        padding-bottom: 144px;
+      }
+    }
+
     &--dark {
       background: $gray-darker;
     }

@@ -271,6 +271,15 @@ $border-radius:               3px !default;
     }
   }
 
+  &--lg-2 {
+    font-size: $font-size--h3;
+    padding: 14px;
+
+    @media (min-width: $screen-md) {
+      padding: 14px;
+    }
+  }
+
   &--md {
     padding: 9px 20px;
 

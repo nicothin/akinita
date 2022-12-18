@@ -46,6 +46,10 @@
     &--ovv {
       overflow: hidden;
     }
+
+    &--compact {
+      padding: 16px;
+    }
   }
 
   &__content-text {
@@ -172,5 +176,9 @@
     .post__text {
       border: 0;
     }
+  }
+
+  &--has-shadow {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.226619);
   }
 }

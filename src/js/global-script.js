@@ -85,6 +85,16 @@ $( document ).ready(function() {
     }
   });
 
+  new hcSticky('.layout-tabs__aside--sticky', {
+    stickTo: '.layout-tabs__tab--akinita-aside',
+    top: 56,
+    responsive: {
+      969: {
+        disable: true
+      }
+    }
+  });
+
   // Клик на кнопке показа формы поиска (мобилка)
   $('#search-form-2-trigger').on('click', function(){
     $('#search-form-2-form').toggleClass('search-form-2__form--shown');

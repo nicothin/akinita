@@ -26,8 +26,11 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    color: $gray-light;
-    text-transform: uppercase;
+
+    &--gray-caps {
+      color: $gray-light;
+      text-transform: uppercase;
+    }
   }
 
   &__text-wrapper {

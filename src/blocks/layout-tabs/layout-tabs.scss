@@ -175,6 +175,14 @@
     &--aside-ovv {
       overflow: visible;
     }
+
+    &--akinita-aside-mobile-hidden {
+      display: none;
+
+      @media (min-width: $screen-lg) {
+        display: block;
+      }
+    }
   }
 
   &__map {

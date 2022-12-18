@@ -10,7 +10,7 @@
 
 <body>
 
-  <div class="page__inner  page__inner--has-bottom-btns">
+  <div class="page__inner  page__inner--has-bottom-user-block">
 
     <div class="page__content">
 
@@ -32,16 +32,32 @@
         <div class="layout-tabs  layout-tabs--normal-aside" data-layout-tab-parent>
 
           <div class="layout-tabs__list">
-            TODO показать тут контакт
-            <!-- <a href="#filter-wrapper" class="layout-tabs__list-item" data-filter-drop-toggler>Properties<span class="layout-tabs__list-item-xs-hide"> filter</span></a>
-            <a href="#availabiity" class="layout-tabs__list-item" data-toggle="modal">Request<span class="layout-tabs__list-item-xs-hide"> to book</span></a> -->
+            <div class="request-info  request-info--mb0  request-info--p15">
+
+              <div class="request-info__user-wrap">
+                <div class="user-mini  user-mini--lg">
+                  <span class="user-mini__inner">
+                    <img src="img/feedback-avatar-01.png" width="56" height="56" alt="Yulia Batratdinova">
+                    <span class="user-mini__text-wrapper">
+                      <span class="user-mini__username">Yulia Batratdinova</span>
+                      <span class="user-mini__user-type">Manager</span>
+                      <a href="tel:+30 2310 567914" class="user-mini__user-phone">+30 2310 567914</a>
+                    </span>
+                  </span>
+                </div>
+              </div>
+
+              <div class="request-info__btn-wrap">
+                <a href="" class="btn  btn--block">Is this available?</a>
+              </div>
+            </div>
           </div>
 
           <div class="layout-tabs__tab  layout-tabs__tab--akinita-text  layout-tabs__tab--active" id="region-description">
 
             <section class="list-property  layout-tabs__text-wrapper  layout-tabs__text-wrapper--akinita">
 
-              <section class="list-property__section  list-property__section--no-border">
+              <section class="list-property__section  list-property__section--no-border  list-property__section--pt0">
                 <header class="list-property__header">
                   <div class="list-property__seo-header-wrapper">
                     <h1>House for Sale «Joker's hospital»</h1>
@@ -209,7 +225,7 @@
                               <a href="" class="user-mini__inner">
                                 <img src="img/feedback-avatar-01.png" width="40" height="40"
                                   alt="Long user name name name">
-                                <span class="user-mini__username">Long user name name name</span>
+                                <span class="user-mini__username  user-mini__username--gray-caps">Long user name name name</span>
                               </a>
                             </div>
                           </td>
@@ -224,7 +240,7 @@
                               <a href="" class="user-mini__inner">
                                 <img src="img/feedback-avatar-01.png" width="40" height="40"
                                   alt="Long user name name name">
-                                <span class="user-mini__username">Long user name name name</span>
+                                <span class="user-mini__username  user-mini__username--gray-caps">Long user name name name</span>
                               </a>
                             </div>
                           </td>
@@ -239,7 +255,7 @@
                               <a href="" class="user-mini__inner">
                                 <img src="img/feedback-avatar-01.png" width="40" height="40"
                                   alt="Long user name name name">
-                                <span class="user-mini__username">Long user name name name</span>
+                                <span class="user-mini__username  user-mini__username--gray-caps">Long user name name name</span>
                               </a>
                             </div>
                           </td>
@@ -459,111 +475,36 @@
 
           </div>
 
-          <div class="layout-tabs__tab  layout-tabs__tab--akinita-aside  layout-tabs__tab--aside-ovv">
+          <div class="layout-tabs__tab  layout-tabs__tab--akinita-aside  layout-tabs__tab--akinita-aside-mobile-hidden">
 
-            <div class="layout-tabs__aside">
+            <div class="layout-tabs__aside  layout-tabs__aside--sticky">
 
-              <div class="aside-block">
-                <div class="aside-block__header">
-                  <h3 class="aside-block__title">Request additional information</h3>
-                </div>
-                <div class="aside-block__content  aside-block__content--pv25">
-                  <form action="" class="request-info">
-                    <div class="request-info__manager-wrap">
-                      <img class="request-info__manager-avatar" src="img/feedback-avatar-01.png" alt="">
-                      <div class="request-info__manager">
-                        <div class="request-info__manager-name">Hillary Cherry</div>
-                        <div class="request-info__manager-post">Property Manager</div>
-                        <a class="request-info__manager-contact" href="tel:+30 6974-383-585">+30 6974-383-585</a>
-                      </div>
-                    </div>
-                    <div class="field-text">
-                      <span class="field-text__name  field-text__name--sm">Phone*</span>
-                      <span class="field-text__input-wrap">
-                        <input class="field-text__input" type="tel" placeholder="+38 (044)">
-                      </span>
-                    </div>
-                    <div class="field-text">
-                      <span class="field-text__name  field-text__name--sm">Message</span>
-                      <span class="field-text__input-wrap">
-                        <textarea class="field-text__input" placeholder="I’m interested in property, ID: 5782311. Please, call me back!"></textarea>
-                      </span>
-                    </div>
-                    <div class="field-actions">
-                      <button class="btn  btn--white  btn--wide">Ask an Agent</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
+              <div class="aside-block  aside-block--has-shadow">
+                <div class="aside-block__content  aside-block__content--compact">
+                  <div class="request-info  request-info--mb0">
 
-              <div class="aside-block">
-                <div class="aside-block__header">
-                  <h3 class="aside-block__title">Availabiity & prices</h3>
-                </div>
-                <div class="aside-block__content-wrapper  aside-block__content-wrapper--ovv">
-                  <form class="aside-block__content  aside-block__content--pv25">
-                    <div class="order-short-list">
-                      <div class="form  form--mb0">
-                        <div class="form__row">
-                          <div class="form__col  form__col--sm-4-4">
-                            Some text
-                          </div>
-                        </div>
-                        <div class="form__row">
-                          <div class="form__col">
-                            <label class="field-text  field-text--datapicker" id="availability-date-start">
-                              <div class="field-text__name  field-text__name--sm">Check In</div>
-                              <span class="field-text__input-wrap">
-                                <input class="field-text__input" id="datepicker-1" type="text" placeholder="05/23/2017">
-                              </span>
-                            </label>
-                          </div>
-                          <div class="form__col">
-                            <label class="field-text  field-text--datapicker" id="availability-date-end">
-                              <div class="field-text__name  field-text__name--sm">Check Out</div>
-                              <span class="field-text__input-wrap">
-                                <input class="field-text__input" id="datepicker-2" type="text" placeholder="06/23/2017">
-                              </span>
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                      <p>Some text</p>
-                      <div class="order-short-list__item  order-short-list__item--sm">
-                        <ul class="order-short-list__sublist">
-                          <li class="order-short-list__sublist-item">
-                            <div class="order-short-list__name">€ 5 813 x 1 night</div>
-                            <div class="order-short-list__price"> € 5 813</div>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="order-short-list__item  order-short-list__item--sm">
-                        <ul class="order-short-list__sublist">
-                          <li class="order-short-list__sublist-item">
-                            <div class="order-short-list__name">
-                              Service fee
-                              <span class="tooltip-all" data-toggle="tooltip" data-placement="top" data-original-title="Some info">
-                                <svg width="12" height="12" class=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#help"></use></svg>
-                              </span>
-                            </div>
-                            <div class="order-short-list__price"> € 125</div>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="order-short-list__item  order-short-list__item--sm">
-                        <div class="order-short-list__total-wrapper  order-short-list__total-wrapper--pt20">
-                          <div class="order-short-list__name">Total </div>
-                          <div class="order-short-list__price"> € 125</div>
-                        </div>
+                    <div class="request-info__user-wrap">
+                      <div class="user-mini  user-mini--lg">
+                        <span class="user-mini__inner">
+                          <img src="img/feedback-avatar-01.png" width="56" height="56" alt="Yulia Batratdinova">
+                          <span class="user-mini__text-wrapper">
+                            <span class="user-mini__username">Yulia Batratdinova</span>
+                            <span class="user-mini__user-type">Manager</span>
+                            <a href="tel:+30 2310 567914" class="user-mini__user-phone">+30 2310 567914</a>
+                          </span>
+                        </span>
                       </div>
                     </div>
-                    <div class="field-actions">
-                      <button class="btn  btn--white  btn--block">Request to Book</button>
-                      <div class="field-actions__help">You won’t be charged yet </div>
+
+                    <div class="request-info__btn-wrap">
+                      <a href="" class="btn  btn--lg-2  btn--block">Is this available?</a>
+                      <div class="request-info__sub-btn-text">Sent message to owner</div>
                     </div>
-                  </form>
-                  <div class="price-tooltip">
-                    € 125 000
+                    ИЛИ
+                    <div class="request-info__btn-wrap">
+                      <a href="" class="btn  btn--white  btn--lg-2  btn--block">Send new message</a>
+                      <div class="request-info__sub-btn-text  request-info__sub-btn-text--success">Your message has been sent</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -603,138 +544,7 @@
 
 
 
-  <!-- Далее - модалки: проверить нужны ли они -->
 
-  <div id="availabiity" class="modal" tabindex="-1" role="dialog">
-    <div class="modal__dialog" role="document">
-      <div class="modal__content">
-        <div class="modal__header">
-          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
-          <h4 class="modal__title">Availabiity & prices</h4>
-        </div>
-        <div class="modal__body">
-          <form class="">
-            <div class="order-short-list">
-              <div class="form  form--mb0">
-                <div class="form__row">
-                  <div class="form__col">
-                    <label id="modal-availability-date-start" class="field-text  field-text--datapicker">
-                      <div class="field-text__name  field-text__name--sm">Check In</div>
-                      <span class="field-text__input-wrap">
-                        <input id="datepicker-3" class="field-text__input" type="text" placeholder="05/23/2017">
-                      </span>
-                    </label>
-                  </div>
-                  <div class="form__col">
-                    <label id="modal-availability-date-end" class="field-text  field-text--datapicker">
-                      <div class="field-text__name  field-text__name--sm">Check Out</div>
-                      <span class="field-text__input-wrap">
-                        <input id="datepicker-4" class="field-text__input" type="text" placeholder="06/23/2017">
-                      </span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <div class="order-short-list__item  order-short-list__item--sm">
-                <ul class="order-short-list__sublist">
-                  <li class="order-short-list__sublist-item">
-                    <div class="order-short-list__name">€ 5 813 x 1 night</div>
-                    <div class="order-short-list__price"> € 5 813</div>
-                  </li>
-                </ul>
-              </div>
-              <div class="order-short-list__item  order-short-list__item--sm">
-                <ul class="order-short-list__sublist">
-                  <li class="order-short-list__sublist-item">
-                    <div class="order-short-list__name">
-                      Service fee
-                      <span class="tooltip-all" data-toggle="tooltip" data-placement="top" data-original-title="Some info">
-                        <svg width="12" height="12" class=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#help"></use></svg>
-                      </span>
-                    </div>
-                    <div class="order-short-list__price"> € 125</div>
-                  </li>
-                </ul>
-              </div>
-              <div class="order-short-list__item  order-short-list__item--sm">
-                <div class="order-short-list__total-wrapper  order-short-list__total-wrapper--pt20">
-                  <div class="order-short-list__name">Total </div>
-                  <div class="order-short-list__price"> € 125</div>
-                </div>
-              </div>
-            </div>
-            <div class="field-actions">
-              <button class="btn  btn--white  btn--block">Request to Book</button>
-              <div class="field-actions__help">You won’t be charged yet </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="request" class="modal" tabindex="-1" role="dialog">
-    <div class="modal__dialog" role="document">
-      <div class="modal__content">
-        <div class="modal__header">
-          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
-          <h4 class="modal__title">Request additional information</h4>
-        </div>
-        <div class="modal__body">
-          <form action="" class="request-info">
-            <div class="request-info__manager-wrap">
-              <img class="request-info__manager-avatar" src="img/feedback-avatar-01.png" alt="">
-              <div class="request-info__manager">
-                <div class="request-info__manager-name">Hillary Cherry</div>
-                <div class="request-info__manager-post">Property Manager</div>
-                <a class="request-info__manager-contact" href="tel:+30 6974-383-585">+30 6974-383-585</a>
-              </div>
-            </div>
-            <div class="field-text">
-              <span class="field-text__name  field-text__name--sm">Phone*</span>
-              <span class="field-text__input-wrap">
-                <input class="field-text__input" type="tel" placeholder="+38 (044)">
-              </span>
-            </div>
-            <div class="field-text">
-              <span class="field-text__name  field-text__name--sm">Message</span>
-              <span class="field-text__input-wrap">
-                <textarea class="field-text__input" placeholder="I’m interested in property, ID: 5782311. Please, call me back!"></textarea>
-              </span>
-            </div>
-            <div class="field-actions">
-              <button class="btn  btn--white  btn--wide">Ask an Agent</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="notice" class="modal" tabindex="-1" role="dialog">
-    <div class="modal__dialog" role="document">
-      <div class="modal__content">
-        <div class="modal__header">
-          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
-          <h4 class="modal__title">Notice About Price Drop</h4>
-        </div>
-        <div class="modal__body">
-          <p>ToLorem ipsum sip amet/</p>
-          <form class="modal__form" action="">
-            <div class="field-text">
-              <span class="field-text__name">Email</span>
-              <span class="field-text__input-wrap">
-                <input class="field-text__input" type="email" placeholder="Type here your email">
-              </span>
-            </div>
-            <div class="field-actions">
-              <button class="btn  btn--white  btn--wide">Get Notice</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <div id="share" class="modal" tabindex="-1" role="dialog">
     <div class="modal__dialog" role="document">
@@ -781,8 +591,6 @@
       </div>
     </div>
   </div>
-
-  <!-- Точно используются: -->
 
   <div class="gallery-modal" id="gallery-modal" tabindex="-1" role="dialog">
     <div class="gallery-modal__body">
