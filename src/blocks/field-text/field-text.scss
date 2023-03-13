@@ -18,6 +18,36 @@ $field-padding-horizontal:    0.7em !default;
 
   display: block;
 
+  .twitter-typeahead {
+    display: block !important;
+    font-size: inherit;
+  }
+
+  .tt-dataset {
+    padding: 4px 0;
+  }
+
+  .tt-suggestion {
+    padding: 4px 13px;
+    font-size: inherit;
+    line-height: inherit;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-main;
+      background-color: $gray-ultra-lightest;
+    }
+  }
+
+  .tt-menu.tt-open {
+    min-width: 320px;
+    border: 1px solid #d9e0e9;
+    border-radius: 2px;
+    background-color: #fff;
+    box-shadow: 0 4px 40px rgba(72, 72, 72, 0.35);
+    transform: translateY(8px);
+  }
+
   &__name {
     display: block;
     margin-bottom: 13px;
