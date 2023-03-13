@@ -1458,6 +1458,28 @@ a.btn--disabled {
             transform: translateY(-0.1em); }
 .field-text {
   display: block; }
+.field-text .twitter-typeahead {
+    display: block !important;
+    font-size: inherit; }
+.field-text .tt-dataset {
+    padding: 4px 0; }
+.field-text .tt-suggestion {
+    padding: 4px 13px;
+    font-size: inherit;
+    line-height: inherit;
+    cursor: pointer; }
+.field-text .tt-suggestion:hover {
+      color: #5547FB;
+      background-color: #f3f5f9; }
+.field-text .tt-menu.tt-open {
+    min-width: 320px;
+    border: 1px solid #d9e0e9;
+    border-radius: 2px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 4px 40px rgba(72, 72, 72, 0.35);
+            box-shadow: 0 4px 40px rgba(72, 72, 72, 0.35);
+    -webkit-transform: translateY(8px);
+            transform: translateY(8px); }
 .field-text__name {
     display: block;
     margin-bottom: 13px;
