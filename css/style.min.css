@@ -13490,6 +13490,10 @@ input:checked + .rating-add__label .rating-add__input-descr {
         padding: 64px 0 55px; }
       .search__form {
         max-width: 800px; }
+      .search__part--md-100 {
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+        max-width: 100%; }
       .search__part--md-75 {
         -ms-flex-preferred-size: 75%;
             flex-basis: 75%;
