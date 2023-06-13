@@ -10,6 +10,14 @@
   background-position: center;
   background-size: cover;
 
+  .tt-suggestion.tt-selectable {
+    font-family: $font-family;
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $text-color;
+    letter-spacing: 0.02em;
+  }
+
   @media (min-width: $screen-md) {
     padding-bottom: 40px;
     background-position: left top;
@@ -37,11 +45,13 @@
   }
 
   &__form {
+    position: relative;
+    z-index: 1000;
     display: flex;
     flex-wrap: wrap;
     max-width: 450px;
     margin: auto;
-    padding: 25px 0 30px 30px;
+    padding: 10px 15px;
     background-color: rgba($gray-darkest, 0.25);
     border-radius: 3px;
 
@@ -54,105 +64,100 @@
     width: 100%;
     color: #D1D9E2;
     font-size: $font-size + 2;
-    margin-bottom: 22px;
-    padding-right: 30px;
   }
 
-  &__part-buy {
+  &__part {
     flex-basis: 100%;
     max-width: 100%;
-    padding-right: 30px;
-    padding-bottom: 30px;
+    padding: 15px 10px;
 
-    @media (min-width: $screen-sm) {
-      flex-basis: 50%;
-      max-width: 50%;
+    .field-actions {
+      margin-top: 0;
     }
 
-    @media (min-width: $screen-md) {
-      order: 1;
-      flex-basis: 25%;
-      max-width: 25%;
-      padding-right: 20px;
-
-      .field-drop-checkboxes__pseudoselect {
-        padding: ($field-padding-vertical + 4) ($field-padding-horizontal + 8) ($field-padding-vertical + 4) $field-padding-horizontal;
-      }
-    }
-  }
-
-  &__part-type {
-    flex-basis: 100%;
-    max-width: 100%;
-    padding-right: 30px;
-    padding-bottom: 30px;
-
-    @media (max-width: ($screen-md - 1)) {
-
-      .field-drop-checkboxes__pseudoselect {
-        font-size: $font-size;
-      }
+    .field-drop-checkboxes__pseudoselect {
+      padding: 13px 22px 13px 14px;
     }
 
     @media (min-width: $screen-sm) {
-      flex-basis: 50%;
-      max-width: 50%;
+      &--sm-75 {
+        flex-basis: 75%;
+        max-width: 75%;
+      }
+      &--sm-66 {
+        flex-basis: 66.6666%;
+        max-width: 66.6666%;
+      }
+      &--sm-50 {
+        flex-basis: 50%;
+        max-width: 50%;
+      }
+      &--sm-33 {
+        flex-basis: 33.3333%;
+        max-width: 33.3333%;
+      }
+      &--sm-25 {
+        flex-basis: 25%;
+        max-width: 25%;
+      }
+      &--sm-20 {
+        flex-basis: 20%;
+        max-width: 20%;
+      }
+      &--sm-to-right {
+        margin-left: auto;
+      }
+      &--sm-to-left {
+        margin-left: 0;
+      }
     }
 
     @media (min-width: $screen-md) {
-      order: 3;
-      flex-basis: 25%;
-      max-width: 25%;
-      padding-right: 20px;
-      padding-bottom: 0;
+      &--md-75 {
+        flex-basis: 75%;
+        max-width: 75%;
+      }
+      &--md-66 {
+        flex-basis: 66.6666%;
+        max-width: 66.6666%;
+      }
+      &--md-50 {
+        flex-basis: 50%;
+        max-width: 50%;
+      }
+      &--md-33 {
+        flex-basis: 33.3333%;
+        max-width: 33.3333%;
+      }
+      &--md-25 {
+        flex-basis: 25%;
+        max-width: 25%;
+      }
+      &--md-20 {
+        flex-basis: 20%;
+        max-width: 20%;
+      }
+      &--md-to-right {
+        margin-left: auto;
+      }
+      &--md-to-left {
+        margin-left: 0;
+      }
     }
-  }
 
-  &__part-location {
-    flex-basis: 100%;
-    max-width: 100%;
-    padding-right: 30px;
-    padding-bottom: 30px;
+    &--btn {
 
-    @media (min-width: $screen-md) {
-      order: 2;
-      flex-basis: 75%;
-      max-width: 75%;
-    }
-  }
+      .btn {
+        width: 100%;
 
-  &__part-bedrooms {
-    display: none;
-
-    @media (min-width: $screen-md) {
-      display: block;
-      order: 4;
-      flex-basis: 19%;
-      max-width: 19%;
-      padding-right: 20px;
-    }
-  }
-
-  &__part-price {
-    display: none;
-
-    @media (min-width: $screen-md) {
-      display: block;
-      order: 5;
-      padding-right: 20px;
-      flex-basis: 35%;
-      max-width: 35%;
+        @media (min-width: $screen-md) {
+          padding: 13px;
+        }
+      }
     }
   }
 
   &__part-btn {
-    flex-basis: 100%;
-    max-width: 100%;
-    padding-right: 30px;
-
-    .field-actions {
-      margin: 0;
-    }
 
     .btn {
       width: 100%;
