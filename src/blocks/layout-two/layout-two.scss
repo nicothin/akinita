@@ -1,0 +1,40 @@
+// В этом файле должны быть стили для БЭМ-блока layout-two, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.layout-two {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  flex-grow: 1;
+  background-color: $gray-ultra-lightest;
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+    margin: auto;
+
+    @media (min-width: $screen-lg) {
+      max-width: 1000px;
+    }
+  }
+
+  &__first {
+    flex-basis: 100%;
+    padding: 16px;
+
+    @media (min-width: $screen-lg) {
+      flex-basis: 50%;
+    }
+  }
+
+  &__second {
+    flex-basis: 100%;
+    padding: 16px;
+
+    @media (min-width: $screen-lg) {
+      flex-basis: 50%;
+    }
+  }
+}

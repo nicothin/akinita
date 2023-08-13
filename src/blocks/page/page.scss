@@ -82,6 +82,11 @@
         display: none;
       }
     }
+
+    &--important {
+      z-index: 3;
+      background-color: #ff0;
+    }
   }
 
   &__h1 {

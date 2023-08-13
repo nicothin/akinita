@@ -23,4 +23,12 @@
     display: block;
     height: 40px;
   }
+
+  &--without-user-blocks {
+    transform: translateX(-28px);
+
+    @media (min-width: $screen-xl) {
+      transform: none;
+    }
+  }
 }

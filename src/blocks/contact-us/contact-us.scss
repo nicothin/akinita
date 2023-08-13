@@ -1,0 +1,56 @@
+// В этом файле должны быть стили для БЭМ-блока contact-us, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.contact-us {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  padding-bottom: 32px;
+
+  @media (min-width: $screen-lg) {
+    padding-top: 42px;
+  }
+
+  &__title {
+    margin: 24px 0;
+    flex-grow: 1;
+    font-size: $font-size--h3 + 2;
+    line-height: 133%;
+    font-weight: 500;
+
+    @media (min-width: $screen-lg) {
+      margin: 42px 0;
+      font-size: $font-size--h1;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    position: relative;
+    padding-left: 24px;
+    min-height: 24px;
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      fill: currentColor;
+    }
+  }
+
+  &__form {
+    padding: 8px 8px 24px;
+    border-radius: 16px;
+    background-color: #fff;
+
+    @media (min-width: $screen-md) {
+      padding: 8px 32px 32px;
+    }
+  }
+
+  &__field {
+    padding-top: 24px;
+  }
+
+}

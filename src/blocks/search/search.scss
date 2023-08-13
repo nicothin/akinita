@@ -113,6 +113,10 @@
     }
 
     @media (min-width: $screen-md) {
+      &--md-100 {
+        flex-basis: 100%;
+        max-width: 100%;
+      }
       &--md-75 {
         flex-basis: 75%;
         max-width: 75%;

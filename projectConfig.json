@@ -177,7 +177,9 @@
     "regions": [],
     "new-submenu": [],
     "regions-details": [],
-    "list-2": []
+    "list-2": [],
+    "layout-two": [],
+    "contact-us": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

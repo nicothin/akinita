@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>akinita</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header.html')
+
+      <main class="page__main-content" role="main">
+
+        <div class="layout-two  contact-us">
+          <div class="layout-two__inner">
+
+            <div class="layout-two__first">
+              <h1 class="contact-us__title">Contact Us</h1>
+              <p>
+                <a href="mailto:email@somedomain.com" class="contact-us__link">
+                  <svg width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#letter"></use></svg>
+                  email@somedomain.com
+                </a>
+              </p>
+              <p>
+                <a href="tel:+734533245664" class="contact-us__link">
+                  <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone"></use></svg>
+                  +7345 332 45 664
+                </a>
+              </p>
+              <p>
+                <a href="https://some" class="contact-us__link">
+                  <svg width="16" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#map-marker-2"></use></svg>
+                  Some Address
+                </a>
+              </p>
+            </div>
+            <div class="layout-two__second">
+              <form action="" class="contact-us__form  grid">
+                <div class="grid__row">
+                  <div class="grid__col-6  contact-us__field">
+                    <label class="field-text">
+                      <span class="field-text__name  field-text__name--sm">First Name</span>
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="text" placeholder="" value="" required>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="grid__col-6  contact-us__field">
+                    <label class="field-text">
+                      <span class="field-text__name  field-text__name--sm">Last Name</span>
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="text" placeholder="" value="" required>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="grid__col-12  contact-us__field">
+                    <label class="field-text">
+                      <span class="field-text__name  field-text__name--sm">Email (<a href="">privacy policy</a>)</span>
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="email" placeholder="" value="" required>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="grid__col-12  contact-us__field">
+                    <label class="field-text">
+                      <span class="field-text__name  field-text__name--sm">Message</span>
+                      <span class="field-text__input-wrap">
+                        <textarea class="field-text__input" name="" id="" cols="30" rows="2" placeholder="Some text" required></textarea>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="grid__col-12  contact-us__field">
+                    <button class="btn">Send Message</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>
