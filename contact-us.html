@@ -576,86 +576,73 @@
 
       <main class="page__main-content" role="main">
 
-        <div class="layout-text">
+        <div class="layout-two  contact-us">
+          <div class="layout-two__inner">
 
-          <div class="layout-text__main">
-            <div class="layout-text__main-inner">
-
-              <article class="mortgage">
-
-                <h1 class="page__h1">Mortgage</h1>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates quo porro dignissimos velit quis officiis, beatae amet! Illo dolores corrupti aliquam omnis accusamus error earum at, id alias. Vero, pariatur.</p>
-
-                <h2>Some...</h2>
-                <h3>What is Greece.ru</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis vel tempora quibusdam aut unde obcaecati nihil non dicta. Repellat enim beatae, animi cum ex? Officiis consequuntur nisi aliquid expedita assumenda.</p>
-                <h3>What is Greece.ru What is Greece.ru</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                <ul>
-                  <li>Lorem ipsum dolor sit amet, consectetur.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetur.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetur.</li>
-                </ul>
-
-                <div class="pay-consult">
-                  <div class="alert">
-                    <div class="alert__inner">
-                      <h2 class="alert__title  alert__title--icon-info">Legal advice by phone</h2>
-                      <p class="alert__small">Suppose end get boy warrant general natural. Delightful met sufficient projection ask. Decisively everything principles if preference do impression of.</p>
-                      <form action="" class="form-line">
-                        <label class="field-text  form-line__part">
-                          <span class="field-text__name">Your name</span>
-                          <span class="field-text__input-wrap">
-                            <input class="field-text__input" type="text" placeholder="">
-                          </span>
-                        </label>
-                        <label class="field-text  form-line__part">
-                          <span class="field-text__name">Phone number</span>
-                          <span class="field-text__input-wrap">
-                            <input class="field-text__input" type="tel" placeholder="">
-                          </span>
-                        </label>
-                        <div class="form-line__price">
-                          € <b>50</b>
-                          <small>per consult</small>
-                        </div>
-                        <div class="form-line__part  form-line__part--full-line">
-                          <button class="btn  btn--white">Processed to Payment</button>
-                        </div>
-                      </form>
-                    </div>
+            <div class="layout-two__first">
+              <h1 class="contact-us__title">Contact Us</h1>
+              <p>
+                <a href="mailto:email@somedomain.com" class="contact-us__link">
+                  <svg width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#letter"></use></svg>
+                  email@somedomain.com
+                </a>
+              </p>
+              <p>
+                <a href="tel:+734533245664" class="contact-us__link">
+                  <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone"></use></svg>
+                  +7345 332 45 664
+                </a>
+              </p>
+              <p>
+                <a href="https://some" class="contact-us__link">
+                  <svg width="16" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#map-marker-2"></use></svg>
+                  Some Address
+                </a>
+              </p>
+            </div>
+            <div class="layout-two__second">
+              <form action="" class="contact-us__form  grid">
+                <div class="grid__row">
+                  <div class="grid__col-6  contact-us__field">
+                    <label class="field-text">
+                      <span class="field-text__name  field-text__name--sm">First Name</span>
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="text" placeholder="" value="" required>
+                      </span>
+                    </label>
                   </div>
-                  <div class="pay-consult__descr">! By clicking proceed button you’ll be redirected to checkout </div>
+                  <div class="grid__col-6  contact-us__field">
+                    <label class="field-text">
+                      <span class="field-text__name  field-text__name--sm">Last Name</span>
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="text" placeholder="" value="" required>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="grid__col-12  contact-us__field">
+                    <label class="field-text">
+                      <span class="field-text__name  field-text__name--sm">Email (<a href="">privacy policy</a>)</span>
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="email" placeholder="" value="" required>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="grid__col-12  contact-us__field">
+                    <label class="field-text">
+                      <span class="field-text__name  field-text__name--sm">Message</span>
+                      <span class="field-text__input-wrap">
+                        <textarea class="field-text__input" name="" id="" cols="30" rows="2" placeholder="Some text" required></textarea>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="grid__col-12  contact-us__field">
+                    <button class="btn">Send Message</button>
+                  </div>
                 </div>
-
-              </article>
-
+              </form>
             </div>
 
           </div>
-
-          <div class="layout-text__aside">
-            <aside class="layout-text__aside-inner" role="complementary">
-
-              <article class="youtube-widget">
-                <h2 class="youtube-widget__title">Youtube content</h2>
-                <p class="youtube-widget__descr">Join Greece.Ru youtube community &amp; get all videos for free at our channel</p>
-                <!-- <img src="img/joker.jpg" alt="" class="youtube-widget__thumb"> -->
-                <div class="embed-responsive  embed-responsive--16-9">
-                  <iframe src="https://www.youtube.com/embed/HNpLuXOg7xQ" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <h3 class="youtube-widget__subtitle">Short title for a video block goes here</h3>
-                <p>Welcome to my Channel, MercBenzKing! Follow/Share/Like. For more <a href="https://www.youtube.com/mercbenzking1">https://www.youtube.com/mercbenzking1</a></p>
-                <a href="" class="btn  btn--youtube  youtube-widget__btn">
-                  <svg width="32" height="32"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#youtube"></use></svg>
-                  Subscribe to our channel
-                </a>
-              </article>
-
-            </aside>
-          </div>
-
         </div>
 
       </main>
