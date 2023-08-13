@@ -4,6 +4,18 @@
 
 .grid {
 
+  &__row {
+    @include row( 0, 0, $grid-gutter-width );
+  }
+
+  &__col-6 {
+    @include col( xs, 6, $grid-columns );
+  }
+
+  &__col-12 {
+    @include col( xs, 12, $grid-columns );
+  }
+
   &__row-md {
     @include row( 0, 0, $grid-gutter-width );
   }
