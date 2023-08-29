@@ -14583,8 +14583,9 @@ input:checked + .rating-add__label .rating-add__input-descr {
         margin-right: 20px;
         border-width: 2px; }
       .social-links__icon {
-        width: 16px;
-        height: 16px; }
+        width: 30px;
+        height: 16px;
+        }
     .modal--open {
       display: -webkit-box;
       display: -ms-flexbox;
