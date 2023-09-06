@@ -3103,8 +3103,6 @@ a:active .pagination__icon-left {
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 18px; }
-.card__price-currency {
-    margin-right: 0.5em; }
 .card__price-per-mo {
     font-weight: 400;
     font-size: 12px; }
@@ -14583,9 +14581,8 @@ input:checked + .rating-add__label .rating-add__input-descr {
         margin-right: 20px;
         border-width: 2px; }
       .social-links__icon {
-        width: 30px;
-        height: 16px;
-        }
+        width: 16px;
+        height: 16px; }
     .modal--open {
       display: -webkit-box;
       display: -ms-flexbox;
